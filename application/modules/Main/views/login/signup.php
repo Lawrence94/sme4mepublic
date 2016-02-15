@@ -80,7 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- end-form -->
 <!-- start-account -->
 <div class="account">
-	<h2><a href="#">Already have an Acount? Sign in </a></h2>
+	<h2><a href="<?= site_url() ?>">Already have an Acount? Sign in </a></h2>
     <div class="span"><a href="#"><img src="<?php echo site_url();?>assets/css/images/facebook.png" alt=""/><i>Sign up with Facebook</i><div class="clear"></div></a></div>	
     <div class="span1"><a href="#"><img src="<?php echo site_url();?>assets/css/images/twitter.png" alt=""/><i>Sign up with Twitter</i><div class="clear"></div></a></div>
     <div class="span2"><a href="#"><img src="<?php echo site_url();?>assets/css/images/gplus.png" alt=""/><i>Sign up with Google+</i><div class="clear"></div></a></div>
