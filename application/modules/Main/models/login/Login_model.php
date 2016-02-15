@@ -10,6 +10,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 use Parse\ParseUser;
 use Parse\ParseException;
+use Parse\ParseObject;
+use Parse\ParseQuery;
+use Parse\ParseRole;
 
 class Login_model extends CI_Model {
 
@@ -46,10 +49,11 @@ class Login_model extends CI_Model {
       }
     }
 
-    public function doSignup($username, $password)
+    public function doSignup($fullname, $username, $password)
     {
       // create the new company owner
       $user = new ParseUser();
+      $user->set("fullname", $fullname);
       $user->set("username", $username);
       $user->set("password", $password);
       $user->set("email", $username);
@@ -58,13 +62,14 @@ class Login_model extends CI_Model {
       try {
 
       // Query for the role to be assigned to the owner of the company
+        $user->signUp();
         $role = new ParseObject("_Role");
         $query = new ParseQuery("_Role");
         $role = $query->get('n21t2vD9Ke');
-        $user->signUp();
         $role->getUsers()->add($user);
         $user->set("role", $role);
         $role->save();
+        $user->save();
         // Hooray! Let them use the app now.
         return ['status' => true,];
       } catch (ParseException $ex) {

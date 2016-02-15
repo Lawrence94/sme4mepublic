@@ -109,11 +109,13 @@ class Login extends CI_Controller {
 
 			$username = $signup['username'];
 			$password = $signup['password'];
+			$fullname = $signup['fullname'];
 
 			$status1 = true; 
 
-			$this->form_validation->set_rules('txtusername', 'Email', 'required|min_length[5]|valid_email|trim');
-			$this->form_validation->set_rules('txtpassword', 'Password', 'required|min_length[8]');
+			$this->form_validation->set_rules('signup[fullname]', 'Full Name', 'required|min_length[3]');
+			$this->form_validation->set_rules('signup[username]', 'Email', 'required|min_length[5]|valid_email|trim');
+			$this->form_validation->set_rules('signup[password]', 'Password', 'required|min_length[8]');
 
 			//check validation
             if ($this->form_validation->run() == FALSE)
@@ -121,10 +123,10 @@ class Login extends CI_Controller {
                     $data = array(
 							'displayData' => 'display:show'
 							);
-                   $this->load->view('login/login', $data);
+                   $this->load->view('login/signup', $data);
             }
 
-			$signupParse = $this->login->doSignup($username, $password);
+			$signupParse = $this->login->doSignup($fullname, $username, $password);
 
 				if (!$signupParse['status']){
 					$status1 = false;
@@ -153,6 +155,14 @@ class Login extends CI_Controller {
 						notify('danger', "You do not have permission to login here, please contact administrator", site_url());
 					}
 				}
+		}else{
+			$data = array(
+				'displayData' => 'display:none'
+			);
+
+			ParseUser::logOut();
+
+			$this->load->view('login/signup', $data);
 		}
 	}
 

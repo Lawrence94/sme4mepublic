@@ -7,14 +7,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Smart Money Ecycopedia | Home :: Login </title>
-<link href="<?php echo site_url();?>assets/css/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<title>SME4ME   |   Sign-Up </title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <div class="row">
-
 <!-- Favicon and touch icons -->
        <link rel="apple-touch-icon" sizes="60x60" href="http://www.sme4.me/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="http://www.sme4.me/apple-icon-72x72.png">
@@ -33,64 +32,67 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-  </head>
+	</head>
 <body>
 
 <div class="header">
-  <img src="<?php echo site_url();?>assets/css/images/logo.png" alt="logo" />
-          <h1 > <strong>Funding your future </strong> </h1>
-                            
-                        </div>
-            
+  <img src="images/logo.png" alt="logo" />
+					                         
+                    </div>
+	
 <div class="wrap">
-<!-- strat-contact-form --> 
+<!-- strat-contact-form -->	
 <div class="contact-form">
 <!-- start-form -->
-  <form class="contact_form" action="<?php echo site_url();?>" method="post" name="contact_form">
-    <h1>Log In</h1>
-     <ul>
-       
-          <?php echo show_notification(); ?>
-              <span style="<?= $displayData ?>" >
-              <?php echo show_valnotif(); ?>
-              </span>
-   
-          <li>
-     <input type="email" class="textbox1" name="txtusername" placeholder="Name" required />
-              <span class="form_hint">Username</span>
-               <p><img src="<?php echo site_url();?>assets/css/images/contact.png" alt=""></p>
-          </li>
-      
-          <li>
-              <input type="password" name="txtpassword" class="textbox2" placeholder="password">
-              <p><img src="<?php echo site_url();?>assets/css/images/lock.png" alt=""></p>
-          </li>
-      
+	<form class="contact_form" action="#" method="post" name="contact_form">
+		<h1>Sign up now</h1>
+		 <ul>
+	        <li>
+		 <input type="email" class="textbox1" name="email" placeholder="Name" required />
+	            <span class="form_hint">Enter full name</span>
+	             <p><img src="images/contact.png" alt=""></p>
+	        </li>
+			<li>
+		 <input type="email" class="textbox1" name="email" placeholder="Email" required />
+	            <span class="form_hint">Enter a valid email</span>
+	             <p><img src="images/contact.png" alt=""></p>
+	        </li>
+	        <li>
+	            <input type="password" name="website" class="textbox2" placeholder="password">
+	            <p><img src="images/lock.png" alt=""></p>
+	        </li>
+			<li>
+	            <input type="password" name="website" class="textbox2" placeholder="Confirm password">
+	            <p><img src="images/lock.png" alt=""></p>
+	        </li>
          </ul>
-          <input type="submit" name="Log In" value="Log in"/>
-      <div class="clear"></div> 
-      
-    <div class="clear"></div> 
-  </form>
+       	 	<input type="submit" name="Sign Up" value="Sign up Now"/>
+			<div class="clear"></div>	
+			
+		<div class="clear"></div>	
+	</form>
 <!-- end-form -->
 <!-- start-account -->
 <div class="account">
-  <h2><a href="<?= site_url('Main/Login/signup') ?>">Don`t have an Acount? Sign Up </a></h2>
-    <div class="span"><a href="#"><img src="<?php echo site_url();?>assets/css/images/facebook.png" alt=""/><i>Log in with Facebook</i><div class="clear"></div></a></div> 
-    <div class="span1"><a href="#"><img src="<?php echo site_url();?>assets/css/images/twitter.png" alt=""/><i>Log in with Twitter</i><div class="clear"></div></a></div>
-    <div class="span2"><a href="#"><img src="<?php echo site_url();?>assets/css/images/gplus.png" alt=""/><i>Log in with Google+</i><div class="clear"></div></a></div>
-</div>  
+	<h2><a href="#">Already have an Acount? Sign in </a></h2>
+    <div class="span"><a href="#"><img src="images/facebook.png" alt=""/><i>Sign up with Facebook</i><div class="clear"></div></a></div>	
+    <div class="span1"><a href="#"><img src="images/twitter.png" alt=""/><i>Sign up with Twitter</i><div class="clear"></div></a></div>
+    <div class="span2"><a href="#"><img src="images/gplus.png" alt=""/><i>Sign up with Google+</i><div class="clear"></div></a></div>
+</div>	
 
 <!-- end-account -->
-<div class="clear"></div> 
+<div class="clear"></div>	
 </div>
 <!-- end-contact-form -->
 <div class="footer">
-  
+	
 </div>
 </div>
 </body>
 <footer class="main-footer">
-<strong>Copyright &copy; 2015-2016 <a href="#">JoshLaw</a>.</strong> All rights reserved.
+        <div class="pull-right ">
+          <strong>Copyright &copy; 2015-2016 <a href="#">JoshLaw</a>.</strong> All rights reserved.
+        </div>
+        
       </footer>
 </html>

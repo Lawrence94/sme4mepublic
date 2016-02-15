@@ -85,7 +85,7 @@ class Dashboard extends CI_Controller {
 		}
 		else{
 			echo 'hey';
-			redirect('Admin/Login', 'refresh');
+			redirect('Main/Login', 'refresh');
 		}
 	}
 
@@ -194,7 +194,7 @@ class Dashboard extends CI_Controller {
 
 		} else {
     		// show the signup or login page
-    		redirect('Admin/Login','refresh');
+    		redirect('Main/Login','refresh');
 		}
     }
 }
