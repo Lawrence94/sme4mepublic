@@ -57,14 +57,20 @@
           <div class="count"> <span><?= $grantcount ?></span> </div>
           <!-- /count --></a> <!-- /.inner --></div>
        <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Awards') ?>">
-          <div class="plus">
-       <div class="cross"></div>
-           <!-- <a> --> <h2 class="title"><span>AWARDS</span></h2><!-- </a> -->
-          </div>
+        <!-- <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Awards') ?>"> -->
+          <!-- <div class="plus"> -->
+       <!-- <div class="cross"></div> -->
+           <!-- <a> --> 
+           <!-- <h2 class="title"><span>AWARDS</span></h2> -->
+           <!-- </a> -->
+          <!-- </div> -->
           <!-- /plus -->
-          <div class="count"> <span>389</span> </div>
-          <!-- /count --></a> <!-- /.inner --></div>
+          <!-- <div class="count"> <span>389</span>  -->
+          <!-- </div> -->
+          <!-- /count -->
+          <!-- </a>  -->
+          <!-- /.inner -->
+          <!-- </div> -->
         <!-- /.block -->
         <div class="block  blog aggregator" data-mobile-weight="5"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Fellowships') ?>" >
           <div class="plus">
@@ -105,24 +111,6 @@
           <div class="count"> <span><?= $corpcount ?></span> </div>
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
-        <div class="block  blonde-title aggregator" data-mobile-weight="3">
-          <div class="inner">
-            <h1><span class="subtitle">SMART MONEY ENCYCLOPEDIA<br/>
-              Funding your Future</span></h1>
-          </div>
-          <!-- /.inner --></div>
-         <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Philantropy') ?>">
-          <div class="plus">
-       <div class="cross"></div>
-           <!-- <a> --> <h2 class="title"><span>PHILANTHROPY</span></h2><!-- </a> -->
-          </div>
-          <!-- /plus -->
-          <div class="count"> <span>132</span> </div>
-          <!-- /count --></a> <!-- /.inner --></div>
-                <!-- /.block -->
-        
-                
         <!-- /.block -->
         <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Competitions') ?>" >
           <div class="plus">
@@ -133,7 +121,31 @@
           <div class="count"> <span><?= $compcount ?></span> </div>
           </a> <!-- /.inner --></div>
         <!-- /.block -->
+         <!-- /.block -->
+        <!-- <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Philantropy') ?>"> -->
+          <!-- <div class="plus"> -->
+       <!-- <div class="cross"></div> -->
+           <!-- <a> --> 
+           <!-- <h2 class="title"><span>PHILANTHROPY</span></h2> -->
+           <!-- </a> -->
+          <!-- </div> -->
+          <!-- /plus -->
+          <!-- <div class="count"> <span>132</span> </div> -->
+          <!-- /count -->
+          <!-- </a>  -->
+          <!-- /.inner -->
+          <!-- </div> -->
+                <!-- /.block -->
         
+                
+        
+        
+        <div class="block  blonde-title aggregator" data-mobile-weight="3">
+          <div class="inner">
+            <h1><span class="subtitle">SMART MONEY ENCYCLOPEDIA<br/>
+              Funding your Future</span></h1>
+          </div>
+          <!-- /.inner --></div>
         
         <!-- /.block -->
        
