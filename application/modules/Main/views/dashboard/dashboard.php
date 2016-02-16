@@ -37,50 +37,73 @@
   <div class="region region-content">
     <div id="block-system-main" class="block block-system first last odd">
       <div id="isotope-container" data-fixed-filter="false">
-        <div class="block  article" data-mobile-weight="0"><a class="inner" href="sample.html" >
-          <h2 class="title"><span>AHAF Alzheimer's Disease Research Grant<br><strong>Value:</strong> $250,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> October 19, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  work filter-case_study aggregator" data-mobile-weight="2"><a class="inner">
-          <div class="plus">
-           <a href="grants.html"> <h2 class="title"><span>GRANTS</span></h2></a>
-          </div>
-          <!-- /plus -->
-          <div class="count"> <span>16</span> </div>
-          <!-- /count --></a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  blog filter-article aggregator" data-mobile-weight="5"><a class="inner" href="grants.html" >
-          <div class="plus">
-            <h2 class="title"><span>FELLOWSHIP</span></h2>
-          </div>
-          <!-- /plus -->
-          <div class="count"> <span>412</span> </div>
-          <!-- /count --></a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  services linksection filter-services aggregator" data-mobile-weight="1"><a class="inner" href="grants.html" >
-          <div class="plus">
-            <h2 class="title"><span>BURSARIES</span></h2>
-          </div>
-          <!-- /plus -->
-          <div class="count"> <span>16</span> </div>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
+      <div class="block  careers linksection filter-careers aggregator" data-mobile-weight="8"><a class="inner" href="grants.html" >
+          <div class="plus">
+      <div class="cross"></div>
+            <h2 class="title"><span>$2,453,095</span></h2>
+             <h1><span class="subtitle"><strong>Fund Available as of:</strong> August  29, 2016</span></h1>
+          </div>
+          <!-- /plus -->
           </a> <!-- /.inner --></div>
+     
+        <!-- /.block -->
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Grants') ?>">
+          <div class="plus">
+       <div class="cross"></div>
+           <!-- <a> --> <h2 class="title"><span>GRANTS</span></h2><!-- </a> -->
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $grantcount ?></span> </div>
+          <!-- /count --></a> <!-- /.inner --></div>
+       <!-- /.block -->
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Awards') ?>">
+          <div class="plus">
+       <div class="cross"></div>
+           <!-- <a> --> <h2 class="title"><span>AWARDS</span></h2><!-- </a> -->
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span>389</span> </div>
+          <!-- /count --></a> <!-- /.inner --></div>
+        <!-- /.block -->
+        <div class="block  blog aggregator" data-mobile-weight="5"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Fellowships') ?>" >
+          <div class="plus">
+      <div class="cross"></div>
+            <h2 class="title"><span>FELLOWSHIPS</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $fellowcount ?></span> </div>
+          <!-- /count --></a> <!-- /.inner --></div>
+        <!-- /.block -->
+        <div class="block  work aggregator" data-mobile-weight="2">
+        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Scholarships') ?>">
+          <div class="plus">
+            <div class="cross"></div>
+           <h2 class="title"><span>SCHOLARSHIPS</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $scholcount ?></span> </div>
+          <!-- /count --></a> <!-- /.inner --></div>
+        <!-- /.block -->
+        <div class="block  services linksection aggregator" data-mobile-weight="1">
+        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Internships') ?>" >
+          <div class="plus">
+       <div class="cross"></div>
+            <h2 class="title"><span>INTERNSHIPS</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $intcount ?></span> </div>
+          </a> <!-- /.inner --></div>
+        <!-- /.block -->
+      <!-- /.block -->
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Corporations') ?>">
+          <div class="plus">
+       <div class="cross"></div>
+           <!-- <a> --> <h2 class="title"><span>CORPORATIONS</span></h2><!-- </a> -->
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $corpcount ?></span> </div>
+          <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <div class="block  blonde-title aggregator" data-mobile-weight="3">
           <div class="inner">
@@ -88,205 +111,55 @@
               Funding your Future</span></h1>
           </div>
           <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  about linksection filter-about aggregator" data-mobile-weight="6"><a class="inner" href="grants.html" >
-          <div class="plus">
-            <h2 class="title"><span>PHILANTHROPY</span></h2>
-          </div>
-          <!-- /plus -->
-          <div class="count"> <span>16</span> </div>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  contact linksection filter-contact aggregator" data-mobile-weight="1"><a class="inner" href="grants.html" >
-          <div class="plus">
-            <h2 class="title"><span>SCHOLARSHIPS</span></h2>
-          </div>
-          <!-- /plus -->
-          <div class="count"> <span>16</span> </div>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
          <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  people linksection filter-people aggregator" data-mobile-weight="7"><a class="inner" href="grants.html" >
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Philantropy') ?>">
           <div class="plus">
+       <div class="cross"></div>
+           <!-- <a> --> <h2 class="title"><span>PHILANTHROPY</span></h2><!-- </a> -->
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span>132</span> </div>
+          <!-- /count --></a> <!-- /.inner --></div>
+                <!-- /.block -->
+        
+                
+        <!-- /.block -->
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Competitions') ?>" >
+          <div class="plus">
+          <div class="cross"></div>
             <h2 class="title"><span>COMPETITIONS</span></h2>
           </div>
           <!-- /plus -->
-          <div class="count"> <span>16</span> </div>
+          <div class="count"> <span><?= $compcount ?></span> </div>
           </a> <!-- /.inner --></div>
         <!-- /.block -->
         
+        
         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <div class="block  careers linksection filter-careers aggregator" data-mobile-weight="8"><a class="inner" href="grants.html" >
-          <div class="plus">
-            <h2 class="title"><span>$2,453,095</span></h2>
-             <h1><span class="subtitle"><strong>Fund Available as of:</strong> August  29, 2016</span></h1>
-          </div>
-          <!-- /plus -->
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
+       
+        
         <!-- /.block -->
         <div class="block  contact linksection filter-contact aggregator" data-mobile-weight="1"><a class="inner" href="grants.html" >
           <div class="plus">
+        <div class="cross"></div>
             <h2 class="title"><span>CONTACT</span></h2>
           </div>
           <!-- /plus -->
           </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
+        
+    
         <!-- /.block -->
          <div class="block  about linksection filter-about aggregator" data-mobile-weight="6"><a class="inner" href="grants.html" >
           <div class="plus">
-            <h2 class="title"><span>BLOG</span></h2>
+        <div class="cross"></div>
+            <h2 class="title"><span>ABOUT US</span></h2>
           </div>
           <!-- /plus -->
           </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-        <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
-        <!-- /.block -->
-         <!-- /.block -->
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="#" >
-          <h2 class="title"><span>British Skin Foundation Large Grants <br> <strong>Value:</strong> $62,000 - 81,000</span></h2>
-          <h1><span class="subtitle"><strong>Deadline:</strong> August  29, 2016</span></h1>
-          </a> <!-- /.inner --></div>
+        
         <!-- /.block -->
       <!-- /.container -->
+     <div>
       <h2 class="element-invisible">Pages</h2>
       <div class="item-list">
         <ul class="pager">
@@ -306,14 +179,12 @@
 </div>
 <!-- /#content -->
 
-<div id="ajax_custom_cont_wrapper"></div>
-<!-- /ajax_custom_cont_wrapper -->
 
-</div>
 <!-- /#main -->
 
 <footer id="footer" class="region region-footer">
   <div id="block-block-6" class="block block-block first last odd"> </div>
+ 
   <!-- /.block --> 
 </footer>
 <!-- region__footer -->
@@ -325,4 +196,6 @@
 <!-- admin tabs -->
 
 </body>
+
+
 </html>

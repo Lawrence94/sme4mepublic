@@ -60,34 +60,34 @@ class Dashboard extends CI_Controller {
   //     exit;
 
 		$currentUser = ParseUser::getCurrentUser();
-		//$adminName = $this->menu_header();
+		$adminName = $this->menu_header();
 		if ($currentUser){		
 		
 			// $dashView = $this->load->view('dashboard/dashboard', $adminName, true);
 			// buildPage($dashView, 'Dashboard');
-			$this->load->view('dashboard/dashboard');
-		}
-		else{
-			echo 'hey';
-			redirect('Admin/Login', 'refresh');
-		}
-		
-	}
-
-	public function newpost()
-	{
-		$currentUser = ParseUser::getCurrentUser();
-		$adminName = $this->menu_header();
-		if ($currentUser){		
-		
-			$dashView = $this->load->view('dashboard/newpost', $adminName, true);
-			buildPage($dashView, 'Dashboard - New Post');
+			$this->load->view('dashboard/dashboard', $adminName);
 		}
 		else{
 			echo 'hey';
 			redirect('Main/Login', 'refresh');
 		}
+		
 	}
+
+	// public function newpost()
+	// {
+	// 	$currentUser = ParseUser::getCurrentUser();
+	// 	$adminName = $this->menu_header();
+	// 	if ($currentUser){		
+		
+	// 		$dashView = $this->load->view('dashboard/newpost', $adminName, true);
+	// 		buildPage($dashView, 'Dashboard - New Post');
+	// 	}
+	// 	else{
+	// 		echo 'hey';
+	// 		redirect('Main/Login', 'refresh');
+	// 	}
+	// }
 
 	public function makepost()
 	{
@@ -152,6 +152,32 @@ class Dashboard extends CI_Controller {
 		}
 	}
 
+	public function getgroup($value)
+	{
+		$currentUser = ParseUser::getCurrentUser();
+		if ($currentUser){		
+			$result = $this->db->get_where('post', ['category' => $value])->result();
+			// var_dump($result);
+			// exit;
+			$groupArray = ['title' => strtoupper($value),
+						   'result' => $result,
+						   'count' => $this->login->checkCount($value)
+						  ];
+			$this->load->view('dashboard/group', $groupArray);
+		}
+		else{
+			echo 'hey';
+			redirect('Main/Login', 'refresh');
+		}
+		//$result = $this->db->get_where('post', ['category' => $value])->result();
+		
+	}
+
+	public function getpost($value)
+	{
+		
+	}
+
 	public function menu_header(){
 
 		//getting the currently logged in admin
@@ -185,6 +211,12 @@ class Dashboard extends CI_Controller {
         	'redirect' => $url,
         	'role' => $role,
         	'active' => $cssClass,
+        	'grantcount' => $this->login->checkCount('Grants'),
+        	'fellowcount' => $this->login->checkCount('Fellowships'),
+        	'intcount' => $this->login->checkCount('Internships'),
+        	'corpcount' => $this->login->checkCount('Corporations'),
+        	'scholcount' => $this->login->checkCount('Scholarships'),
+        	'compcount' => $this->login->checkCount('Competitions'),
         	'active2' => $cssClass1,
         	'active1' => $cssClass2,
         	'active4' => $cssClass1,

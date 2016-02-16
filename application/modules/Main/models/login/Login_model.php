@@ -78,6 +78,12 @@ class Login_model extends CI_Model {
         return ['status' => false, 'parseMsg' => $ex->getMessage()];
       }
     }
+
+    public function checkCount($value)
+    {
+      $result = $this->db->get_where('post', ['category' => $value])->result();
+      return count($result);
+    }
 	
 }
 
