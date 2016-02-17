@@ -89,68 +89,68 @@ class Dashboard extends CI_Controller {
 	// 	}
 	// }
 
-	public function makepost()
-	{
-		if ($this->input->post('adminpost')) {
-			$post = $this->input->post('adminpost');
-			$status1 = true;
+	// public function makepost()
+	// {
+	// 	if ($this->input->post('adminpost')) {
+	// 		$post = $this->input->post('adminpost');
+	// 		$status1 = true;
 
-			$posttitle = $post['title'];
-			$purpose = $post['purpose'];
-			$eligibility = $post['eligibility'];
-			$level = $post['level'];
-			$value = $post['value'];
-			$valuedoll = $post['valuedoll'];
-			$frequency = $post['freq'];
-			$est = $post['est'];
-			$country = $post['country'];
-			$awards = $post['awards'];
-			$deadline = $post['deadline'];
-			$weblink = $post['weblink'];
-			$singlecat = $post['catsingle'];
-			//$multicat = $post['catmulti'];
-			$datecreated = date('Y-m-d h:i:s');
+	// 		$posttitle = $post['title'];
+	// 		$purpose = $post['purpose'];
+	// 		$eligibility = $post['eligibility'];
+	// 		$level = $post['level'];
+	// 		$value = $post['value'];
+	// 		$valuedoll = $post['valuedoll'];
+	// 		$frequency = $post['freq'];
+	// 		$est = $post['est'];
+	// 		$country = $post['country'];
+	// 		$awards = $post['awards'];
+	// 		$deadline = $post['deadline'];
+	// 		$weblink = $post['weblink'];
+	// 		$singlecat = $post['catsingle'];
+	// 		//$multicat = $post['catmulti'];
+	// 		$datecreated = date('Y-m-d h:i:s');
 
-			// var_dump($multicat);
-			// exit;
+	// 		// var_dump($multicat);
+	// 		// exit;
 
-			//$multijson = json_encode($multicat);
+	// 		//$multijson = json_encode($multicat);
 
-			$postArray = ['title' => $posttitle,
-						  'purpose' => $purpose,
-						  'eligibility' => $eligibility,
-						  'level' => $level,
-						  'value' => $value,
-						  'valuedoll' => $valuedoll,
-						  'frequency' => $frequency,
-						  'establishment' => $est,
-						  'country' => $country,
-						  'awards' => $awards,
-						  'deadline' => $deadline,
-						  'weblink' => $weblink,
-						  'category' => $singlecat,
-						  'categories' => '',
-						  'datecreated' => $datecreated,
-						 ];
+	// 		$postArray = ['title' => $posttitle,
+	// 					  'purpose' => $purpose,
+	// 					  'eligibility' => $eligibility,
+	// 					  'level' => $level,
+	// 					  'value' => $value,
+	// 					  'valuedoll' => $valuedoll,
+	// 					  'frequency' => $frequency,
+	// 					  'establishment' => $est,
+	// 					  'country' => $country,
+	// 					  'awards' => $awards,
+	// 					  'deadline' => $deadline,
+	// 					  'weblink' => $weblink,
+	// 					  'category' => $singlecat,
+	// 					  'categories' => '',
+	// 					  'datecreated' => $datecreated,
+	// 					 ];
 
-			 // var_dump($postArray);
-			 // exit;
+	// 		 // var_dump($postArray);
+	// 		 // exit;
 
-			$postdb = $this->login->doPost($postArray);
+	// 		$postdb = $this->login->doPost($postArray);
 
-				if (!$postdb['status']){
-					$status1 = false;
-				}
+	// 			if (!$postdb['status']){
+	// 				$status1 = false;
+	// 			}
 
-				if (!$status1){
-					//echo "fuck";
-					notify('danger', $loginParse['parseMsg'], 'Admin/Dashboard/newpost');
-				}else{
-					echo "Please wait, we'll take you back to the dashboard right away...";
-					notify('success', 'Post added sucessfully', 'Admin/Dashboard/newpost');
-				}
-		}
-	}
+	// 			if (!$status1){
+	// 				//echo "fuck";
+	// 				notify('danger', $loginParse['parseMsg'], 'Admin/Dashboard/newpost');
+	// 			}else{
+	// 				echo "Please wait, we'll take you back to the dashboard right away...";
+	// 				notify('success', 'Post added sucessfully', 'Admin/Dashboard/newpost');
+	// 			}
+	// 	}
+	// }
 
 	public function getgroup($value)
 	{
@@ -166,7 +166,7 @@ class Dashboard extends CI_Controller {
 			$this->load->view('dashboard/group', $groupArray);
 		}
 		else{
-			echo 'hey';
+			echo 'Session Expired';
 			redirect('Main/Login', 'refresh');
 		}
 		//$result = $this->db->get_where('post', ['category' => $value])->result();
@@ -175,7 +175,18 @@ class Dashboard extends CI_Controller {
 
 	public function getpost($value)
 	{
-		
+		$currentUser = ParseUser::getCurrentUser();
+		if ($currentUser){		
+			$result = $this->db->get_where('post', ['id' => $value])->row();
+			$groupArray = ['result' => $result,
+						   'count' => $this->login->checkCount($result->category)
+						  ];
+			$this->load->view('dashboard/newpost', $groupArray);
+		}
+		else{
+			echo 'Session Expired';
+			redirect('Main/Login', 'refresh');
+		}
 	}
 
 	public function menu_header(){

@@ -1,127 +1,135 @@
-<!-- Content Header (Page header) -->
-<section class="content-header">
-          <h1>
-            New Post
-            <small>new</small>
-          </h1>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Page</a></li>
-            <li class="active">Add a New Post</li>
-          </ol>
-        </section>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" version="HTML+RDFa 1.0" lang="en" dir="ltr">
+<title>Smart Money Encyclopedia</title>
+<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/main-style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/custom.css" media="all" />
+<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/responsive.css" media="all" />
+<script src="<?php echo site_url();?>assets/assets-for-website/js/js_RLdCYwzbvDqlQo2TU9KQgLHzdcyZ66umH31ME30FMh0.js"></script>
+<script src="<?php echo site_url();?>assets/assets-for-website/js/js_RLdCYwzbvDqlQo2TU9KQgLHzdcyZ66umH31ME30FMh0.js"></script>
+<script src="<?php echo site_url();?>assets/assets-for-website/js/js_X3wqWxXtw6R4AIb97o3dAWED9S2GhQf47b9XC3VETVg.js"></script>
+<script src="<?php echo site_url();?>assets/assets-for-website/js/js_CC-zfeuQHcDhFtVRuKW53h30TL7j_105J32Nz8b8R38.js"></script>
+<script src="<?php echo site_url();?>assets/assets-for-website/js/js_gQlbxMG_wwGeHhZ0A48UxYM004xIupskuGJjEprYK-g.js"></script>
+<script>jQuery.extend(Drupal.settings, {"mediaelementAll":true,"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});</script>
 
-        <?php echo show_notification(); ?>
-          
+<!-- Favicon and touch icons -->
+<link rel="apple-touch-icon" sizes="60x60" href="http://www.sme4.me/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.sme4.me/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://www.sme4.me/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.sme4.me/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://www.sme4.me/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.sme4.me/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://www.sme4.me/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://www.sme4.me/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://www.sme4.me/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://www.sme4.me/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://www.sme4.me/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://www.sme4.me/favicon-16x16.png">
+<link rel="manifest" href="http://www.sme4.me/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head><body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-1029 node-type-article section-blog" >
+<header id="header" role="banner"> <a href="<?php echo site_url('Main/Dashboard');?>" title="Home" rel="home" id="logo"> <span class="logo">SME4ME</span> </a> </header>
+<!-- /header -->
 
-        <!-- Main content -->
-        <section class="content">
-          <div class="row">
-            <!-- left column -->
-            <div class="col-md-8">
-              <!-- general form elements -->
-              <div class="box box-primary">
-                <div class="box-header with-border">
-                <h3 class="box-title">Add a New Post</h3>
-                </div><!-- /.box-header -->
-                <!-- form start -->
-                <form role="form" action="<?= site_url('Admin/Dashboard/makepost'); ?>" method="post">
-                  <div class="box-body">
-                    
-				 <div class="box-body">
-				<label for="exampleInputEmail1">Opportunity Title</label>
-                <input name="adminpost[title]" class="form-control input-lg" type="text" placeholder="Post Title">
-                      
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Purpose </label>
-                      <input type="text" name="adminpost[purpose]" class="form-control" id="exampleInputPassword1" placeholder="Purpose">
-                      </div>
-					
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Eligibility </label>
-                      <input type="text" name="adminpost[eligibility]" class="form-control" id="exampleInputPassword1" placeholder="Eligibility">
-                    </div>
-				
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Level of Study </label>
-                      <input type="text" name="adminpost[level]" class="form-control" id="exampleInputPassword1" placeholder="Level">
-                    </div>
-                    <div class="form-group">
-					            <div class="input-group">
-                        <span class="input-group-addon">$</span>
-                        <input type="text" name="adminpost[value]" class="form-control" placeholder="Value">
-                        <span class="input-group-addon">.00</span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-group">
-                        <span class="input-group-addon">$</span>
-                        <input type="text" name="adminpost[valuedoll]" class="form-control" placeholder="Value in dollars">
-                        <span class="input-group-addon">.00</span>
-                      </div>
-                    </div>
-					          <div class="form-group">
-                      <label for="exampleInputPassword1">Frequency </label>
-                      <input type="text" name="adminpost[freq]" class="form-control" id="exampleInputPassword1" placeholder="Frequency">
-                    </div>
-					          <div class="form-group">
-                      <label for="exampleInputPassword1">Study Establishment</label>
-                      <input type="text" name="adminpost[est]" class="form-control" id="exampleInputPassword1" placeholder="Study">
-                    </div>
-					          <div class="form-group">
-                      <label for="exampleInputPassword1">Country of Study </label>
-                      <input type="text" name="adminpost[country]" class="form-control" id="exampleInputPassword1" placeholder="Country">
-                    </div>
-					          <div class="form-group">
-                      <label for="exampleInputPassword1">No. of awards offered </label>
-                      <input type="text" name="adminpost[awards]" name="" class="form-control" id="exampleInputPassword1" placeholder="Awards">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Deadline</label>
-                      <input type="text" name="adminpost[deadline]" class="form-control" id="exampleInputPassword1" placeholder="Deadline">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Weblink </label>
-                      <input type="text" name="adminpost[weblink]" class="form-control" id="exampleInputPassword1" placeholder="Weblink">
-                    </div>
-                    
-                    
-                  </div><!-- /.box-body -->
-				    
-                    <!-- select -->
-                    <div class="form-group">
-                      <label>Category</label>
-                      <select name="adminpost[catsingle]" class="form-control">
-                        <option>Grants</option>
-                        <option>Scholarships</option>
-                        <option>Competitions</option>
-                        <option>Intenships</option>
-                        <option>Fellowships</option>
-                        <option>Corporations</option>
-                      </select>
-                    </div>
-                    
+<div id="main">
+  <div id="content" class="column" role="main"> <a id="main-content"></a>
+    <div class="post-date"> Deadline: <?= $result->deadline ?> </div>
+    <div class="region region-content">
+      <div id="block-system-main" class="block block-system first last odd">
+        <article>
+        
+          <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+            <div class="field-items">
+              <div class="field-item even" property="content:encoded">
+              <h1 class="title" id="page-title"><?= $result->title ?></h1>
+                <p align="center">
+                  
 
-                    <!-- Select multiple-->
-                    <div class="form-group">
-                      <label>category</label>
-                      <select name="adminpost[catmulti]" multiple class="form-control">
-                        <option value="grants">Grants</option>
-                        <option value="scholarships">Scholarships</option>
-                        <option>Competitions</option>
-                        <option>Intenships</option>
-                        <option>Fellowships</option>
-                        <option>Corporations</option>
-                      </select>
-                    </div>
+                  <strong>Purpose:</strong> <?= $result->purpose ?><br>
+                  <strong>Eligibility:</strong> <?= $result->eligibility ?><br>
+                  <strong>Level of Study:</strong> <?= $result->level ?><br>
+                  <strong>Type:</strong> <?= $result->category ?><br>
+                  <strong>Length of Study:</strong> 1 year<br>
+                  <strong>Value:</strong> <?= $result->value ?><br>
+                  <strong>Frequency:</strong> <?= $result->frequency ?><br>
+                  <strong> Study Establishment:</strong> <?= $result->establishment ?><br>
+                  <strong>Country of Study:</strong> <?= $result->country ?> <br>
+                  <strong>No. of awards offered:</strong> <?= $result->awards ?><br><br>
+                  <a href="<?= $result->weblink ?>" class="form-submit"> Visit Website </a>
 
-                  <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                </form>
-              </div><!-- /.box -->
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!--/.col (right) -->
-        </section><!-- /.content -->
+
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- /.node --> 
+        
+      </div>
+      <!-- /.block --> 
+    </div>
+  </div>
+  <!-- /#content -->
+  
+  <aside class="sidebars">
+    <div class="region region-sidebar-first column sidebar">
+      <div id="block-blonde-global-blocks-home" class="block block-blonde-global-blocks first odd"> <a href="<?php echo site_url('Main/Dashboard');?>">
+        <div class="title-wrapper">
+          <h2><span class="icon">Homepage</span></h2>
+        </div>
+        </a> </div>
+      <!-- /.block -->
+      <div id="block-blonde-global-blocks-site-section" class="block block-blonde-global-blocks even"> 
+         <a class="section-link section-work" href="<?= site_url('Main/Dashboard/getgroup/'.$result->category) ?>">
+         <span class="line"><?= $result->category ?></span>
+              <span class="section-total"><span><?php echo $count  ?></span>
+        </span>
+        <div class="minusicon"></div>
+        </a> </div>
+      <!-- /.block -->
+      <div id="block-blonde-global-blocks-pagination" class="block block-blonde-global-blocks last odd">
+        <div class="title-wrapper">
+          <h2 class="block-title">Opportunities</h2>
+        </div>
+        <ul class="pagination">
+          <li class="pre"><a href="#">Previous</a></li>
+          <li class="next-disabled"><span>Next</span></li>
+        </ul>
+      </div>
+      <!-- /.block --> 
+    </div>
+    <div class="region region-sidebar-second column sidebar">
+      <div id="block-blonde-solr-service-search" class="block block-blonde-solr-service first odd">
+        <div class="title-wrapper">
+          <h2>Search</h2>
+        </div>
+        <form action="#" method="post">
+          <div>
+            <div class="form-item form-type-textfield form-item-search">
+              <label for="edit-search">Search </label>
+              <input type="text" id="edit-search" name="search" value="Type here..." size="60" maxlength="128" class="form-text" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- /.block -->
+      
+    </div>
+  </aside>
+  <!-- /.sidebars --> 
+  
+</div>
+<!-- /#main -->
+
+<footer id="footer" class="region region-footer">
+<div id="block-block-1" class="block block-block first odd"><p>
+    2016 SME4ME.com<br />
+    <a href="#">Contact us</a> | <a href="#">Privacy Policy</a> | <a href="http://twitter.com/sme4_me" target="_blank">Follow us on Twitter</a></p>
+</div>
+<!-- /.block -->
+
+</body>
+</html>
