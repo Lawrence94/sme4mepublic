@@ -156,7 +156,7 @@ class Dashboard extends CI_Controller {
 	{
 		$currentUser = ParseUser::getCurrentUser();
 		if ($currentUser){		
-			$result = $this->db->get_where('post', ['category' => $value])->result();
+			$result = $this->db->get_where('posts', ['category' => $value])->result();
 			// var_dump($result);
 			// exit;
 			$groupArray = ['title' => strtoupper($value),
@@ -177,7 +177,7 @@ class Dashboard extends CI_Controller {
 	{
 		$currentUser = ParseUser::getCurrentUser();
 		if ($currentUser){		
-			$result = $this->db->get_where('post', ['id' => $value])->row();
+			$result = $this->db->get_where('posts', ['id' => $value])->row();
 			$groupArray = ['result' => $result,
 						   'count' => $this->login->checkCount($result->category)
 						  ];
@@ -222,12 +222,12 @@ class Dashboard extends CI_Controller {
         	'redirect' => $url,
         	'role' => $role,
         	'active' => $cssClass,
-        	'grantcount' => $this->login->checkCount('Grants'),
-        	'fellowcount' => $this->login->checkCount('Fellowships'),
-        	'intcount' => $this->login->checkCount('Internships'),
-        	'corpcount' => $this->login->checkCount('Corporations'),
-        	'scholcount' => $this->login->checkCount('Scholarships'),
-        	'compcount' => $this->login->checkCount('Competitions'),
+        	'grantcount' => $this->login->checkCount('Grant'),
+        	'fellowcount' => $this->login->checkCount('Fellowship'),
+        	'intcount' => $this->login->checkCount('Internship'),
+        	'corpcount' => $this->login->checkCount('Corporation'),
+        	'scholcount' => $this->login->checkCount('Scholarship'),
+        	'compcount' => $this->login->checkCount('Competition'),
         	'active2' => $cssClass1,
         	'active1' => $cssClass2,
         	'active4' => $cssClass1,

@@ -48,7 +48,7 @@
           </a> <!-- /.inner --></div>
      
         <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Grants') ?>">
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Grant') ?>">
           <div class="plus">
        <div class="cross"></div>
            <!-- <a> --> <h2 class="title"><span>GRANTS</span></h2><!-- </a> -->
@@ -72,7 +72,7 @@
           <!-- /.inner -->
           <!-- </div> -->
         <!-- /.block -->
-        <div class="block  blog aggregator" data-mobile-weight="5"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Fellowships') ?>" >
+        <div class="block  blog aggregator" data-mobile-weight="5"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Fellowship') ?>" >
           <div class="plus">
       <div class="cross"></div>
             <h2 class="title"><span>FELLOWSHIPS</span></h2>
@@ -82,7 +82,7 @@
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <div class="block  work aggregator" data-mobile-weight="2">
-        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Scholarships') ?>">
+        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Scholarship') ?>">
           <div class="plus">
             <div class="cross"></div>
            <h2 class="title"><span>SCHOLARSHIPS</span></h2>
@@ -92,7 +92,7 @@
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <div class="block  services linksection aggregator" data-mobile-weight="1">
-        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Internships') ?>" >
+        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Internship') ?>" >
           <div class="plus">
        <div class="cross"></div>
             <h2 class="title"><span>INTERNSHIPS</span></h2>
@@ -102,7 +102,7 @@
           </a> <!-- /.inner --></div>
         <!-- /.block -->
       <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Corporations') ?>">
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Corporation') ?>">
           <div class="plus">
        <div class="cross"></div>
            <!-- <a> --> <h2 class="title"><span>CORPORATIONS</span></h2><!-- </a> -->
@@ -112,7 +112,7 @@
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <!-- /.block -->
-        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Competitions') ?>" >
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Competition') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>COMPETITIONS</span></h2>

@@ -51,12 +51,12 @@
                   <strong>Eligibility:</strong> <?= $result->eligibility ?><br>
                   <strong>Level of Study:</strong> <?= $result->level ?><br>
                   <strong>Type:</strong> <?= $result->category ?><br>
-                  <strong>Length of Study:</strong> 1 year<br>
+                  <!-- <strong>Length of Study:</strong> 1 year<br> -->
                   <strong>Value:</strong> <?= $result->value ?><br>
-                  <strong>Frequency:</strong> <?= $result->frequency ?><br>
-                  <strong> Study Establishment:</strong> <?= $result->establishment ?><br>
-                  <strong>Country of Study:</strong> <?= $result->country ?> <br>
-                  <strong>No. of awards offered:</strong> <?= $result->awards ?><br><br>
+                  <strong>Courses:</strong> <?= $result->frequency ?><br>
+                  <!-- <strong> Study Establishment:</strong> <?= $result->establishment ?><br> -->
+                  <strong>Country of Study:</strong> <?= $result->country ?> <br><br>
+                  <!-- <strong>No. of awards offered:</strong> <?= $result->awards ?><br><br> -->
                   <a href="<?= $result->weblink ?>" class="form-submit"> Visit Website </a>
 
 
