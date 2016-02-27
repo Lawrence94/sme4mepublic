@@ -57,7 +57,7 @@
                   <!-- <strong> Study Establishment:</strong> <?= $result->establishment ?><br> -->
                   <strong>Country of Study:</strong> <?= $result->country ?> <br><br>
                   <!-- <strong>No. of awards offered:</strong> <?= $result->awards ?><br><br> -->
-                  <a href="<?= $result->weblink ?>" class="form-submit"> Visit Website </a>
+                  <a href="<?= $result->weblink ?>" target="_blank" class="form-submit"> Visit Website </a>
 
 
 
