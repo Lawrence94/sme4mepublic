@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" version="HTML+RDFa 1.0" lang="en" dir="ltr">
+<!-- <meta name=viewport content="width=device-width, initial-scale=1"> -->
     <title>Smart Money Encyclopedia</title>  
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/main-style.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/style.css" media="all" />
@@ -41,8 +42,8 @@
       <div class="block  careers linksection filter-careers aggregator" data-mobile-weight="8"><a class="inner" href="grants.html" >
           <div class="plus">
       <div class="cross"></div>
-            <h2 class="title"><span>$2,453,095</span></h2>
-             <h1><span class="subtitle"><strong>Fund Available as of:</strong> August  29, 2016</span></h1>
+            <h2 class="title"><span><?= '$'.$realcash ?></span></h2>
+             <h1><span class="subtitle"><strong>Total Funding Available</strong></span></h1>
           </div>
           <!-- /plus -->
           </a> <!-- /.inner --></div>
@@ -112,13 +113,13 @@
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <!-- /.block -->
-        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Competition') ?>" >
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Startup') ?>" >
           <div class="plus">
           <div class="cross"></div>
-            <h2 class="title"><span>COMPETITIONS</span></h2>
+            <h2 class="title"><span>START-UPS</span></h2>
           </div>
           <!-- /plus -->
-          <div class="count"> <span><?= $compcount ?></span> </div>
+          <div class="count"> <span><?= $startupcount ?></span> </div>
           </a> <!-- /.inner --></div>
         <!-- /.block -->
          <!-- /.block -->
@@ -148,10 +149,78 @@
           <!-- /.inner --></div>
         
         <!-- /.block -->
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Competition') ?>" >
+          <div class="plus">
+          <div class="cross"></div>
+            <h2 class="title"><span>COMPETITIONS</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $compcount ?></span> </div>
+          </a> <!-- /.inner --></div>
+
+          <!-- /.block -->
+        <div class="block  about linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Philantropy') ?>" >
+          <div class="plus">
+          <div class="cross"></div>
+            <h2 class="title"><span>PHIILANTROPY</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $philcount ?></span> </div>
+          </a> <!-- /.inner --></div>
+
+          <!-- /.block -->
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Essay') ?>" >
+          <div class="plus">
+          <div class="cross"></div>
+            <h2 class="title"><span>ESSAY</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $essaycount ?></span> </div>
+          </a> <!-- /.inner --></div>
+
+          <!-- /.block -->
+        <div class="block  blog linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/SocialInnovation') ?>" >
+          <div class="plus">
+          <div class="cross"></div>
+            <h2 class="title"><span>SOCIAL INNOVATION</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $socialcount ?></span> </div>
+          </a> <!-- /.inner --></div>
+
+          <!-- /.block -->
+        <div class="block  about linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Government') ?>" >
+          <div class="plus">
+          <div class="cross"></div>
+            <h2 class="title"><span>GOVERNMENTS</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $govcount ?></span> </div>
+          </a> <!-- /.inner --></div>
+
+          <!-- /.block -->
+        <div class="block  contact linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Essay') ?>" >
+          <div class="plus">
+          <div class="cross"></div>
+            <h2 class="title"><span>ESSAY</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $essaycount ?></span> </div>
+          </a> <!-- /.inner --></div>
+
+          <!-- /.block -->
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Loan') ?>" >
+          <div class="plus">
+          <div class="cross"></div>
+            <h2 class="title"><span>LOANS</span></h2>
+          </div>
+          <!-- /plus -->
+          <div class="count"> <span><?= $loancount ?></span> </div>
+          </a> <!-- /.inner --></div>
        
         
         <!-- /.block -->
-        <div class="block  contact linksection filter-contact aggregator" data-mobile-weight="1"><a class="inner" href="grants.html" >
+        <div class="block  contact linksection filter-contact aggregator" data-mobile-weight="1"><a class="inner" href="#" >
           <div class="plus">
         <div class="cross"></div>
             <h2 class="title"><span>CONTACT</span></h2>
@@ -161,7 +230,7 @@
         
     
         <!-- /.block -->
-         <div class="block  about linksection filter-about aggregator" data-mobile-weight="6"><a class="inner" href="grants.html" >
+         <div class="block  about linksection filter-about aggregator" data-mobile-weight="6"><a class="inner" href="#" >
           <div class="plus">
         <div class="cross"></div>
             <h2 class="title"><span>ABOUT US</span></h2>

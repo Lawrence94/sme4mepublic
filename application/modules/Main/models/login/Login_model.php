@@ -84,6 +84,19 @@ class Login_model extends CI_Model {
       $result = $this->db->get_where('posts', ['category' => $value])->result();
       return count($result);
     }
+
+    public function checkCash()
+    {
+      $result = $this->db->get('posts')->result();
+      $sum = 0;
+      $row1 = [];
+      foreach ( $result as $row ) {
+        // += str_replace(",", "", $row['amount']);
+        $sum += $row->valuedoll;
+      }
+
+      return number_format( $sum, 0 );;
+    }
 	
 }
 
