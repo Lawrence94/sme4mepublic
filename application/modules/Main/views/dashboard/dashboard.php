@@ -39,7 +39,7 @@
     <div id="block-system-main" class="block block-system first last odd">
       <div id="isotope-container" data-fixed-filter="false">
        <!-- /.block -->
-      <div class="block  careers linksection filter-careers aggregator" data-mobile-weight="8"><a class="inner" href="grants.html" >
+      <div class="block  careers linksection filter-careers aggregator" data-mobile-weight="8"><a class="inner" href="#" >
           <div class="plus">
       <div class="cross"></div>
             <h2 class="title"><span><?= '$'.$realcash ?></span></h2>
