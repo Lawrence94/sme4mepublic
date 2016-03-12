@@ -173,10 +173,10 @@
         <div class="block  about linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Philantropy') ?>" >
           <div class="plus">
           <div class="cross"></div>
-            <h2 class="title"><span>PHIILANTROPY</span></h2>
+            <h2 class="title"><span>PHILANTROPY</span></h2>
           </div>
           <!-- /plus -->
-          <div class="count"> <span><?= $philcount ?></span> </div>
+          <!-- <div class="count"> <span><?= $philcount ?></span> </div> -->
           </a> <!-- /.inner --></div>
 
           <!-- /.block -->
