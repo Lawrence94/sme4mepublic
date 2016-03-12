@@ -170,7 +170,7 @@
           </a> <!-- /.inner --></div>
 
           <!-- /.block -->
-        <div class="block  about linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Philantropy') ?>" >
+        <div class="block  about linksection aggregator" data-mobile-weight="7"><a class="inner" href="#" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>PHILANTROPY</span></h2>
