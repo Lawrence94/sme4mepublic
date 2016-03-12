@@ -223,16 +223,21 @@ class Dashboard extends CI_Controller {
         	'role' => $role,
         	'active' => $cssClass,
         	'realcash' => $this->login->checkCash(),
-        	'grantcount' => $this->login->checkCount('Grant'),
+        	//'grantcount' => $this->login->checkCount('Grant'),
+        	'phdcount' => $this->login->checkCount('Phd'),
         	'fellowcount' => $this->login->checkCount('Fellowship'),
         	'intcount' => $this->login->checkCount('Internship'),
-        	'corpcount' => $this->login->checkCount('Corporation'),
-        	'scholcount' => $this->login->checkCount('Scholarship'),
-        	'compcount' => $this->login->checkCount('Competition'),
+        	//'corpcount' => $this->login->checkCount('Corporation'),
+        	'bachelorcount' => $this->login->checkCount('Bachelor'),
+        	//'scholcount' => $this->login->checkCount('Scholarship'),
+        	'mastercount' => $this->login->checkCount('Master'),
+        	//'compcount' => $this->login->checkCount('Competition'),
+        	'doccount' => $this->login->checkCount('Postdoctorate'),
         	'startupcount' => $this->login->checkCount('Startup'),
-        	'socialcount' => $this->login->checkCount('SocialInnovation'),
+        	//'socialcount' => $this->login->checkCount('SocialInnovation'),
         	'essaycount' => $this->login->checkCount('Essay'),
-        	'govcount' => $this->login->checkCount('Government'),
+        	'ngocount' => $this->login->checkCount('Ngo'),
+        	//'govcount' => $this->login->checkCount('Government'),
         	'loancount' => $this->login->checkCount('Loan'),
         	'philcount' => $this->login->checkCount('Philantropy'),
         	'active2' => $cssClass1,
@@ -246,5 +251,11 @@ class Dashboard extends CI_Controller {
     		// show the signup or login page
     		redirect('Main/Login','refresh');
 		}
+    }
+
+    public function logout()
+    {
+    	ParseUser::logout();
+    	redirect('Main/Dashboard','refresh');
     }
 }

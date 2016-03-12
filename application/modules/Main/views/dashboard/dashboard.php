@@ -39,23 +39,34 @@
     <div id="block-system-main" class="block block-system first last odd">
       <div id="isotope-container" data-fixed-filter="false">
        <!-- /.block -->
-      <div class="block  careers linksection filter-careers aggregator" data-mobile-weight="8"><a class="inner" href="#" >
+      <div class="block  careers linksection filter-careers aggregator" data-mobile-weight="8">
+      <a class="inner" href="<?= site_url('Main/Dashboard/logout') ?>" >
           <div class="plus">
-      <div class="cross"></div>
-            <h2 class="title"><span><?= '$'.$realcash ?></span></h2>
-             <h1><span class="subtitle"><strong>Total Funding Available</strong></span></h1>
+          <div class="cross"></div>
+            <h2 class="title"><span>LOG OUT</span></h2>
+             <h1><span class="subtitle"><strong>LOG OUT</strong></span></h1>
           </div>
           <!-- /plus -->
           </a> <!-- /.inner --></div>
      
         <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Grant') ?>">
+        <!-- <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Grant') ?>">
+          <div class="plus">
+       <div class="cross"></div> -->
+           <!-- <a> --> <!-- <h2 class="title"><span>GRANTS</span></h2> --><!-- </a> -->
+          <!-- </div> -->
+          <!-- /plus -->
+          <!-- <div class="count"> <span><?= $grantcount ?></span> </div> -->
+          <!-- /count --><!-- </a> --> <!-- /.inner --><!-- </div> -->
+       <!-- /.block -->
+       <!-- /.block -->
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Phd') ?>">
           <div class="plus">
        <div class="cross"></div>
-           <!-- <a> --> <h2 class="title"><span>GRANTS</span></h2><!-- </a> -->
+           <!-- <a> --> <h2 class="title"><span>PHD</span></h2><!-- </a> -->
           </div>
           <!-- /plus -->
-          <div class="count"> <span><?= $grantcount ?></span> </div>
+          <div class="count"> <span><?= $phdcount ?></span> </div>
           <!-- /count --></a> <!-- /.inner --></div>
        <!-- /.block -->
         <!-- <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Awards') ?>"> -->
@@ -83,13 +94,13 @@
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <div class="block  work aggregator" data-mobile-weight="2">
-        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Scholarship') ?>">
+        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Master') ?>">
           <div class="plus">
             <div class="cross"></div>
-           <h2 class="title"><span>SCHOLARSHIPS</span></h2>
+           <h2 class="title"><span>MASTERS</span></h2>
           </div>
           <!-- /plus -->
-          <div class="count"> <span><?= $scholcount ?></span> </div>
+          <div class="count"> <span><?= $mastercount ?></span> </div>
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <div class="block  services linksection aggregator" data-mobile-weight="1">
@@ -103,13 +114,13 @@
           </a> <!-- /.inner --></div>
         <!-- /.block -->
       <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Corporation') ?>">
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Bachelor') ?>">
           <div class="plus">
        <div class="cross"></div>
-           <!-- <a> --> <h2 class="title"><span>CORPORATIONS</span></h2><!-- </a> -->
+           <!-- <a> --> <h2 class="title"><span>BACHELORS</span></h2><!-- </a> -->
           </div>
           <!-- /plus -->
-          <div class="count"> <span><?= $corpcount ?></span> </div>
+          <div class="count"> <span><?= $bachelorcount ?></span> </div>
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <!-- /.block -->
@@ -149,13 +160,13 @@
           <!-- /.inner --></div>
         
         <!-- /.block -->
-        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Competition') ?>" >
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Postdoctorate') ?>" >
           <div class="plus">
           <div class="cross"></div>
-            <h2 class="title"><span>COMPETITIONS</span></h2>
+            <h2 class="title"><span>POST DOCTORATE</span></h2>
           </div>
           <!-- /plus -->
-          <div class="count"> <span><?= $compcount ?></span> </div>
+          <div class="count"> <span><?= $doccount ?></span> </div>
           </a> <!-- /.inner --></div>
 
           <!-- /.block -->
@@ -179,33 +190,33 @@
           </a> <!-- /.inner --></div>
 
           <!-- /.block -->
-        <div class="block  blog linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/SocialInnovation') ?>" >
+        <!-- <div class="block  blog linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/SocialInnovation') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>SOCIAL INNOVATION</span></h2>
-          </div>
+          </div> -->
           <!-- /plus -->
-          <div class="count"> <span><?= $socialcount ?></span> </div>
-          </a> <!-- /.inner --></div>
+          <!-- <div class="count"> <span><?= $socialcount ?></span> </div>
+          </a> --> <!-- /.inner --><!-- </div> -->
 
           <!-- /.block -->
-        <div class="block  about linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Government') ?>" >
+       <!--  <div class="block  about linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Government') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>GOVERNMENTS</span></h2>
-          </div>
+          </div> -->
           <!-- /plus -->
-          <div class="count"> <span><?= $govcount ?></span> </div>
-          </a> <!-- /.inner --></div>
+          <!-- <div class="count"> <span><?= $govcount ?></span> </div>
+          </a>  --><!-- /.inner --><!-- </div> -->
 
           <!-- /.block -->
-        <div class="block  contact linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Essay') ?>" >
+        <div class="block  contact linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Ngo') ?>" >
           <div class="plus">
           <div class="cross"></div>
-            <h2 class="title"><span>ESSAY</span></h2>
+            <h2 class="title"><span>N.G.O</span></h2>
           </div>
           <!-- /plus -->
-          <div class="count"> <span><?= $essaycount ?></span> </div>
+          <div class="count"> <span><?= $ngocount ?></span> </div>
           </a> <!-- /.inner --></div>
 
           <!-- /.block -->
