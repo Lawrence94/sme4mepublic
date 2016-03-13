@@ -216,14 +216,14 @@
 
 			// only create block if required
 			if(typeof spinner_block === 'undefined') {
-				//spinner_block = items.filter(':first').clone();
+				spinner_block = items.filter(':first').clone();
 				(function() {
-					//spinner_block.empty().attr('class', 'block loading-block');
-					//spinner_block.removeAttr('data-initial-position').removeAttr('data-mobile-weight');
-					//spinner_block.append((new Spinner).getInstance());
+					spinner_block.empty().attr('class', 'block loading-block');
+					spinner_block.removeAttr('data-initial-position').removeAttr('data-mobile-weight');
+					spinner_block.append((new Spinner).getInstance());
 				}());
 			}
-			//spinner_block.appendTo(instance.$container)
+			spinner_block.appendTo(instance.$container)
 
 			var visibleItemCount = items.length;
 			var top = $w.scrollTop();
