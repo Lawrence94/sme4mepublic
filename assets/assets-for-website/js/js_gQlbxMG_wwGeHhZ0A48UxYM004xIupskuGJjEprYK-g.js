@@ -223,7 +223,7 @@
 					spinner_block.append((new Spinner).getInstance());
 				}());
 			}
-			spinner_block.appendTo(instance.$container)
+			//spinner_block.appendTo(instance.$container)
 
 			var visibleItemCount = items.length;
 			var top = $w.scrollTop();
