@@ -59,7 +59,7 @@ class Dashboard extends CI_Controller {
   //     curl_close($ch);
   //     exit;
 
-		$currentUser = ParseUser::getCurrentUser();
+		$currentUser = $this->session->userdata('user_vars');
 		$adminName = $this->menu_header();
 		if ($currentUser){		
 		
@@ -154,7 +154,7 @@ class Dashboard extends CI_Controller {
 
 	public function getgroup($value)
 	{
-		$currentUser = ParseUser::getCurrentUser();
+		$currentUser = $this->session->userdata('user_vars');
 		if ($currentUser){		
 			$result = $this->db->get_where('posts', ['category' => $value])->result();
 			// var_dump($result);
@@ -175,7 +175,7 @@ class Dashboard extends CI_Controller {
 
 	public function getpost($value)
 	{
-		$currentUser = ParseUser::getCurrentUser();
+		$currentUser = $this->session->userdata('user_vars');
 		if ($currentUser){		
 			$result = $this->db->get_where('posts', ['id' => $value])->row();
 			$groupArray = ['result' => $result,
@@ -192,28 +192,23 @@ class Dashboard extends CI_Controller {
 	public function menu_header(){
 
 		//getting the currently logged in admin
-		$currentUser = ParseUser::getCurrentUser();
+		$currentUser = $this->session->userdata('user_vars');
 		$firstName = '';
 		$lastName = '';
-		$url = '/Admin/dashboard';
+		$url = '/Main/dashboard';
 		$cssClass = 'active';
 		$cssClass1 = '""';
 		$cssClass2 = '""';
 		$cssClass3 = '""';
 		if ($currentUser) {
     		// do stuff with the user
-    		$firstName = $currentUser->get("firstName");
-    		$lastName = $currentUser->get("lastName");
-    		$username = $currentUser->get("username");
-    		$roleCheck = $currentUser->get("role");
-    		$roleCheck->fetch();
-    		$role = $roleCheck->get("name");
-    		$userDetails = array(
-        	'firstName' => $firstName,
-        	'lastName' => $lastName,
-        	'username' => $username
-        	);
-        	$this->session->set_userdata($userDetails);
+    		$firstName = $currentUser['firstname'];
+    		$lastName = $currentUser["lastname"];
+    		$username = $currentUser["username"];
+    		$accessid = $currentUser['accesslevel'];
+			$roleCheck = $this->db->get_where('accesslevel', ['id' => $accessid])->row();
+    		$role = $roleCheck->name;
+    		
 
     		return array(
     		'displayData' => 'display:none',
@@ -255,7 +250,7 @@ class Dashboard extends CI_Controller {
 
     public function logout()
     {
-    	ParseUser::logout();
+    	$this->session->unset_userdata('user_vars');
     	redirect('Main/Dashboard','refresh');
     }
 }

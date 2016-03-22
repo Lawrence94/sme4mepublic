@@ -21,10 +21,12 @@ class Login_model extends CI_Model {
                 parent::__construct();
         }
 
-    public function doLogin($userName, $password){
+    public function doLogin($username, $password){
 
     	try {
-  			$user = ParseUser::logIn($userName, $password);
+  			 $this->login($username, $password);
+        // Do stuff after successful login.
+        $session = $this->session->has_userdata('user_vars');
   			// Do stuff after successful login.
   			// return true to the Login controller so that it can load the dashBoard
   			return ['status' => true,];
@@ -52,24 +54,20 @@ class Login_model extends CI_Model {
     public function doSignup($fullname, $username, $password)
     {
       // create the new company owner
-      $user = new ParseUser();
-      $user->set("fullname", $fullname);
-      $user->set("username", $username);
-      $user->set("password", $password);
-      $user->set("email", $username);
-
+      $datadb = ['fullname' => $fullname,
+                 'username' => $username,
+                 'password' => $password,
+                 'email' => $username,
+                 'aid' => 5,
+                ];
       // other fields can be set just like with ParseObject
       try {
+        //Sign-up user
+        $this->db->insert('userdetails', $datadb);
 
-      // Query for the role to be assigned to the owner of the company
-        $user->signUp();
-        $role = new ParseObject("_Role");
-        $query = new ParseQuery("_Role");
-        $role = $query->get('n21t2vD9Ke');
-        $role->getUsers()->add($user);
-        $user->set("role", $role);
-        $role->save();
-        $user->save();
+        //Now Log user in
+        $this->login($username, $password);
+        
         // Hooray! Let them use the app now.
         return ['status' => true,];
       } catch (ParseException $ex) {
@@ -96,6 +94,22 @@ class Login_model extends CI_Model {
       }
 
       return number_format( $sum, 0 );;
+    }
+
+    public function login($username, $password)
+    {
+      $details = $this->db->get_where('userdetails', ['username' => $username, 'password' => $password])->row();
+      $key = sha1($details->username.'_'.$details->aid);
+      $userdetails = ['user_vars' => ['userid' => $details->id,
+                                      'username' => $details->username,
+                                      'email' => $details->username,
+                                      'firstname' => $details->firstname,
+                                      'lastname' => $details->lastname,
+                                      'accesslevel' => $details->aid,
+                                      'k' => $key,
+                                     ]
+                     ];
+      return $this->session->set_userdata( $userdetails );
     }
 	
 }
