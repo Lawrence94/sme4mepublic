@@ -8,6 +8,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>Smart Money Ecycopedia | Home :: Login </title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href="<?php echo site_url();?>assets/css/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -39,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="header">
   <img src="<?php echo site_url();?>assets/css/images/logo.png" alt="logo" />
           <h1 > <strong>Funding your future </strong> </h1>
-                            
+                             
                         </div>
             
 <div class="wrap">
