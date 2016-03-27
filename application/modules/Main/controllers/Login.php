@@ -47,7 +47,7 @@ class Login extends CI_Controller {
                     $data = array(
 							'displayData' => 'display:show'
 							);
-                   $this->load->view('login/login', $data);
+                   $this->load->view('login/payment', $data);
             }
             else
             {
@@ -96,7 +96,7 @@ class Login extends CI_Controller {
 
 				//ParseUser::logOut();
 
-				$this->load->view('login/login', $data);
+				$this->load->view('login/payment', $data);
 			}
 		}
 
@@ -169,7 +169,7 @@ class Login extends CI_Controller {
 
 				//ParseUser::logOut();
 
-				$this->load->view('login/login', $data);
+				$this->load->view('login/payment', $data);
 			}
 		}
 	}

@@ -34,7 +34,7 @@ class Login_model extends CI_Model {
         }
         
 
-			} catch (ParseException $ex) {
+			} catch (Exception $ex) {
 				//return false to the Login controller along with the error message 
 				//so that it can send the error message to the view 
 				//through the notification_helper
@@ -62,18 +62,19 @@ class Login_model extends CI_Model {
                  'password' => $password,
                  'email' => $username,
                  'aid' => 5,
+                 'dateCreated' => new DateTime('now'),
+                 'endDate'=> new DateTime('+2 day'),
                 ];
       // other fields can be set just like with ParseObject
       try {
         //Sign-up user
-        $this->db->insert('userdetails', $datadb);
+        if($this->db->insert('userdetails', $datadb)){
+          //Now Log user in
+          $this->login($username, $password);
+        }
 
-        //Now Log user in
-        $this->login($username, $password);
-        
-        // Hooray! Let them use the app now.
         return ['status' => true,];
-      } catch (ParseException $ex) {
+      } catch (Exception $ex) {
         // Show the error message somewhere and let the user try again.
         // echo "Error: " . $ex->getCode() . " " . $ex->getMessage();
         return ['status' => false, 'parseMsg' => $ex->getMessage()];
