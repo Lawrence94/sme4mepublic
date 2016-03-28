@@ -35,14 +35,8 @@ class Payment extends CI_Controller {
 				);
 				$this->load->view('login/payment', $data);
 			}else{
-				$data = array(
-					'displayData' => 'display:none'
-				);
-
-				//ParseUser::logOut();
-
-				$this->load->view('login/signup', $data);
-				}
+				redirect('Main/Login/signup');
+			}
 	}
 	
 	public function showCard(){
