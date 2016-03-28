@@ -169,7 +169,7 @@ class Login extends CI_Controller {
 
 				//ParseUser::logOut();
 
-				$this->load->view('login/login', $data);
+				$this->load->view('login/signup', $data);
 			}
 		}
 	}
