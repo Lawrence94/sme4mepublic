@@ -18,10 +18,10 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $jobby = new Jobby\Jobby();
 
 //core application task
-$jobby->add('processPayout', array(
+$jobby->add('checkStatus', array(
     'command' => 'php ' . APPROOT . 'index.php Main/Dashboard/userStatus',
-    'schedule' => '* * * * *',
-    'output' => 'logs/payout.log',
+    'schedule' => '*/2 * * * *',
+    'output' => 'logs/userstatus.log',
     'enabled' => true,
 ));
 
