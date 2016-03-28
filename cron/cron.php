@@ -20,7 +20,7 @@ $jobby = new Jobby\Jobby();
 //core application task
 $jobby->add('checkStatus', array(
     'command' => 'php ' . APPROOT . 'index.php Main/Dashboard/userStatus',
-    'schedule' => '*/2 * * * *',
+    'schedule' => '* * * * *',
     'output' => 'logs/userstatus.log',
     'enabled' => true,
 ));
