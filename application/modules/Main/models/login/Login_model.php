@@ -65,7 +65,7 @@ class Login_model extends CI_Model {
                  'email' => $username,
                  'aid' => 5,
                  'dateCreated' => $created->format('Y-m-d'),
-                 'endDate'=> $end->format('Y-m-d'),
+                 'expDate'=> $end->format('Y-m-d'),
                 ];
       // other fields can be set just like with ParseObject
       try {
