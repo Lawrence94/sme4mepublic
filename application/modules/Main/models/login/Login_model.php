@@ -57,13 +57,15 @@ class Login_model extends CI_Model {
     public function doSignup($fullname, $username, $password)
     {
       // create the new company owner
+      $created = new DateTime('now');
+      $end = new DateTime('+1 day');
       $datadb = ['fullname' => $fullname,
                  'username' => $username,
                  'password' => $password,
                  'email' => $username,
                  'aid' => 5,
-                 'dateCreated' => new DateTime('now'),
-                 'endDate'=> new DateTime('+1 day'),
+                 'dateCreated' => $created->format('Y-m-d'),
+                 'endDate'=> $end->format('Y-m-d'),
                 ];
       // other fields can be set just like with ParseObject
       try {
