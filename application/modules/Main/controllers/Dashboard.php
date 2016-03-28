@@ -260,7 +260,7 @@ class Dashboard extends CI_Controller {
     	foreach ($details as $key => $val) {
     		$start = new DateTime($val->dateCreated);
     		$end = new DateTime($val->expDate);
-    		$diff = date_diff(strtotime($start), strtotime($end));
+    		$diff = date_diff($start, $end);
     		var_dump($diff->format("%R%a days"));
     	}
     	
