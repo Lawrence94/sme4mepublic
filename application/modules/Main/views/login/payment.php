@@ -432,46 +432,31 @@ Smart Money Encylcopedia Payments
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+         <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
           <br>
-          <i class="fa fa-th fa-7x"></i>
-          <h4 id="myModalLabel" class="semi-bold">Add A New Beacon</h4>
-          <p class="no-margin">Please fill in the details of the Beacon you wish to add </p>
+          <i class="fa fa-th fa-9x"></i>
+          <h3 id="myModalLabel" class="semi-bold">Welcome!</h3>
+          <p class="no-margin"><h5>Thank you for signing up on sme4.me!</h5> 
+      </p>
           <br>
         </div>
         <div class="modal-body">
-        <form id="admin_form" name="adminform" class="animated" action="<?= site_url('admin/Beacons') ?>" method="post">
-        Beacon Information :<br>
-          <div class="row form-row">
-            <div class="col-md-6">
-              <input required type="text" class="form-control" name="createbeac[beacname]" id="beacname" placeholder="Beacon Name">
-            </div>
-            <div class="col-md-6">
-            <input required type="text" name="createbeac[beacmajor]" class="form-control" placeholder="Beacon Major">
-            </div>
-          </div>
-          <div class="row form-row">
-             <div class="col-md-12">
-               <input required type="text" name="createbeac[beacuuid]" class="form-control" placeholder="Beacon UUID">
-              </div>  
-           </div>
-          <div class="row form-row">
-            <div class="col-md-7">
-               <input required type="text" name="createbeac[beacminor]" class="form-control" placeholder="Beacon Minor">
-          </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <input name="" type="submit" class="btn btn-primary" value="Add">
-        </div>
-        </form>
+        	<h4><p>You have been given a two(2) day free trial!</p>
+				  <p>To extend this time click on "pay" and use one of our various payment
+				options, otherwise click on "continue to site" to use the site for the
+				trial period.</p>
+			</h4>
       </div>
+		<div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Pay</button>
+          <button type="button" class="btn btn-primary">Continue to site</button>
+        </div>
       <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
   </div>
                   <!-- /.modal -->
+</div>
 
 <div class="main">
 

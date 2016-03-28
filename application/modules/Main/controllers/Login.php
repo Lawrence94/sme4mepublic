@@ -47,7 +47,7 @@ class Login extends CI_Controller {
                     $data = array(
 							'displayData' => 'display:show'
 							);
-                   $this->load->view('login/payment', $data);
+                   $this->load->view('login/login', $data);
             }
             else
             {
@@ -96,7 +96,7 @@ class Login extends CI_Controller {
 
 				//ParseUser::logOut();
 
-				$this->load->view('login/payment', $data);
+				$this->load->view('login/login', $data);
 			}
 		}
 
@@ -146,7 +146,7 @@ class Login extends CI_Controller {
 						$role = $roleCheck->name;
 						if($role == USER || $role == SUPER_ADMINISTRATOR){
 							echo "Logging you in...";
-							redirect('Main/Dashboard');
+							redirect('Main/Payment');
 						}
 						else{
 							# code...
@@ -169,7 +169,7 @@ class Login extends CI_Controller {
 
 				//ParseUser::logOut();
 
-				$this->load->view('login/payment', $data);
+				$this->load->view('login/login', $data);
 			}
 		}
 	}
