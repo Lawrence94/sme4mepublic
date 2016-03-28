@@ -256,7 +256,7 @@ class Dashboard extends CI_Controller {
 
     public function userStatus()
     {
-    	$details = $this->db->get_where('userdetails', ['status' => '1'])->result();
+    	$details = $this->db->get_where('userdetails', ['status' => '1', 'aid' => '5'])->result();
     	var_dump($details);
     	exit;
     	// $now = new DateTime('now');
