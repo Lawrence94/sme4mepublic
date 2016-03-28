@@ -258,8 +258,8 @@ class Dashboard extends CI_Controller {
     {
     	$details = $this->db->get_where('userdetails', ['status' => '1', 'aid' => '5'])->result();
     	foreach ($details as $key => $val) {
-    		$start = $val->dateCreated;
-    		$end = $val->expDate;
+    		$start = new DateTime($val->dateCreated);
+    		$end = new DateTime($val->expDate);
     		$diff = date_diff(strtotime($start), strtotime($end));
     		var_dump($diff->format("%R%a days"));
     	}
