@@ -257,7 +257,10 @@ class Dashboard extends CI_Controller {
     public function userStatus()
     {
     	$details = $this->db->get_where('userdetails', ['status' => '1', 'aid' => '5'])->result();
-    	var_dump($details);
+    	foreach ($details as $key => $val) {
+    		var_dump($val);
+    	}
+    	
     	exit;
     	// $now = new DateTime('now');
     	// $twodays = new DateTime('+1 day');
