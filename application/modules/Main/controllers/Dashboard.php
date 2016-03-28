@@ -267,7 +267,7 @@ class Dashboard extends CI_Controller {
     		file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
 
     		$diff->format("%R%a days");
-    		var_dump($file);
+    		var_dump($logFile);
     	}
     	
     	exit;
