@@ -258,7 +258,7 @@ class Dashboard extends CI_Controller {
     {
     	$details = $this->db->get_where('userdetails', ['status' => '1', 'aid' => '5'])->result();
     	foreach ($details as $key => $val) {
-    		var_dump($val->datecreated);
+    		var_dump($val->dateCreated);
     	}
     	
     	exit;
