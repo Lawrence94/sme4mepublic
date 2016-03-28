@@ -280,6 +280,7 @@ class Dashboard extends CI_Controller {
     			//file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
     			$this->db->where('id', $val->id);
 				$this->db->update('userdetails', $datadb); 
+				echo "The user status has been changed on the db";
     		}
     		
     		//var_dump($logFile);
