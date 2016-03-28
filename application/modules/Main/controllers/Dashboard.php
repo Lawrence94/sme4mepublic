@@ -263,17 +263,17 @@ class Dashboard extends CI_Controller {
     		$diff = date_diff($start, $end);
 
     		$logFile = $_SERVER['DOCUMENT_ROOT'].'/logs/cronMethodLog.txt';
-    		$log = 'Checking for expired users...';
+    		$log = 'Checking for expired users...\n';
     		echo $log;
     		//file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
 
     		if($diff->format("%R%a days") > 0){
-    			$log = 'The User ' . $val->fullname . ' with id ' . $val->id . ' is still active with ' . $diff->format("%R%a days") . ' left';
+    			$log = 'The User ' . $val->fullname . ' with id ' . $val->id . ' is still active with ' . $diff->format("%R%a days") . ' left \n';
     			echo $log;
     			//file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
     		}else{
     			$datadb = ['status' => 0];
-    			$log = 'The User ' . $val->fullname . ' with id ' . $val->id . ' has an expired license';
+    			$log = 'The User ' . $val->fullname . ' with id ' . $val->id . ' has an expired license \n';
     			echo $log;
     			//file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
     			$this->db->where('id', $val->id);
