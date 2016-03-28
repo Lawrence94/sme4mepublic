@@ -63,7 +63,7 @@ class Login_model extends CI_Model {
                  'email' => $username,
                  'aid' => 5,
                  'dateCreated' => new DateTime('now'),
-                 'endDate'=> new DateTime('+2 day'),
+                 'endDate'=> new DateTime('+1 day'),
                 ];
       // other fields can be set just like with ParseObject
       try {

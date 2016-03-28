@@ -256,20 +256,23 @@ class Dashboard extends CI_Controller {
 
     public function userStatus()
     {
-    	$now = new DateTime('now');
-    	$twodays = new DateTime('+1 day');
-
-    	$diff = date_diff($now, $twodays);
-
-    	if($diff->format("%R%a days") > 0){
-    		var_dump('active');
-    		//exit;
-    	}else{
-    		var_dump('inactive');
-    		//exit;
-    	}
-    	
-    	echo "Remaining Days ".$diff->format("%R%a days");
+    	$details = $this->db->get_where('userdetails', ['status' => 1])->result();
+    	var_dump($details);
     	exit;
+    	// $now = new DateTime('now');
+    	// $twodays = new DateTime('+1 day');
+
+    	// $diff = date_diff($now, $twodays);
+
+    	// if($diff->format("%R%a days") > 0){
+    	// 	var_dump('active');
+    	// 	//exit;
+    	// }else{
+    	// 	var_dump('inactive');
+    	// 	//exit;
+    	// }
+    	
+    	// echo "Remaining Days ".$diff->format("%R%a days");
+    	// exit;
     }
 }

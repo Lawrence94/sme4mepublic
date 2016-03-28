@@ -449,7 +449,7 @@ Smart Money Encylcopedia Payments
       </div>
 		<div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Pay</button>
-          <button type="button" class="btn btn-primary">Continue to site</button>
+          <a href="<?= site_url('Main/Dashboard') ?>"><button type="button" class="btn btn-primary">Continue to site</button></a>
         </div>
       <!-- /.modal-content -->
     </div>
@@ -480,7 +480,7 @@ Smart Money Encylcopedia Payments
 	  </a>
     </div>
     <div class='button' >
-	<a href = " #">
+	<a href = "<?= site_url('Main/Card') ?>">
       Join Code
 
       <svg class="svg-debit" viewBox="0 0 32 23">

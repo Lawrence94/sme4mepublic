@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>SME4ME: JOIN CODE</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     
     
     <link rel="stylesheet" href="<?php echo site_url();?>assets/card/css/normalize.css">
@@ -112,9 +112,9 @@ body {
     font-size: 15px;
     font-family: Georgia;
     cursor: pointer;
+  }
     
-
-    </style>
+</style>
 
     
         <script src="<?php echo site_url();?>assets/card/js/prefixfree.min.js"></script>
@@ -128,10 +128,10 @@ body {
   <div class="credit-card__title">
     JOIN CODE
   </div>
-  <form class="credit-card__form">
-    <input class="credit-card__number" placeholder="Enter Join Code" type="text" />
+  <form class="credit-card__form" action="<?php echo site_url('Main/Card/doVoucherPay');?>" method="post">
+    <input class="credit-card__number" name="code" placeholder="Enter Join Code" type="text" />
    <fieldset>
-   <a href"#"="" class="form-submit"> Submit</a>
+   <input type="submit" class="form-submit" value="Submit">
    </fieldset>
   </form>
 </div>
