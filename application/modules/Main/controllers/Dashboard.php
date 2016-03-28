@@ -261,7 +261,9 @@ class Dashboard extends CI_Controller {
     		$start = new DateTime($val->dateCreated);
     		$end = new DateTime($val->expDate);
     		$diff = date_diff($start, $end);
-    		var_dump($diff->format("%R%a days"));
+    		$file = site_url('logs/cronMethodLog.txt');
+    		$diff->format("%R%a days");
+    		var_dump($file);
     	}
     	
     	exit;
