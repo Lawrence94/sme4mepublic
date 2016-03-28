@@ -264,10 +264,12 @@ class Dashboard extends CI_Controller {
 
     		$logFile = $_SERVER['DOCUMENT_ROOT'].'/logs/cronMethodLog.txt';
     		$log = 'Checking for expired users...';
+    		echo "Checking for expired users...";
     		file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
 
     		if($diff->format("%R%a days") > 0){
     			$log = 'The User ' . $val->fullname . ' with id ' . $val->id . ' is still active with ' . $diff->format("%R%a days") . ' left';
+    			echo 'The User ' . $val->fullname . ' with id ' . $val->id . ' is still active with ' . $diff->format("%R%a days") . ' left';
     			file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
     		}else{
     			$datadb = ['status' => 0];
@@ -277,10 +279,10 @@ class Dashboard extends CI_Controller {
 				$this->db->update('userdetails', $datadb); 
     		}
     		
-    		var_dump($logFile);
+    		//var_dump($logFile);
     	}
     	
-    	exit;
+    	//exit;
     	// $now = new DateTime('now');
     	// $twodays = new DateTime('+1 day');
 
