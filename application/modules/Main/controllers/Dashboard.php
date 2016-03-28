@@ -261,7 +261,11 @@ class Dashboard extends CI_Controller {
     		$start = new DateTime($val->dateCreated);
     		$end = new DateTime($val->expDate);
     		$diff = date_diff($start, $end);
-    		$file = site_url('logs/cronMethodLog.txt');
+
+    		$logFile = site_url('logs/cronMethodLog.txt');
+    		$log = 'Checking for expired users...';
+    		file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
+
     		$diff->format("%R%a days");
     		var_dump($file);
     	}
