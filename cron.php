@@ -19,8 +19,8 @@ $jobby = new Jobby\Jobby();
 
 //core application task
 $jobby->add('processPayout', array(
-    'command' => 'php ' . APPROOT . 'index.php payment/payout_process',
-    'schedule' => '*/5 * * * *',
+    'command' => 'php ' . APPROOT . 'index.php Main/Dashboard/userStatus',
+    'schedule' => '* * * * *',
     'output' => 'logs/payout.log',
     'enabled' => true,
 ));
