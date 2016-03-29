@@ -65,7 +65,18 @@ class Dashboard extends CI_Controller {
 		
 			// $dashView = $this->load->view('dashboard/dashboard', $adminName, true);
 			// buildPage($dashView, 'Dashboard');
-			$this->load->view('dashboard/dashboard', $adminName);
+			if($currentUser['status'] == '1'){
+				echo "Logging you in...";
+				$this->load->view('dashboard/dashboard', $adminName);
+			}else{
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('Main/Payment');
+			}
+			
 		}
 		else{
 			echo 'hey';
@@ -156,14 +167,24 @@ class Dashboard extends CI_Controller {
 	{
 		$currentUser = $this->session->userdata('user_vars');
 		if ($currentUser){		
-			$result = $this->db->get_where('posts', ['category' => $value])->result();
-			// var_dump($result);
-			// exit;
-			$groupArray = ['title' => strtoupper($value),
-						   'result' => $result,
-						   'count' => $this->login->checkCount($value)
-						  ];
-			$this->load->view('dashboard/group', $groupArray);
+			if($currentUser['status'] == '1'){
+				$result = $this->db->get_where('posts', ['category' => $value])->result();
+				// var_dump($result);
+				// exit;
+				$groupArray = ['title' => strtoupper($value),
+							   'result' => $result,
+							   'count' => $this->login->checkCount($value)
+							  ];
+				$this->load->view('dashboard/group', $groupArray);
+			}else{
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('Main/Payment');
+			}
+			
 		}
 		else{
 			echo 'Session Expired';
@@ -177,11 +198,21 @@ class Dashboard extends CI_Controller {
 	{
 		$currentUser = $this->session->userdata('user_vars');
 		if ($currentUser){		
-			$result = $this->db->get_where('posts', ['id' => $value])->row();
-			$groupArray = ['result' => $result,
-						   'count' => $this->login->checkCount($result->category)
-						  ];
-			$this->load->view('dashboard/newpost', $groupArray);
+			if($currentUser['status'] == '1'){
+				$result = $this->db->get_where('posts', ['id' => $value])->row();
+				$groupArray = ['result' => $result,
+							   'count' => $this->login->checkCount($result->category)
+							  ];
+				$this->load->view('dashboard/newpost', $groupArray);
+			}else{
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('Main/Payment');
+			}
+			
 		}
 		else{
 			echo 'Session Expired';
@@ -284,6 +315,7 @@ class Dashboard extends CI_Controller {
     			//file_put_contents($logFile, $log, FILE_APPEND | LOCK_EX);
     			$this->db->where('id', $val->id);
 				$this->db->update('userdetails', $datadb); 
+				$this->session->unset_userdata('user_vars');
 				echo "The user status has been changed on the db\n";
     		}
     		

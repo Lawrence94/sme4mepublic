@@ -435,21 +435,20 @@ Smart Money Encylcopedia Payments
          <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
           <br>
           <i class="fa fa-th fa-9x"></i>
-          <h3 id="myModalLabel" class="semi-bold">Welcome!</h3>
-          <p class="no-margin"><h5>Thank you for signing up on sme4.me!</h5> 
+          <h3 id="myModalLabel" class="semi-bold"><?= $this->session->flashdata('msg0') == NULL ? 'Hello!' : $this->session->flashdata('msg0') ?></h3>
+          <p class="no-margin"><h5><?= $this->session->flashdata('msg1') == NULL ? 'Redirection Notice!' : $this->session->flashdata('msg1') ?></h5> 
       </p>
           <br>
         </div>
         <div class="modal-body">
-        	<h4><p>You have been given a two(2) day free trial!</p>
-				  <p>To extend this time click on "pay" and use one of our various payment
-				options, otherwise click on "continue to site" to use the site for the
-				trial period.</p>
-			</h4>
+        <h4><?= $this->session->flashdata('msg2') == NULL ? 'You must have been redirected here because your subscription has expired or you are signing up on the platform. 
+        Please click on "pay" to use any of our various payment methods or "continue" to check if you still have acccess ' : $this->session->flashdata('msg2') ?></h4>
       </div>
 		<div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Pay</button>
-          <a href="<?= site_url('Main/Dashboard') ?>"><button type="button" class="btn btn-primary">Continue to site</button></a>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><?= $this->session->flashdata('msg3') == NULL ? 'Pay' : $this->session->flashdata('msg3') ?></button>
+          <a href="<?= $this->session->flashdata('msg4') == 'Logout' ? site_url('Main/Dashboard/logout') : site_url('Main/Dashboard') ?>">
+            <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
+          </a>
         </div>
       <!-- /.modal-content -->
     </div>

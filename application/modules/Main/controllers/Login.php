@@ -70,8 +70,18 @@ class Login extends CI_Controller {
 					if(!empty($roleCheck)){
 						$role = $roleCheck->name;
 						if($role == SUPER_ADMINISTRATOR || $role == USER){
-							echo "Logging you in...";
-							redirect('Main/Dashboard');
+							if($currentUser['status'] == '1'){
+								echo "Logging you in...";
+								redirect('Main/Dashboard');
+							}else{
+								$this->session->set_flashdata('msg0', 'Subscription Expired!');
+								$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+								$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+								$this->session->set_flashdata('msg3', 'Pay');
+								$this->session->set_flashdata('msg4', 'Logout');
+								redirect('Main/Payment');
+							}
+							
 						}
 						else{
 							# code...
@@ -146,6 +156,14 @@ class Login extends CI_Controller {
 						$role = $roleCheck->name;
 						if($role == USER || $role == SUPER_ADMINISTRATOR){
 							echo "Logging you in...";
+							$this->session->set_flashdata('msg0', 'Welcome!');
+							$this->session->set_flashdata('msg1', 'Thank you for signing up on sme4.me!');
+							$this->session->set_flashdata('msg2', '<p>You have been given a two(2) day free trial!</p>
+																  <p>To extend this time click on "pay" and use one of our various payment
+																options, otherwise click on "continue to site" to use the site for the
+																trial period.</p>');
+							$this->session->set_flashdata('msg3', 'Pay');
+							$this->session->set_flashdata('msg4', 'Continue to site');
 							redirect('Main/Payment');
 						}
 						else{

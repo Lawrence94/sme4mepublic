@@ -58,7 +58,7 @@ class Login_model extends CI_Model {
     {
       // create the new company owner
       $created = new DateTime('now');
-      $end = new DateTime('+1 day');
+      $end = new DateTime('+2 day');
       $datadb = ['fullname' => $fullname,
                  'username' => $username,
                  'password' => $password,
@@ -116,6 +116,7 @@ class Login_model extends CI_Model {
                                       'firstname' => $details->firstname,
                                       'lastname' => $details->lastname,
                                       'accesslevel' => $details->aid,
+                                      'status' => $details->status,
                                       'k' => $key,
                                      ]
                      ];
