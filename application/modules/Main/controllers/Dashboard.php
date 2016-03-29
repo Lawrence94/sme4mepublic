@@ -260,8 +260,8 @@ class Dashboard extends CI_Controller {
     	foreach ($details as $key => $val) {
     		$logDating = new DateTime('now');
     		$logDate = $logDating->format('Y-m-d H:i:s');
-    		$start = new DateTime($val->dateCreated);
-    		$end = new DateTime($val->expDate);
+    		$start = new DateTime($val->expDate);
+    		$end = new DateTime('now');
     		$diff = date_diff($start, $end);
 
     		$logFile = $_SERVER['DOCUMENT_ROOT'].'/logs/cronMethodLog.txt';
