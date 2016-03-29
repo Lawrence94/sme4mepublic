@@ -256,6 +256,10 @@ class Dashboard extends CI_Controller {
 
     public function userStatus()
     {
+    	$logDating = new DateTime('now');
+    	$logDate = $logDating->format('Y-m-d H:i:s');
+    	$log = $logDate . ": User status check initiated...\n";
+    	echo ($log);
     	$details = $this->db->get_where('userdetails', ['status' => '1', 'aid' => '5'])->result();
     	foreach ($details as $key => $val) {
     		$logDating = new DateTime('now');
