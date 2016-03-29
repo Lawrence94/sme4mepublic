@@ -46,7 +46,30 @@ class Card extends CI_Controller {
 	}
 	
 	public function doVoucherPay(){
-		//redirect('Main/Card');
+		if ($this->input->server('REQUEST_METHOD') == 'POST') {
+			//declare variables
+			//holding boolean for error checking
+			$status1 = true;
+			$currentUser = $this->session->userdata('user_vars');
+			//code from card form
+			$code = $this->input->post('code');
+			$result = $this->db->get_where('vouchers', ['vouchercode' => $code])->row();
+
+			if($result == NULL){
+				notify('danger', 'Invalid Join Code', site_url('Main/Card'));
+			}else{
+				$userid = $currentUser['userid'];
+				$vid = $result->id;
+				$datadb = ['userid' => $userid,
+		                 'voucherid' => $vid,
+                ];
+                if($this->db->insert('subusers', $datadb)){
+                	notify('success', 'You have a one year validity', site_url('Main/Card'));
+					redirect('Main/Dashboard','refresh');
+                }
+				
+			}
+		}
 	}
 		
 }

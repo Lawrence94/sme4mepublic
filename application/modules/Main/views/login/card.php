@@ -124,6 +124,11 @@ body {
 
   <body>
 
+  <?php echo show_notification(); ?>
+              <span style="<?= $displayData ?>" >
+              <?php echo show_valnotif(); ?>
+              </span>
+
     <div class="credit-card credit-card--with-stripe credit-card--visa l-centered">
   <div class="credit-card__title">
     JOIN CODE
