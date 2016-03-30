@@ -1,29 +1,14 @@
-<!--
-Author: SME4ME
-Author URL: www.sme4.me
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Smart Money Ecycopedia | Home :: Login </title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link href="<?php echo site_url();?>assets/css/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<div class="row">
-
-<!-- Favicon and touch icons -->
+<!DOCTYPE html>
+<html >
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Smart Money Ecycopedia |Login</title>
+    <!-- Favicon and touch icons -->
        <link rel="apple-touch-icon" sizes="60x60" href="http://www.sme4.me/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="http://www.sme4.me/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="http://www.sme4.me/apple-icon-76x76.png">
@@ -40,65 +25,56 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-  </head>
-<body>
-
-<div class="header">
-  <img src="<?php echo site_url();?>assets/css/images/logo.png" alt="logo" />
-          <h1 > <strong>Funding your future </strong> </h1>
-                             
-                        </div>
-            
-<div class="wrap">
-<!-- strat-contact-form --> 
-<div class="contact-form">
-<!-- start-form -->
-  <form class="contact_form" action="<?php echo site_url();?>" method="post" name="contact_form">
-    <h1>Log In</h1>
-     <ul>
        
-          <?php echo show_notification(); ?>
-              <span style="<?= $displayData ?>" >
-              <?php echo show_valnotif(); ?>
-              </span>
-   
-          <li>
-     <input type="email" class="textbox1" name="txtusername" placeholder="Name" required />
-              <span class="form_hint">Username</span>
-               <p><img src="<?php echo site_url();?>assets/css/images/contact.png" alt=""></p>
-          </li>
-      
-          <li>
-              <input type="password" name="txtpassword" class="textbox2" placeholder="password">
-              <p><img src="<?php echo site_url();?>assets/css/images/lock.png" alt=""></p>
-          </li>
-      
-         </ul>
-          <input type="submit" name="Log In" value="Log in"/>
-      <div class="clear"></div> 
-      
-    <div class="clear"></div> 
-  </form>
-<!-- end-form -->
-<!-- start-account -->
-<div class="account">
-  <h2><a href="<?= site_url('Main/Login/signup') ?>">Don`t have an Acount? Sign Up </a></h2>
-    <div class="span"><a href="#"><img src="<?php echo site_url();?>assets/css/images/facebook.png" alt=""/><i>Log in with Facebook</i><div class="clear"></div></a></div> 
-    <div class="span1"><a href="#"><img src="<?php echo site_url();?>assets/css/images/twitter.png" alt=""/><i>Log in with Twitter</i><div class="clear"></div></a></div>
-    <div class="span2"><a href="#"><img src="<?php echo site_url();?>assets/css/images/gplus.png" alt=""/><i>Log in with Google+</i><div class="clear"></div></a></div>
-</div>  
+    
+        <link rel="stylesheet" href="<?php echo site_url();?>assets/login/css/style.css">
 
-<!-- end-account -->
-<div class="clear"></div> 
-</div>
-<!-- end-contact-form -->
-<div class="footer">
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="loginpanel">
+  <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
+  <form class="contact_form" action="<?php echo site_url();?>" method="post" name="contact_form">
+    <div class="txt">
+      <input id="user" type="text" name="txtusername" placeholder="Username" required/>
+      <label for="user" class="entypo-user"></label>
+    </div>
+    <div class="txt">
+      <input id="pwd" type="password" name="txtpassword" placeholder="Password" />
+      <label for="pwd" class="entypo-lock"></label>
+    </div>
+    <div class="buttons">
+      <input type="submit" type="button" value="Login" />
+  </form>
+    <span>
+      <a href="<?= site_url('Main/Login/signup') ?>" class="entypo-user-add register">Register</a>
+    </span>
+  </div>
   
+  <div class="hr">
+    <div></div>
+    <div>OR</div>
+    <div></div>
+  </div>
+  
+  <div class="social">
+    <a href="javascript:void(0)" class="facebook"></a>
+    <a href="javascript:void(0)" class="twitter"></a>
+    <a href="javascript:void(0)" class="googleplus"></a>
+  </div>
 </div>
-</div>
-</body>
-<footer class="main-footer">
-<strong>Copyright &copy; 2015-2016 <a href="#">JoshLaw</a>.</strong> All rights reserved.
-      </footer>
-</html>
+
+<span class="resp-info"></span>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    
+    
+    
+    
+  </body>
+  
+  </html>
