@@ -168,7 +168,7 @@ class Dashboard extends CI_Controller {
 		$currentUser = $this->session->userdata('user_vars');
 		if ($currentUser){		
 			if($currentUser['status'] == '1'){
-				$result = $this->db->get_where('posts', ['category' => $value])->result();
+				$result = $this->db->get_where('posts', ['category' => $value, 'status' => '1'])->result();
 				// var_dump($result);
 				// exit;
 				$groupArray = ['title' => strtoupper($value),

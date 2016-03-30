@@ -85,7 +85,7 @@ class Login_model extends CI_Model {
 
     public function checkCount($value)
     {
-      $result = $this->db->get_where('posts', ['category' => $value])->result();
+      $result = $this->db->get_where('posts', ['category' => $value, 'status' => '1'])->result();
       return count($result);
     }
 

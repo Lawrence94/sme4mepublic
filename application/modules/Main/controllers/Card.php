@@ -64,9 +64,13 @@ class Card extends CI_Controller {
 				$voucherRes = $this->db->get_where('subusers', ['voucherid' => $vid])->row();
 				if($voucherRes == NULL){
 					$datadb = ['userid' => $userid,
-		                 'voucherid' => $vid,
-	                ];
+			                   'voucherid' => $vid,
+		                      ];
 	                if($this->db->insert('subusers', $datadb)){
+	                	$exp = new DateTime('+365 day');
+	                	$data = ['expDate'=> $exp->format('Y-m-d H:i:s')];
+	                	$this->db->where('id', $userid);
+						$this->db->update('posts', $data);
 	                	notify('success', 'You have a one year validity', site_url('Main/Card'));
 						redirect('Main/Dashboard','refresh');
 	                }
