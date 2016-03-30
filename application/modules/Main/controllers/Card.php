@@ -60,13 +60,19 @@ class Card extends CI_Controller {
 			}else{
 				$userid = $currentUser['userid'];
 				$vid = $result->id;
-				$datadb = ['userid' => $userid,
+
+				$voucherRes = $this->db->get_where('subusers', ['voucherid' => $vid])->row();
+				if($voucherRes == NULL){
+					$datadb = ['userid' => $userid,
 		                 'voucherid' => $vid,
-                ];
-                if($this->db->insert('subusers', $datadb)){
-                	notify('success', 'You have a one year validity', site_url('Main/Card'));
-					redirect('Main/Dashboard','refresh');
-                }
+	                ];
+	                if($this->db->insert('subusers', $datadb)){
+	                	notify('success', 'You have a one year validity', site_url('Main/Card'));
+						redirect('Main/Dashboard','refresh');
+	                }
+				}else{
+					notify('danger', 'This Code has already been used, sorry', site_url('Main/Card'));
+				}
 				
 			}
 		}
