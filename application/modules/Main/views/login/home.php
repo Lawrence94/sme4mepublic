@@ -93,7 +93,8 @@
 									<div class="inner-dash clearfix">
 										
 										
-										<div class="digit">$</div>
+										<div style="font-size: 80px; float: left; text-align: center; color: #fff; position: relative; min-width: 46px; line-height: 1; overflow: hidden;" class="">
+										$</div>
 									</div>
 									<span class="dash_title">Dollars</span>
 
@@ -102,7 +103,8 @@
 								<!-- HOURS -->
 								<div class="dash hours_dash">
 									<div class="inner-dash clearfix">
-										<div class="digit"><?php echo $realcash ?></div>
+										<div style="font-size: 80px; float: left; text-align: center; color: #fff; position: relative; min-width: 46px; line-height: 1; overflow: hidden;" class="">
+										<?php echo $realcash ?></div>
 									</div>
 									<span class="dash_title"></span>
 								</div>
@@ -207,7 +209,7 @@
 										<!-- DAYS -->
 										<div class="dash days_dash">
 											<div class="inner-dash clearfix">
-												<div class="digit">$</div>
+												<div style="font-size: 50px;" class="">$</div>
 												</div>
 											<span class="dash_title">Dollars</span>
 										</div>
@@ -218,29 +220,29 @@
 											<!-- HOURS -->
 											<div class="dash hours_dash">
 												<div class="inner-dash clearfix">
-													<div class="digit">2</div>
-													<div class="digit">1</div>
+													<div style="font-size: 50px;" class=""><?php echo $realcash ?></div>
+													<!-- <div class="digit">1</div> -->
 												</div>
-												<span class="dash_title">hours</span>
+												<!-- <span class="dash_title">hours</span> -->
 											</div>
 
 											<!-- MINIUTES -->
-											<div class="dash minutes_dash">
+											<!-- <div class="dash minutes_dash">
 												<div class="inner-dash clearfix">
 													<div class="digit">0</div>
 													<div class="digit">0</div>
 												</div>
 												<span class="dash_title">Pence</span>
-											</div>
+											</div> -->
 
 											<!-- SECONDS -->
-											<div class="dash seconds_dash">
+											<!-- <div class="dash seconds_dash">
 												<div class="inner-dash clearfix">
 													<div class="digit">0</div>
 													<div class="digit">0</div>
 												</div>
 												<span class="dash_title">Kobo</span>
-											</div>
+											</div> -->
 
 										</div>
 
@@ -266,7 +268,8 @@
 					</div>
 				</div>
 				
-
+				<br>
+				<br>
 				<!-- NAVIGATION LINKS -->
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="right nav-box">
@@ -276,6 +279,7 @@
 					</div>
 				</div>
 				
+				<br>
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="left nav-box">
 						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login');?>">
