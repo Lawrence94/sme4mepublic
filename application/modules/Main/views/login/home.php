@@ -102,8 +102,7 @@
 								<!-- HOURS -->
 								<div class="dash hours_dash">
 									<div class="inner-dash clearfix">
-										<div class="digit">2</div>
-										<div class="digit">5</div>
+										<div class="digit"><?php echo $realcash ?></div>
 									</div>
 									<span class="dash_title"></span>
 								</div>
