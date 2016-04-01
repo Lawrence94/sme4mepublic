@@ -109,7 +109,7 @@
 								</div>
 
 								<!-- MINIUTES -->
-								<div class="dash minutes_dash">
+								<!-- <div class="dash minutes_dash">
 									<div class="inner-dash clearfix">
 										<div class="digit">0</div>
 										<div class="digit">0</div>
@@ -118,7 +118,7 @@
 									<span class="dash_title"></span>
 								</div>
 
-								<!-- SECONDS -->
+								SECONDS
 								<div class="dash seconds_dash">
 									<div class="inner-dash clearfix">
 										<div class="digit">0</div>
@@ -127,7 +127,7 @@
 									</div>
 									<span class="dash_title"></span>
 								</div>
-
+ -->
 							</div>
 						</div>
 
@@ -155,7 +155,7 @@
 				<!-- NAVIGATION LINKS -->
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="right nav-box">
-						<a class="md-trigger" data-modal="modal-3" href="#">
+						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login/signup');?>">
 							<span data-hover="Open an Account!">Sign Up</span>
 						</a>
 					</div>
@@ -163,7 +163,7 @@
 				
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="left nav-box">
-						<a class="md-trigger" data-modal="modal-3" href="#">
+						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login');?>">
 							<span data-hover=" Log in!">Sign in</span>
 						</a>
 					</div>
@@ -262,7 +262,7 @@
 						</div>
 						
 						<div class="tag-line">
-						<a href="https://youtu.be/iTzpJtk6jJ8"> <font color="FFFFFF"> How it Works </font> </a>
+						<a href="https://youtu.be/iTzpJtk6jJ8"> <font color="#FFFFFF"> How it Works </font> </a>
 						</div>
 					</div>
 				</div>
@@ -271,7 +271,7 @@
 				<!-- NAVIGATION LINKS -->
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="right nav-box">
-						<a class="md-trigger" data-modal="modal-3" href="#">
+						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login/signup');?>">
 							<span data-hover="Open an Account">Sign Up!</span>
 						</a>
 					</div>
@@ -279,7 +279,7 @@
 				
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="left nav-box">
-						<a class="md-trigger" data-modal="modal-3" href="#">
+						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login');?>">
 							<span data-hover="Log in!">Sign in!</span>
 						</a>
 					</div>

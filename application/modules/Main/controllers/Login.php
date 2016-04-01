@@ -59,7 +59,7 @@ class Login extends CI_Controller {
 
 				if (!$status1){
 					//echo "fuck";
-					notify('danger', $loginParse['parseMsg'], site_url());
+					notify('danger', $loginParse['parseMsg'], site_url('Main/Login'));
 				}else{
 					$currentUser = $this->session->userdata('user_vars');
 					// var_dump($currentUser);
@@ -86,11 +86,11 @@ class Login extends CI_Controller {
 						else{
 							# code...
 							echo "Taking you back...";
-							notify('danger', "Please use the admin portal to login or contact administrator", site_url());
+							notify('danger', "Please use the admin portal to login or contact administrator", site_url('Main/Login'));
 						}
 					}else{
 						echo "Taking you back...";
-						notify('danger', "You do not have permission to login here, please contact administrator", site_url());
+						notify('danger', "You do not have permission to login here, please contact administrator", site_url('Main/Login'));
 					}
 				}
             }
@@ -145,7 +145,7 @@ class Login extends CI_Controller {
 
 				if (!$status1){
 					//echo "fuck";
-					notify('danger', $signupParse['parseMsg'], site_url());
+					notify('danger', $signupParse['parseMsg'], site_url('Main/Login'));
 				}else{
 					$currentUser = $this->session->userdata('user_vars');
 
@@ -169,11 +169,11 @@ class Login extends CI_Controller {
 						else{
 							# code...
 							echo "Taking you back...";
-							notify('danger', "Please use the admin portal to login or contact administrator", site_url());
+							notify('danger', "Please use the admin portal to login or contact administrator", site_url('Main/Login'));
 						}
 					}else{
 						echo "Taking you back...";
-						notify('danger', "You do not have permission to login here, please contact administrator", site_url());
+						notify('danger', "You do not have permission to login here, please contact administrator", site_url('Main/Login'));
 					}
 				}
 		}else{

@@ -38,7 +38,7 @@
 
     <div class="loginpanel">
   <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
-  <form class="contact_form" action="<?php echo site_url();?>" method="post" name="contact_form">
+  <form class="contact_form" action="<?php echo site_url('Main/Login');?>" method="post" name="contact_form">
     <div class="txt">
       <input id="user" type="text" name="txtusername" placeholder="Username" required/>
       <label for="user" class="entypo-user"></label>
