@@ -184,7 +184,7 @@
         <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Essay') ?>" >
           <div class="plus">
           <div class="cross"></div>
-            <h2 class="title"><span>ESSAY</span></h2>
+            <h2 class="title"><span>ESSAYS</span></h2>
           </div>
           <!-- /plus -->
           <div class="count"> <span><?= $essaycount ?></span> </div>
