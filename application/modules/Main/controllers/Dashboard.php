@@ -298,7 +298,7 @@ class Dashboard extends CI_Controller {
     		$start = new DateTime('now');
     		$startDate = new DateTime($val->dateCreated); 
 
-    		$dateDiff = date_diff($start, $startDate);
+    		$dateDiff = date_diff($startDate, $start);
 
     		echo "Difference between date on db and server is: ". $dateDiff->format("%R%a days")."\n";
 
