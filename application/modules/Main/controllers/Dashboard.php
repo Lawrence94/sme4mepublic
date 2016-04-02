@@ -298,12 +298,14 @@ class Dashboard extends CI_Controller {
     		$start = new DateTime('now');
     		$startDate = new DateTime($val->dateCreated); 
 
-    		$dateDiff = date_diff($startDate, $start);
+    		
+    		$end = new DateTime($val->expDate);
+    		$diff = date_diff($start, $end);
+
+    		$dateDiff = date_diff($end, $start);
 
     		echo "Difference between date on db and server is: ". $dateDiff->format("%R%a days")."\n";
 
-    		$end = new DateTime($val->expDate);
-    		$diff = date_diff($start, $end);
 
     		$logFile = $_SERVER['DOCUMENT_ROOT'].'/logs/cronMethodLog.txt';
     		$log = $logDate . ": Checking for expired users...\n";
