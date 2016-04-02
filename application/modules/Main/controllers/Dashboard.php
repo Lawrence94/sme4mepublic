@@ -66,7 +66,7 @@ class Dashboard extends CI_Controller {
 			// $dashView = $this->load->view('dashboard/dashboard', $adminName, true);
 			// buildPage($dashView, 'Dashboard');
 			if($currentUser['status'] == '1'){
-				echo "Logging you in...";
+				//echo "Logging you in...";
 				$this->load->view('dashboard/dashboard', $adminName);
 			}else{
 				$this->session->set_flashdata('msg0', 'Subscription Expired!');
@@ -251,7 +251,7 @@ class Dashboard extends CI_Controller {
         	'realcash' => $this->login->checkCash(),
         	//'grantcount' => $this->login->checkCount('Grant'),
         	'phdcount' => $this->login->checkCount('Phd'),
-        	'fellowcount' => $this->login->checkCount('Fellowship'),
+        	'fellowcount' => $this->login->checkCount('Award'),
         	'intcount' => $this->login->checkCount('Internship'),
         	//'corpcount' => $this->login->checkCount('Corporation'),
         	'bachelorcount' => $this->login->checkCount('Bachelor'),

@@ -85,10 +85,10 @@
           <!-- /.inner -->
           <!-- </div> -->
         <!-- /.block -->
-        <div class="block  blog aggregator" data-mobile-weight="5"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Fellowship') ?>" >
+        <div class="block  blog aggregator" data-mobile-weight="5"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Award') ?>" >
           <div class="plus">
       <div class="cross"></div>
-            <h2 class="title"><span>FELLOWSHIPS</span></h2>
+            <h2 class="title"><span>AWARDS</span></h2>
           </div>
           <!-- /plus -->
           <div class="count"> <span><?= $fellowcount ?></span> </div>

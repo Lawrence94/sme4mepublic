@@ -155,7 +155,7 @@ class Login extends CI_Controller {
 					if(!empty($roleCheck)){
 						$role = $roleCheck->name;
 						if($role == USER || $role == SUPER_ADMINISTRATOR){
-							echo "Logging you in...";
+							//echo "Logging you in...";
 							$this->session->set_flashdata('msg0', 'Welcome!');
 							$this->session->set_flashdata('msg1', 'Thank you for signing up on sme4.me!');
 							$this->session->set_flashdata('msg2', '<p>You have been given a two(2) day free trial!</p>
