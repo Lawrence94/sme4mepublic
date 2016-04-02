@@ -302,7 +302,7 @@ class Dashboard extends CI_Controller {
     		$end = new DateTime($val->expDate);
     		$diff = date_diff($start, $end);
 
-    		$dateDiff = date_diff($startDate, $end);
+    		$dateDiff = date_diff($start, $startDate);
 
     		echo "Difference between date on db and server is: ". $dateDiff->format("%R%a days")."\n";
 
