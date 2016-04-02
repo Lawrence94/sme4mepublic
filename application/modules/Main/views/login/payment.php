@@ -474,8 +474,8 @@ Smart Money Encylcopedia Payments
       </svg>
 	  </a>
     </div>
-    <div class='button'>
-	<a href = " #" >
+    <!-- <div class='button'>
+	   <a href = " #" >
       QuickTeller
 
       <svg class="svg-visa" viewBox="0 0 512 512">
@@ -517,10 +517,10 @@ Smart Money Encylcopedia Payments
         <path class="svg-amex-letter" d="M450.984,329.018h-23.495v-11.973h20.507c0,0,7.477,0.88,7.477-4.123 c0-4.679-11.169-4.316-11.169-4.316s-18.218,1.586-18.218-15.484c0-16.984,16.449-16.016,16.449-16.016h25.262v12.14h-20.334 c0,0-7.038-1.412-7.038,3.705c0,4.296,9.597,3.685,9.597,3.685s20.144-1.488,20.144,14.168 c0,16.793-12.983,18.282-17.584,18.282C451.586,329.084,450.984,329.018,450.984,329.018" />
       </svg>
 	  </a>
-    </div>
+    </div> -->
     
-    <div class='button'>
-	<a href = " #" >
+    <!-- <div class='button'>
+	   <a href = " #" >
       Fortumo
 
       <svg class="svg-click" viewBox="0 0 512 512">
@@ -540,9 +540,9 @@ Smart Money Encylcopedia Payments
         <path class="svg-click-letter" d="M449.076,394.145c-0.412,1.029-1.03,1.854-2.162,1.854h-8.345 c-1.132,0-1.955-0.928-1.544-1.955l5.869-17.202l-16.378-49.954c-0.307-1.027,0.312-1.957,1.548-1.957h8.138 c1.132,0,1.955,0.723,2.265,1.854l10.507,32.65l11.021-32.65c0.412-1.028,1.133-1.854,2.266-1.854h8.139 c1.234,0,1.954,1.028,1.544,2.062L449.076,394.145z" />
       </svg>
 	  </a>
-    </div>
+    </div> -->
 
-   <div class='button'>
+   <!-- <div class='button'>
 	   <a href = " #" >
       PayPal
 
@@ -556,7 +556,7 @@ Smart Money Encylcopedia Payments
         <polygon class="svg-paypal-letter4to6" points="429.327,201.88 410.649,287.754 433.583,287.754 452.491,201.88 429.327,201.88" />
       </svg>
 	  </a>
-    </div>
+    </div> -->
 
   </div>
 
