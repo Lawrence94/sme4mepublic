@@ -262,7 +262,7 @@ class Dashboard extends CI_Controller {
         	'startupcount' => $this->login->checkCount('Startup'),
         	//'socialcount' => $this->login->checkCount('SocialInnovation'),
         	'essaycount' => $this->login->checkCount('Essay'),
-        	'ngocount' => $this->login->checkCount('Ngo'),
+        	'ngocount' => $this->login->checkCount('Mba'),
         	//'govcount' => $this->login->checkCount('Government'),
         	'loancount' => $this->login->checkCount('Loan'),
         	'philcount' => $this->login->checkCount('Philantropy'),
