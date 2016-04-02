@@ -209,7 +209,7 @@
 										<!-- DAYS -->
 										<div class="dash days_dash">
 											<div class="inner-dash clearfix">
-												<div style="font-size: 50px;" class="">$</div>
+												<div style="font-size: 43px;" class="">$</div>
 												</div>
 											<span class="dash_title">Dollars</span>
 										</div>
