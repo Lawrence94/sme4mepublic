@@ -211,10 +211,10 @@
           </a>  --><!-- /.inner --><!-- </div> -->
 
           <!-- /.block -->
-        <div class="block  contact linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Ngo') ?>" >
+        <div class="block  contact linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Mba') ?>" >
           <div class="plus">
           <div class="cross"></div>
-            <h2 class="title"><span>N.G.O</span></h2>
+            <h2 class="title"><span>MBA</span></h2>
           </div>
           <!-- /plus -->
           <div class="count"> <span><?= $ngocount ?></span> </div>
