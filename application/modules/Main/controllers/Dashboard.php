@@ -296,6 +296,12 @@ class Dashboard extends CI_Controller {
     		$logDating = new DateTime('now');
     		$logDate = $logDating->format('Y-m-d H:i:s');
     		$start = new DateTime('now');
+    		$startDate = new DateTime($val->dateCreated); 
+
+    		$dateDiff = date_diff($start, $startDate);
+
+    		echo "Difference between date on db and server is: ". $dateDiff->format("%R%a days");
+
     		$end = new DateTime($val->expDate);
     		$diff = date_diff($start, $end);
 
