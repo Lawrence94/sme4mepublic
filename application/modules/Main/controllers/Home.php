@@ -28,11 +28,15 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		
-				$data = array(
-					'realcash' => $this->login->checkCash()
-				);
-				$this->load->view('login/home', $data);
+		$currentUser = $this->session->userdata('user_vars');
+		if($currentUser){
+			redirect('Main/Dashboard');
+		}else{
+			$data = array(
+				'realcash' => $this->login->checkCash()
+			);
+			$this->load->view('login/home', $data);
+		}
 			
 	}
 		

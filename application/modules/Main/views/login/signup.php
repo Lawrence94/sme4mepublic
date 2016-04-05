@@ -35,7 +35,7 @@
   </head>
 
   <body>
-
+    <?php echo show_notification(); ?>
   <div class="loginpanel">
   <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
   <form class="contact_form" action="<?php echo site_url('Main/Login/signup');?>" method="post" name="contact_form">

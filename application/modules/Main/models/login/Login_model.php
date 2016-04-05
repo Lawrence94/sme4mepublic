@@ -89,6 +89,32 @@ class Login_model extends CI_Model {
       return count($result);
     }
 
+    public function doProfileEdit($fullname='', $username='', $userid, $firstname='', $lastname='')
+    {
+      try {
+        $currentUser = $this->session->userdata('user_vars');
+        $access = $currentUser['accesslevel'];
+        $postArray = [];
+        if ($access == '1') {
+          
+          $postArray = ['firstname' => $fullname,
+                        'lastname' => $lastname,
+                        'username' => $username,
+                       ];
+        }else{
+          $postArray = ['fullname' => $fullname,
+                        'username' => $username,
+                       ];
+        }
+        
+        $this->db->where('id', $userid);
+        $this->db->update('userdetails', $postArray);
+        return ['status' => true,];
+      } catch (Exception $ex) {
+        return ['status' => false, 'parseMsg' => 'There was an error, please try again'];
+      }
+    }
+
     public function checkCash()
     {
       $result = $this->db->get('posts')->result();
@@ -113,6 +139,7 @@ class Login_model extends CI_Model {
         $userdetails = ['user_vars' => ['userid' => $details->id,
                                       'username' => $details->username,
                                       'email' => $details->username,
+                                      'fullname' => $details->fullname,
                                       'firstname' => $details->firstname,
                                       'lastname' => $details->lastname,
                                       'accesslevel' => $details->aid,
