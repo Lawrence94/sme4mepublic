@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" version="HTML+RDFa 1.0" lang="en" dir="ltr">
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>Smart Money Encyclopedia</title>
-<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/main-style.css" media="all" />
-<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/style.css" media="all" />
-<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/custom.css" media="all" />
-<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/responsive.css" media="all" />
+<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/contact/css/main-style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/contact/css/style.css" media="all" />
+<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/contact/css/custom.css" media="all" />
+<link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/contact/css/responsive.css" media="all" />
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_RLdCYwzbvDqlQo2TU9KQgLHzdcyZ66umH31ME30FMh0.js"></script>
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_RLdCYwzbvDqlQo2TU9KQgLHzdcyZ66umH31ME30FMh0.js"></script>
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_X3wqWxXtw6R4AIb97o3dAWED9S2GhQf47b9XC3VETVg.js"></script>
