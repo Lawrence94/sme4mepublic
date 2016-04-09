@@ -254,10 +254,10 @@
                                       </h4>
                                     </a>
                                 </div>
-                                <!-- <p class="description text-center"> "Dry Bones shall Rise again <br>
-                                                    Joshua is fair <br>
-                                                    lawrence is Black"
-                                </p> -->
+                                <p class="description text-center"> "You have <br>
+                                                    <?php echo $daysleft; ?> <br>
+                                                    left on your subscription"
+                                </p>
                             </div>
                             <hr>
                             <div class="text-center">

@@ -92,6 +92,10 @@ class Profile extends CI_Controller {
     		$userid = $currentUser['userid'];
 			$roleCheck = $this->db->get_where('accesslevel', ['id' => $accessid])->row();
     		$role = $roleCheck->name;
+    		$details = $this->db->get_where('userdetails', ['id' => $userid])->row();
+    		$start = new DateTime('now');
+    		$end = new DateTime($details->expDate);
+    		$diff = date_diff($start, $end);
     		// var_dump($currentUser);
     		// exit;
     		
@@ -102,6 +106,7 @@ class Profile extends CI_Controller {
         	'lastname' => $lastName,
         	'username' => $username,
         	'fullname' => $fullname,
+        	'daysleft' => $diff->format("%R%a days"),
         	'redirect' => $url,
         	'accesslevel' => $accessid,
         	'role' => $role,
