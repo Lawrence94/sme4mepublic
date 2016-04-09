@@ -232,7 +232,7 @@
        
         
         <!-- /.block -->
-        <div class="block  contact linksection filter-contact aggregator" data-mobile-weight="1"><a class="inner" href="#" >
+        <div class="block  contact linksection filter-contact aggregator" data-mobile-weight="1"><a class="inner" href="<?= site_url('Main/Dashboard/contact') ?>" >
           <div class="plus">
         <div class="cross"></div>
             <h2 class="title"><span>CONTACT</span></h2>

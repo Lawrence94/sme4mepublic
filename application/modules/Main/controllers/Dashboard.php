@@ -194,6 +194,32 @@ class Dashboard extends CI_Controller {
 		
 	}
 
+	public function contact()
+	{
+		$currentUser = $this->session->userdata('user_vars');
+		if ($currentUser){		
+			if($currentUser['status'] == '1'){
+				// $result = $this->db->get_where('posts', ['id' => $value])->row();
+				// $groupArray = ['result' => $result,
+				// 			   'count' => $this->login->checkCount($result->category)
+				// 			  ];
+				$this->load->view('dashboard/contact');
+			}else{
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('Main/Payment');
+			}
+			
+		}
+		else{
+			echo 'Session Expired';
+			redirect('Main/Login', 'refresh');
+		}
+	}
+
 	public function getpost($value)
 	{
 		$currentUser = $this->session->userdata('user_vars');
