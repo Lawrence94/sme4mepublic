@@ -43,7 +43,7 @@ class Profile extends CI_Controller {
 	public function edit($userid)
 	{
 		if ($this->input->post('editprofile')) {
-			$edit = $this->input->post('signup');
+			$edit = $this->input->post('editprofile');
 
 			$currentUser = $this->session->userdata('user_vars');
 			$access = $currentUser['accesslevel'];
