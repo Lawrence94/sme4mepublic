@@ -45,7 +45,7 @@
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>PROFILE</span></h2>
-             <h1><span class="subtitle"><strong>PROFILE</strong></span></h1>
+             <h1><span class="subtitle"><strong>My PROFILE</strong></span></h1>
           </div>
           <!-- /plus -->
           </a> <!-- /.inner --></div>
