@@ -36,6 +36,9 @@
 
   <body>
   <?php echo show_notification(); ?>
+  <span style="<?= $displayData ?>" >
+  <?php echo show_valnotif(); ?>
+  </span>
     <div class="loginpanel">
   <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
   <form class="contact_form" action="<?php echo site_url('Main/Login');?>" method="post" name="contact_form">
