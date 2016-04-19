@@ -35,9 +35,7 @@
   </head>
 
   <body>
-  <?php echo show_notification(); ?>
-  <span style="<?= $displayData ?>" >
-  <?php echo show_valnotif(); ?>
+  
   </span>
     <div class="loginpanel">
     <?php echo show_notification(); ?>
