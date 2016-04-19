@@ -279,7 +279,7 @@
                 <nav class="pull-left">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo site_url('Main/Dashboard');?>">
                                 Home
                             </a>
                         </li>
@@ -289,15 +289,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo site_url('Main/Dashboard/contact');?>">
                                 Contact
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                Opportunities
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
