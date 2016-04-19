@@ -97,11 +97,11 @@
                             </a>
                         </li>
                         
-                        <li>
+                        <!-- <li>
                            <a href="">
                                 <i class="fa fa-search"></i>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
