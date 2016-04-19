@@ -121,7 +121,7 @@ by exposing them to self-development opportunities, one youth at a time.
           <span class="subtitle">Founder / CEO </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="profile/manos-riglis.html"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/kpobs.jpg" width="180" height="180" alt="" /></a></div>    
+          <div class="profile-image-wrapper colorshift"><a href="profile/manos-riglis.html"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/kpobs.JPG" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/manos-riglis" typeof="sioc:UserAccount" property="foaf:name">Kpobari Nwanya </a></h2>    
           <span class="subtitle">Chief Operating Officer </span>    </div>
   <div class="profile-card">
@@ -131,7 +131,7 @@ by exposing them to self-development opportunities, one youth at a time.
           <span class="subtitle">Chief Technology Officer </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="profile/phil-adams.html"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/success.jpg" width="180" height="180" alt="" /></a></div>    
+          <div class="profile-image-wrapper colorshift"><a href="profile/phil-adams.html"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/success.JPG" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/phil-adams" typeof="sioc:UserAccount" property="foaf:name">Success Chinwo </a></h2>    
           <span class="subtitle">Database Analyst </span>    </div>
   <div class="profile-card">
