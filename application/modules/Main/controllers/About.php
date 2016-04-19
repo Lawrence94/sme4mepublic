@@ -11,6 +11,7 @@ class About extends CI_Controller {
 
 	public function index()
 	{
+		$currentUser = $this->session->userdata('user_vars');
 		if ($currentUser){		
 		
 			// $dashView = $this->load->view('dashboard/dashboard', $adminName, true);
