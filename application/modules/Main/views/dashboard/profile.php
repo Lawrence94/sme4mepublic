@@ -47,7 +47,7 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.sme4.me" class="simple-text">
+                <a href="<?php echo site_url('Main/Home');?>" class="simple-text">
                     SME4ME
                 </a>
             </div>
