@@ -242,7 +242,7 @@
         
     
         <!-- /.block -->
-         <div class="block  about linksection filter-about aggregator" data-mobile-weight="6"><a class="inner" href="#" >
+         <div class="block  about linksection filter-about aggregator" data-mobile-weight="6"><a class="inner" href="<?php echo site_url('Main/About');?>" >
           <div class="plus">
         <div class="cross"></div>
             <h2 class="title"><span>ABOUT US</span></h2>
