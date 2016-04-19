@@ -13,7 +13,7 @@ if(!function_exists('show_valnotif')){
     	 ?>
 
 			<div class="alert alert-danger fade in">
-			    <button type="button" class="close" data-dismiss="alert"></button>
+			    <button type="button" class="close" data-dismiss="alert">x</button>
 			    <?php echo validation_errors(); ?>
 			</div>
 		<?php	
