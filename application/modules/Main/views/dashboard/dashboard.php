@@ -44,7 +44,7 @@
       <a class="inner" href="<?= site_url('Main/Profile') ?>" >
           <div class="plus">
           <div class="cross"></div>
-            <h2 class="title"><span>MY PROFILE</span></h2>
+            <h2 class="title"><span>PROFILE</span></h2>
              <h1><span class="subtitle"><strong>PROFILE</strong></span></h1>
           </div>
           <!-- /plus -->
