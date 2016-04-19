@@ -284,7 +284,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo site_url('Main/About');?>">
                                 Company
                             </a>
                         </li>
