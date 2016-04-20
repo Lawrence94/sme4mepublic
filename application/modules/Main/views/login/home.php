@@ -148,7 +148,7 @@
 						</div>
 						
 						<div class="tag-line">
-						<a href="https://youtu.be/iTzpJtk6jJ8"> <font color="FFFFFF"> How it Works </font> </a>
+						<a href="#"> <font color="FFFFFF"> How it Works </font> </a>
 						</div>
 					</div>
 				</div>
