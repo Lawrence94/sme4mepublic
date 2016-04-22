@@ -126,7 +126,7 @@ by exposing them to self-development opportunities, one youth at a time.
           <span class="subtitle">Business Development Manager </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="#"><img typeof="foaf:Image" src="//sites/default/files/styles/180assets/sme4me/x180/public/users/picture-75-1398351179.jpg" width="180" height="180" alt="" /></a></div>    
+          <div class="profile-image-wrapper colorshift"><a href="#"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180assets/sme4me/x180/public/users/picture-75-1398351179.jpg" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/nick-cole" typeof="sioc:UserAccount" property="foaf:name">Ibifa Mcdiamond </a></h2>    
           <span class="subtitle">Lead Developer </span>    </div>
   <div class="profile-card">
