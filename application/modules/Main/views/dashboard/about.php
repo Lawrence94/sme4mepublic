@@ -65,21 +65,21 @@ $("#ajax_custom_cont_wrapper").css({display: "none"});
     
 </header> <!-- /header -->
 <!-- Favicon and touch icons -->
-<link rel="apple-touch-icon" sizes="60x60" href="http://www.sme4.me/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="http://www.sme4.me/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="http://www.sme4.me/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="http://www.sme4.me/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="http://www.sme4.me/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="http://www.sme4.me/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="http://www.sme4.me/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="http://www.sme4.me/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="http://www.sme4.me/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://www.sme4.me/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="http://www.sme4.me/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="http://www.sme4.me/favicon-16x16.png">
-<link rel="manifest" href="http://www.sme4.me/manifest.json">
+<link rel="apple-touch-icon" sizes="60x60" href="http://www.sme4.me/assets/sme4me/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.sme4.me/assets/sme4me/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://www.sme4.me/assets/sme4me/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.sme4.me/assets/sme4me/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://www.sme4.me/assets/sme4me/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.sme4.me/assets/sme4me/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://www.sme4.me/assets/sme4me/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://www.sme4.me/assets/sme4me/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://www.sme4.me/assets/sme4me/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://www.sme4.me/assets/sme4me/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://www.sme4.me/assets/sme4me/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://www.sme4.me/assets/sme4me/favicon-16x16.png">
+<link rel="manifest" href="http://www.sme4.me/assets/sme4me/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="http://www.sme4.me/assets/sme4me/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
 
@@ -116,28 +116,28 @@ by exposing them to self-development opportunities, one youth at a time.
       <div class="view-content">
         <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="profile/olly-guest.html"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/suanu.jpg" width="180" height="180" alt="" /></a></div>    
-          <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/olly-guest" typeof="sioc:UserAccount" property="foaf:name">Suanu Moni-Nwinia </a></h2>    
+          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/suanu');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/suanu.jpg" width="180" height="180" alt="" /></a></div>    
+          <h2 class="title"><a href="<?php echo site_url('Main/About/suanu');?>" title="View user profile." class="username" xml:lang="" about="/profile/olly-guest" typeof="sioc:UserAccount" property="foaf:name">Suanu Moni-Nwinia </a></h2>    
           <span class="subtitle">Founder / CEO </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="profile/manos-riglis.html"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/kpobs.JPG" width="180" height="180" alt="" /></a></div>    
-          <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/manos-riglis" typeof="sioc:UserAccount" property="foaf:name">Kpobari Nwanya </a></h2>    
+          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/kpobari');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/kpobs.JPG" width="180" height="180" alt="" /></a></div>    
+          <h2 class="title"><a href="<?php echo site_url('Main/About/kpobari');?>" title="View user profile." class="username" xml:lang="" about="/profile/manos-riglis" typeof="sioc:UserAccount" property="foaf:name">Kpobari Nwanya </a></h2>    
           <span class="subtitle">Chief Operating Officer </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="profile/nick-cole.html"><img typeof="foaf:Image" src="//sites/default/files/styles/180x180/public/users/picture-75-1398351179.jpg" width="180" height="180" alt="" /></a></div>    
+          <div class="profile-image-wrapper colorshift"><a href="#"><img typeof="foaf:Image" src="//sites/default/files/styles/180assets/sme4me/x180/public/users/picture-75-1398351179.jpg" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/nick-cole" typeof="sioc:UserAccount" property="foaf:name">Ibifa Mcdiamond </a></h2>    
           <span class="subtitle">Chief Technology Officer </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="profile/phil-adams.html"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/success.JPG" width="180" height="180" alt="" /></a></div>    
-          <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/phil-adams" typeof="sioc:UserAccount" property="foaf:name">Success Chinwo </a></h2>    
+          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/success');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/success.JPG" width="180" height="180" alt="" /></a></div>    
+          <h2 class="title"><a href="<?php echo site_url('Main/About/success');?>" title="View user profile." class="username" xml:lang="" about="/profile/phil-adams" typeof="sioc:UserAccount" property="foaf:name">Success Chinwo </a></h2>    
           <span class="subtitle">Database Analyst </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="profile/louise-goulden.html"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/wisdom.jpg" width="180" height="180" alt="" /></a></div>    
-          <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/louise-goulden" typeof="sioc:UserAccount" property="foaf:name">Wisdom Nwikpo </a></h2>    
+          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/wisdom');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/wisdom.jpg" width="180" height="180" alt="" /></a></div>    
+          <h2 class="title"><a href="<?php echo site_url('Main/About/wisdom');?>" title="View user profile." class="username" xml:lang="" about="/profile/louise-goulden" typeof="sioc:UserAccount" property="foaf:name">Wisdom Nwikpo </a></h2>    
           <span class="subtitle">Marketing Analyst </span>    </div>
 
 		  

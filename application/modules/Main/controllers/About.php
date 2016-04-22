@@ -35,6 +35,115 @@ class About extends CI_Controller {
 		}
 	}
 
+	public function kpobari()
+	{
+		$currentUser = $this->session->userdata('user_vars');
+		if ($currentUser){		
+		
+			// $dashView = $this->load->view('dashboard/dashboard', $adminName, true);
+			// buildPage($dashView, 'Dashboard');
+			if($currentUser['status'] == '1'){
+				//echo "Logging you in...";
+				$this->load->view('dashboard/kpobari');
+			}else{
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('Main/Payment');
+			}
+			
+		}
+		else{
+			echo 'hey';
+			redirect('Main/Login', 'refresh');
+		}
+	}
+
+	public function suanu()
+	{
+		$currentUser = $this->session->userdata('user_vars');
+		if ($currentUser){		
+		
+			// $dashView = $this->load->view('dashboard/dashboard', $adminName, true);
+			// buildPage($dashView, 'Dashboard');
+			if($currentUser['status'] == '1'){
+				//echo "Logging you in...";
+				$this->load->view('dashboard/suanu');
+			}else{
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('Main/Payment');
+			}
+			
+		}
+		else{
+			echo 'hey';
+			redirect('Main/Login', 'refresh');
+		}
+	}
+
+	public function success()
+	{
+		$currentUser = $this->session->userdata('user_vars');
+		if ($currentUser){		
+		
+			// $dashView = $this->load->view('dashboard/dashboard', $adminName, true);
+			// buildPage($dashView, 'Dashboard');
+			if($currentUser['status'] == '1'){
+				//echo "Logging you in...";
+				$this->load->view('dashboard/success');
+			}else{
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('Main/Payment');
+			}
+			
+		}
+		else{
+			echo 'hey';
+			redirect('Main/Login', 'refresh');
+		}
+	}
+
+	public function wisdom()
+	{
+		$currentUser = $this->session->userdata('user_vars');
+		if ($currentUser){		
+		
+			// $dashView = $this->load->view('dashboard/dashboard', $adminName, true);
+			// buildPage($dashView, 'Dashboard');
+			if($currentUser['status'] == '1'){
+				//echo "Logging you in...";
+				$this->load->view('dashboard/wisdom');
+			}else{
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('Main/Payment');
+			}
+			
+		}
+		else{
+			echo 'hey';
+			redirect('Main/Login', 'refresh');
+		}
+	}
+
+	public function ibifa()
+	{
+		# code...
+	}
+
 }
 
 /* End of file About.php */
