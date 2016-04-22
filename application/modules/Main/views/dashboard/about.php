@@ -123,12 +123,12 @@ by exposing them to self-development opportunities, one youth at a time.
       
           <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/kpobari');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/kpobs.JPG" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="<?php echo site_url('Main/About/kpobari');?>" title="View user profile." class="username" xml:lang="" about="/profile/manos-riglis" typeof="sioc:UserAccount" property="foaf:name">Kpobari Nwanya </a></h2>    
-          <span class="subtitle">Chief Operating Officer </span>    </div>
+          <span class="subtitle">Business Development Manager </span>    </div>
   <div class="profile-card">
       
           <div class="profile-image-wrapper colorshift"><a href="#"><img typeof="foaf:Image" src="//sites/default/files/styles/180assets/sme4me/x180/public/users/picture-75-1398351179.jpg" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="#" title="View user profile." class="username" xml:lang="" about="/profile/nick-cole" typeof="sioc:UserAccount" property="foaf:name">Ibifa Mcdiamond </a></h2>    
-          <span class="subtitle">Chief Technology Officer </span>    </div>
+          <span class="subtitle">Lead Developer </span>    </div>
   <div class="profile-card">
       
           <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/success');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/success.JPG" width="180" height="180" alt="" /></a></div>    
@@ -138,7 +138,7 @@ by exposing them to self-development opportunities, one youth at a time.
       
           <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/wisdom');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/wisdom.jpg" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="<?php echo site_url('Main/About/wisdom');?>" title="View user profile." class="username" xml:lang="" about="/profile/louise-goulden" typeof="sioc:UserAccount" property="foaf:name">Wisdom Nwikpo </a></h2>    
-          <span class="subtitle">Marketing Analyst </span>    </div>
+          <span class="subtitle">Sales Associate </span>    </div>
 
 		  
     </div>
