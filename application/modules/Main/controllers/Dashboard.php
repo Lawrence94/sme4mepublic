@@ -377,7 +377,7 @@ class Dashboard extends CI_Controller {
 
     public function mailtest($name)
     {
-    	$to      = 'l.agbani@hotmail.co.uk';
+    	$to      = 'l.agbani@hotmail.co.uk' . ', ';
     	$to      .= 'agbani92@gmail.com';
 		$subject = 'Subject';
 		$message = 'This is a test';
