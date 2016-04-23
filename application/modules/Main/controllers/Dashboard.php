@@ -380,7 +380,7 @@ class Dashboard extends CI_Controller {
     	$to      = 'l.agbani@hotmail.co.uk';
 		$subject = 'Subject';
 		$message = 'This is a test';
-    	$headers = 'From: Lawrence Agbani\<lawrence@lawrencetalks.com\>' . "\r\n" .
+    	$headers = 'From: Lawrence\<lawrence@lawrencetalks.com\>' . "\r\n" .
 	   'Reply-To: lawrence@lawrencetalks.com' . "\r\n" .
 	   'X-Mailer: PHP/' . phpversion();
 	   try {
