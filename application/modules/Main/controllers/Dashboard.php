@@ -375,7 +375,7 @@ class Dashboard extends CI_Controller {
     	// exit;
     }
 
-    public function mailtest()
+    public function mailtest($name)
     {
     	$to      = 'l.agbani@hotmail.co.uk' . ', ';
     	$to      .= 'agbani92@gmail.com';
