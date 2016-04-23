@@ -374,4 +374,20 @@ class Dashboard extends CI_Controller {
     	// echo "Remaining Days ".$diff->format("%R%a days");
     	// exit;
     }
+
+    public function mailtest()
+    {
+    	$to      = 'l.agbani@hotmail.co.uk';
+		$subject = 'Subject';
+		$message = 'This is a test';
+    	$headers = 'From: Lawrence Agbani\<lawrence@lawrencetalks.com\>' . "\r\n" .
+	   'Reply-To: lawrence@lawrencetalks.com' . "\r\n" .
+	   'X-Mailer: PHP/' . phpversion();
+	   try {
+	   	mail($to, $subject, $message, $headers);
+	   } catch (Exception $e) {
+	   	echo "THere was a problem " . $e;
+	   }
+	   
+    }
 }
