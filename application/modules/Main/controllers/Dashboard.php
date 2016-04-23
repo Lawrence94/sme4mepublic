@@ -375,7 +375,7 @@ class Dashboard extends CI_Controller {
     	// exit;
     }
 
-    public function mailtest($name)
+    public function mailtest()
     {
     	$to      = 'l.agbani@hotmail.co.uk' . ', ';
     	$to      .= 'agbani92@gmail.com';
@@ -385,7 +385,7 @@ class Dashboard extends CI_Controller {
 	   'Reply-To: lawrence@lawrencetalks.com' . "\r\n" .
 	   'X-Mailer: PHP/' . phpversion();
 	   try {
-	   	mail($to, $subject, $message, null, '-flawrence@lawrencetalks.com -rlawrence@lawrencetalks.com');
+	   	mail($to, $subject, $message, $headers, '-flawrence@lawrencetalks.com -rlawrence@lawrencetalks.com');
 	   	echo "Mail sent ";
 	   } catch (Exception $e) {
 	   	echo "THere was a problem " . $e;
