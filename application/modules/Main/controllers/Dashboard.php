@@ -384,7 +384,7 @@ class Dashboard extends CI_Controller {
 	   'Reply-To: lawrence@lawrencetalks.com' . "\r\n" .
 	   'X-Mailer: PHP/' . phpversion();
 	   try {
-	   	mail($to, $subject, $message, $headers);
+	   	mail($to, $subject, $message);
 	   	echo "Mail sent ";
 	   } catch (Exception $e) {
 	   	echo "THere was a problem " . $e;
