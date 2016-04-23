@@ -375,13 +375,13 @@ class Dashboard extends CI_Controller {
     	// exit;
     }
 
-    public function mailtest()
+    public function mailtest($email, $name)
     {
     	$to      = 'l.agbani@hotmail.co.uk';
 		$subject = 'Subject';
 		$message = 'This is a test';
-    	$headers = 'From: Lawrence<lawrence@lawrencetalks.com>' . "\r\n" .
-	   'Reply-To: lawrence@lawrencetalks.com' . "\r\n" .
+    	$headers = 'From: '.$name.'<'.$email.'>' . "\r\n" .
+	   'Reply-To: '.$email.'' . "\r\n" .
 	   'X-Mailer: PHP/' . phpversion();
 	   try {
 	   	mail($to, $subject, $message, $headers);
