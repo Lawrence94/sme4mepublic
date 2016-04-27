@@ -3,7 +3,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Smart Money Encyclopedia| Coming Soon</title>	
+    <title>Smart Money Encyclopedia</title>
+    <meta property="og:url" content="http://www.sme4.me">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Smart Money Encyclopedia">
+	<meta property="og:description" content="amazing opportunities on sme4.me">
+	<meta property="og:image" content="<?php echo site_url();?>assets/login/images/logo.png">	
 	<!-- FONT AWESOME ICON -->
 	<link rel="stylesheet" type="text/css" href="<?php echo site_url();?>assets/sme4me/lib/font-awesome-4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
