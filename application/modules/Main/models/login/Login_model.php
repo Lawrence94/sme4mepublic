@@ -137,15 +137,15 @@ class Login_model extends CI_Model {
       }else{
         $key = sha1($details->username.'_'.$details->aid);
         $userdetails = ['user_vars' => ['userid' => $details->id,
-                                      'username' => $details->username,
-                                      'email' => $details->username,
-                                      'fullname' => $details->fullname,
-                                      'firstname' => $details->firstname,
-                                      'lastname' => $details->lastname,
-                                      'accesslevel' => $details->aid,
-                                      'status' => $details->status,
-                                      'k' => $key,
-                                     ]
+                                        'username' => $details->username,
+                                        'email' => $details->username,
+                                        'fullname' => $details->fullname,
+                                        'firstname' => $details->firstname,
+                                        'lastname' => $details->lastname,
+                                        'accesslevel' => $details->aid,
+                                        'status' => $details->status,
+                                        'k' => $key,
+                                       ]
                      ];
         return ['status' => true, 'session' => $this->session->set_userdata( $userdetails )];
       }

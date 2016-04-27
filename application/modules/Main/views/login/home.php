@@ -156,7 +156,7 @@
 				<!-- NAVIGATION LINKS -->
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="right nav-box">
-						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login/signup');?>">
+						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('register');?>">
 							<span data-hover="Open an Account!">Sign Up</span>
 						</a>
 					</div>
@@ -164,7 +164,7 @@
 				
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="left nav-box">
-						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login');?>">
+						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('login');?>">
 							<span data-hover=" Log in!">Sign in</span>
 						</a>
 					</div>
@@ -273,7 +273,7 @@
 				<!-- NAVIGATION LINKS -->
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="right nav-box">
-						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login/signup');?>">
+						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('register');?>">
 							<span data-hover="Open an Account">Sign Up!</span>
 						</a>
 					</div>
@@ -282,7 +282,7 @@
 				<br>
 				<div style="margin-top: -23px;" class="navigation-wrp cl-effect-5">
 					<div class="left nav-box">
-						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('Main/Login');?>">
+						<a class="md-trigger" data-modal="modal-3" href="<?php echo site_url('login');?>">
 							<span data-hover="Log in!">Sign in!</span>
 						</a>
 					</div>

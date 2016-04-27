@@ -311,6 +311,11 @@ class Dashboard extends CI_Controller {
     	redirect('dashboard','refresh');
     }
 
+    public function forgotpassword()
+    {
+    	
+    }
+
     public function userStatus()
     {
     	$logDating = new DateTime('now');
@@ -375,11 +380,11 @@ class Dashboard extends CI_Controller {
     	// exit;
     }
 
-    public function mailtest($name)
+    public function mailtest($email)
     {
     	$to      = 'l.agbani@hotmail.co.uk' . ', ';
     	$to      .= 'agbani92@gmail.com';
-		$subject = 'Mail Test';
+		$subject = 'Password Reset';
 		$message = '<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="viewport" content="width=device-width" />
@@ -658,7 +663,7 @@ a {
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<tr>
 									<td class="content-block">
-										You have requested to reset your password.
+										You have requested a password reset.
 									</td>
 								</tr>
 								<tr>
@@ -696,7 +701,7 @@ a {
 
 		// Additional headers
 		//$headers .= 'To: Lawrence <l.agbani@hotmail.co.uk>' . "\r\n";
-		$headers .= 'From: '.$name.' <lawrence@lawrencetalks.com>' . "\r\n";
+		$headers .= 'From: Sme4.me <lawrence@lawrencetalks.com>' . "\r\n";
 		//$headers .= 'Cc: agbani92@gmail.com' . "\r\n";
 		//$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 	   try {

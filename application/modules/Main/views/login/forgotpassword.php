@@ -43,30 +43,27 @@
   <?php echo show_valnotif(); ?>
   </span>
   <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
-  <form class="contact_form" action="<?php echo site_url('Main/Login');?>" method="post" name="contact_form">
+  <form class="contact_form" action="<?php echo site_url('Main/Login/forgotpassword');?>" method="post" name="contact_form">
     <div class="txt">
-      <input id="user" type="text" name="txtusername" placeholder="Username" required/>
+      <input id="user" type="text" name="txtusername" placeholder="Email Address" required/>
       <label for="user" class="entypo-user"></label>
     </div>
-    <div class="txt">
-      <input id="pwd" type="password" name="txtpassword" placeholder="Password" />
-      <label for="pwd" class="entypo-lock"></label>
-    </div>
+    
     <div class="buttons">
-      <input type="submit" type="button" value="Login" />
+      <input type="submit" type="button" value="Reset Password" />
 
   </form>
     <span>
-      <a href="<?= site_url('register') ?>" class="entypo-user-add register">Register</a>
+      <a href="<?= site_url('login') ?>" class="entypo-user-add register">Login</a>
     </span>
 
   </div>
 
-  <div class="hr">
+  <!-- <div class="hr">
     <div></div>
-    <a href="<?= site_url('forgotpassword') ?>" class="register">Forgot Password</a>
+    <a href="<?= site_url('login') ?>" class="register">Login</a>
     <div></div>
-  </div>
+  </div> -->
   
   <!-- <div class="hr">
     <div></div>

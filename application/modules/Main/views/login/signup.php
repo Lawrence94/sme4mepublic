@@ -54,7 +54,7 @@
     <div class="buttons">
       <input type="submit" type="button" value="Sign Up" />
       <span>
-        <a href="<?= site_url() ?>" class="entypo-user-add register">Login</a>
+        <a href="<?= site_url('login') ?>" class="entypo-user-add register">Login</a>
       </span>
   </form>
     
