@@ -53,8 +53,8 @@ $route['default_controller'] = 'Main/Home';
 $route['home'] = 'Main/Home';
 
 // User Auth
-$route['login'] = 'Main/Login';
-$route['login/(:any)'] = 'Main/Login/$1';
+$route['login'] = 'Main/Login/login';
+$route['login/(:any)'] = 'Main/Login/login/$1';
 $route['register'] = 'Main/Login/signup';
 $route['register/(:any)'] = 'Main/Login/signup/$1';
 $route['profile'] = 'Main/Profile';
@@ -79,6 +79,12 @@ $route['dashboard/loan'] = 'Main/Dashboard/getgroup/Loan';
 $route['dashboard/posts/(:any)'] = 'Main/Dashboard/getpost/$1';
 $route['contact'] = 'Main/Dashboard/contact';
 $route['about'] = 'Main/About';
+
+// Payment
+$route['payment'] = 'Main/Payment';
+$route['payments'] = 'Main/Payment/next';
+$route['payment/(:any)'] = 'Main/Payment/$1';
+$route['payments/(:any)'] = 'Main/Payment/next/$1';
 
 // 404
 $route['404_override'] = '';

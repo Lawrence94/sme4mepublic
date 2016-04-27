@@ -38,6 +38,20 @@ class Payment extends CI_Controller {
 				redirect('register');
 			}
 	}
+
+	public function next($url='')
+	{
+		$currentUser = $this->session->userdata('user_vars');
+		if($currentUser){
+			$data = array(
+				'displayData' => 'display:none',
+				'url' => $url,
+			);
+			$this->load->view('login/payment', $data);
+		}else{
+			redirect('register/'.$url);
+		}
+	}
 	
 	public function showCard(){
 		redirect('Main/Card');

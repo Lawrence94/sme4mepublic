@@ -255,8 +255,9 @@ class Dashboard extends CI_Controller {
 			
 		}
 		else{
-			echo 'Session Expired';
-			redirect('login', 'refresh');
+			$url = 'dashboard%20posts%20'.$value;
+			notify('danger', "You need to be signed in to view that post", site_url('login/'. $url));
+			//notify('login/'. $url);
 		}
 	}
 

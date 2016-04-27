@@ -77,7 +77,7 @@
   
   <aside class="sidebars">
     <div class="region region-sidebar-first column sidebar">
-      <div id="block-blonde-global-blocks-home" class="block block-blonde-global-blocks first odd"> <a href="<?php echo site_url('Main/Dashboard');?>">
+      <div id="block-blonde-global-blocks-home" class="block block-blonde-global-blocks first odd"> <a href="<?php echo site_url('dashboard');?>">
         <div class="title-wrapper">
           <h2><span class="icon">Homepage</span></h2>
         </div>
@@ -122,7 +122,23 @@
 
       <div class="title-wrapper">
     <h2 class="block-title">Share</h2>
-  <ul class="share"><li><a class="google" href="#" target="_blank" >Google+</a></li><li><a class="facebook" href="#" target="_blank" >Facebook</a></li><li><a class="twitter" href="#" target="_blank" >Twitter</a></li><li><a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.blonde.net%2Fblog%2F2016%2F02%2F09%2Fgreat-ux-design-examples&amp;title=This+is+what+great+UX+looks+like.+%28Episode+1%29 via @blondedigital" target="_blank" >LinkedIn</a></li><li><a class="pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.blonde.net%2Fblog%2F2016%2F02%2F09%2Fgreat-ux-design-examples&media=http%3A%2F%2Fwww.blonde.net%2F" target="_blank" >Pinterest</a></li></ul>
+  <ul class="share">
+    <li>
+      <a class="google" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result->id ?>" target="_blank" >Google+</a>
+    </li>
+    <li>
+      <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result->id ?>" target="_blank" >Facebook</a>
+    </li>
+    <li>
+      <a class="twitter" href="https://twitter.com/intent/tweet?text=Contact via @sme4_me&amp;url=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result->id ?>" target="_blank" >Twitter</a>
+    </li>
+    <li>
+      <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.blonde.net%2Fblog%2F2016%2F02%2F09%2Fgreat-ux-design-examples&amp;title=This+is+what+great+UX+looks+like.+%28Episode+1%29 via @blondedigital" target="_blank" >LinkedIn</a>
+    </li>
+    <li>
+      <a class="pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.blonde.net%2Fblog%2F2016%2F02%2F09%2Fgreat-ux-design-examples&media=http%3A%2F%2Fwww.blonde.net%2F" target="_blank" >Pinterest</a>
+    </li>
+  </ul>
 
   </div>
     

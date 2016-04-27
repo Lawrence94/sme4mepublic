@@ -28,6 +28,12 @@ class Login extends CI_Controller {
 	public function index($url = '')
 	{
 		
+
+
+	}
+
+	public function login($url = '')
+	{
 		if ($this->input->server('REQUEST_METHOD') == 'POST') {
 			//declare variables
 			//holding boolean for error checking
@@ -36,6 +42,8 @@ class Login extends CI_Controller {
 			$username = $this->input->post('txtusername');
 			//password from login form
 			$password = $this->input->post('txtpassword');
+
+			$formurl = $this->input->post('url');
 			
 			//set validation rules
 			$this->form_validation->set_rules('txtusername', 'Email', 'required|min_length[5]|valid_email|trim');
@@ -72,10 +80,11 @@ class Login extends CI_Controller {
 						if($role == SUPER_ADMINISTRATOR || $role == USER){
 							if($currentUser['status'] == '1'){
 								//echo "Logging you in...";
-								if (empty($url)) {
+								if (empty($formurl)) {
 									redirect('dashboard');
 								}else{
-									redirect($url);
+									$url1 = str_replace('%20', '/', $formurl);
+									redirect($url1);
 								}
 								
 							}else{
@@ -84,7 +93,7 @@ class Login extends CI_Controller {
 								$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
 								$this->session->set_flashdata('msg3', 'Pay');
 								$this->session->set_flashdata('msg4', 'Logout');
-								redirect('Main/Payment');
+								redirect('payment');
 							}
 							
 						}
@@ -115,15 +124,25 @@ class Login extends CI_Controller {
 					$this->load->view('login/login', $data);
 				}
 			}else{
-				notify('danger', "You must be logged in to view that post", site_url('login/'.$url));
+				$currentUser = $this->session->userdata('user_vars');
+				if($currentUser){
+					redirect('dashboard');
+				}else{
+					$data = array(
+						'displayData' => 'display:none',
+						'url' => $url,
+					);
+
+					//ParseUser::logOut();
+
+					$this->load->view('login/login', $data);
+				}
 			}
 			
 		}
-
-
 	}
 
-	public function signup()
+	public function signup($url = '')
 	{
 		if ($this->input->post('signup')) {
 			$signup = $this->input->post('signup');
@@ -131,6 +150,8 @@ class Login extends CI_Controller {
 			$username = $signup['username'];
 			$password = $signup['password'];
 			$fullname = $signup['fullname'];
+
+			$formurl = $this->input->post('url');
 
 			$status1 = true; 
 
@@ -174,7 +195,15 @@ class Login extends CI_Controller {
 																trial period.</p>');
 							$this->session->set_flashdata('msg3', 'Pay');
 							$this->session->set_flashdata('msg4', 'Continue to site');
-							redirect('Main/Payment');
+
+							if (empty($formurl)) {
+								$this->session->set_flashdata('msg5', site_url('dashboard'));
+								redirect('payment');
+							}else{
+								$this->session->set_flashdata('msg5', site_url($formurl));
+								redirect('payments/'.$formurl);
+							}
+							
 						}
 						else{
 							# code...
@@ -187,18 +216,35 @@ class Login extends CI_Controller {
 					}
 				}
 		}else{
-			$currentUser = $this->session->userdata('user_vars');
-			if($currentUser){
-				redirect('dashboard');
+			if (empty($url)) {
+				$currentUser = $this->session->userdata('user_vars');
+				if($currentUser){
+					redirect('dashboard');
+				}else{
+					$data = array(
+						'displayData' => 'display:none'
+					);
+
+					//ParseUser::logOut();
+
+					$this->load->view('login/signup', $data);
+				}
 			}else{
-				$data = array(
-					'displayData' => 'display:none'
-				);
+				$currentUser = $this->session->userdata('user_vars');
+				if($currentUser){
+					redirect('dashboard');
+				}else{
+					$data = array(
+						'displayData' => 'display:none',
+						'url' => $url,
+					);
 
-				//ParseUser::logOut();
+					//ParseUser::logOut();
 
-				$this->load->view('login/signup', $data);
+					$this->load->view('login/signup', $data);
+				}
 			}
+			
 		}
 	}
 

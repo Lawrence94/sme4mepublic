@@ -43,12 +43,13 @@
   <?php echo show_valnotif(); ?>
   </span>
   <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
-  <form class="contact_form" action="<?php echo site_url('Main/Login');?>" method="post" name="contact_form">
+  <form class="contact_form" action="<?php echo site_url('login');?>" method="post" name="contact_form">
     <div class="txt">
       <input id="user" type="text" name="txtusername" placeholder="Username" required/>
       <label for="user" class="entypo-user"></label>
     </div>
     <div class="txt">
+      <input id="pwd" type="hidden" name="url" value="<?php echo empty($url)? '' : $url;?>" />
       <input id="pwd" type="password" name="txtpassword" placeholder="Password" />
       <label for="pwd" class="entypo-lock"></label>
     </div>
@@ -57,7 +58,7 @@
 
   </form>
     <span>
-      <a href="<?= site_url('register') ?>" class="entypo-user-add register">Register</a>
+      <a href="<?= empty($url)? site_url('register') : site_url('register/'.$url); ?>" class="entypo-user-add register">Register</a>
     </span>
 
   </div>

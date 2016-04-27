@@ -40,6 +40,7 @@
   <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
   <form class="contact_form" action="<?php echo site_url('Main/Login/signup');?>" method="post" name="contact_form">
     <div class="txt">
+      <input id="pwd" type="hidden" name="url" value="<?php echo empty($url)? '' : $url;?>" />
       <input id="user" type="text" name="signup[fullname]" placeholder="Name" />
       <label for="user" class="entypo-user"></label>
     </div>
@@ -54,7 +55,7 @@
     <div class="buttons">
       <input type="submit" type="button" value="Sign Up" />
       <span>
-        <a href="<?= site_url('login') ?>" class="entypo-user-add register">Login</a>
+        <a href="<?= empty($url)? site_url('login') : site_url('login/'.$url); ?>" class="entypo-user-add register">Login</a>
       </span>
   </form>
     

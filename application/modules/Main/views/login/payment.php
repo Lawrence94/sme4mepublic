@@ -446,7 +446,7 @@ Smart Money Encylcopedia Payments
       </div>
 		<div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal"><?= $this->session->flashdata('msg3') == NULL ? 'Pay' : $this->session->flashdata('msg3') ?></button>
-          <a href="<?= $this->session->flashdata('msg4') == 'Logout' ? site_url('Main/Dashboard/logout') : site_url('dashboard') ?>">
+          <a href="<?= $this->session->flashdata('msg4') == 'Logout' ? site_url('Main/Dashboard/logout') : $this->session->flashdata('msg5'); ?>">
             <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
           </a>
         </div>
