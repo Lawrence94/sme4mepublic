@@ -384,7 +384,6 @@ class Dashboard extends CI_Controller {
 <head>
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Pssword reset </title>
 <!-- <link href="styles.css" media="all" rel="stylesheet" type="text/css" /> -->
 <style type="text/css">
 * {
@@ -413,9 +412,6 @@ table td {
   vertical-align: top;
 }
 
-/* -------------------------------------
-    BODY & CONTAINER
-------------------------------------- */
 body {
   background-color: #f6f6f6;
 }
@@ -440,9 +436,6 @@ body {
   padding: 20px;
 }
 
-/* -------------------------------------
-    HEADER, FOOTER, MAIN
-------------------------------------- */
 .main {
   background-color: #fff;
   border: 1px solid #e9e9e9;
@@ -473,9 +466,6 @@ body {
   font-size: 12px;
 }
 
-/* -------------------------------------
-    TYPOGRAPHY
-------------------------------------- */
 h1, h2, h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #000;
@@ -517,9 +507,7 @@ p li, ul li, ol li {
   list-style-position: inside;
 }
 
-/* -------------------------------------
-    LINKS & BUTTONS
-------------------------------------- */
+
 a {
   color: #348eda;
   text-decoration: underline;
@@ -542,9 +530,6 @@ a {
   text-transform: capitalize;
 }
 
-/* -------------------------------------
-    OTHER STYLES THAT MIGHT BE USEFUL
-------------------------------------- */
 .last {
   margin-bottom: 0;
 }
@@ -569,10 +554,6 @@ a {
   clear: both;
 }
 
-/* -------------------------------------
-    ALERTS
-    Change the class depending on warning email, good email or bad email
-------------------------------------- */
 .alert {
   font-size: 16px;
   color: #fff;
@@ -597,10 +578,6 @@ a {
   background-color: #68B90F;
 }
 
-/* -------------------------------------
-    INVOICE
-    Styles for the billing table
-------------------------------------- */
 .invoice {
   margin: 40px auto;
   text-align: left;
@@ -621,9 +598,6 @@ a {
   font-weight: 700;
 }
 
-/* -------------------------------------
-    RESPONSIVE AND MOBILE FRIENDLY STYLES
-------------------------------------- */
 @media only screen and (max-width: 640px) {
   body {
     padding: 0 !important;
