@@ -68,7 +68,7 @@
         <?php foreach ($result as $val) {
           # code...
         ?>
-        <div class="block  article" data-mobile-weight="4"><a class="inner" href="<?php echo site_url('Main/Dashboard/getpost/'. $val->id);?>" >
+        <div class="block  article" data-mobile-weight="4"><a class="inner" href="<?php echo site_url('dashboard/posts/'. $val->id);?>" >
           <h2 class="title"><span><?= $val->title ?> <br> <strong>Value:</strong> <?= $val->value ?></span></h2>
           <h1><span class="subtitle"><strong>Deadline:</strong> <?= $val->deadline ?></span></h1>
           </a> <!-- /.inner --></div>

@@ -74,6 +74,7 @@ $route['dashboard/postdoctorate'] = 'Main/Dashboard/getgroup/Postdoctorate';
 $route['dashboard/essay'] = 'Main/Dashboard/getgroup/Essay';
 $route['dashboard/mba'] = 'Main/Dashboard/getgroup/Mba';
 $route['dashboard/loan'] = 'Main/Dashboard/getgroup/Loan';
+$route['dashboard/posts/(:any)'] = 'Main/Dashboard/getpost/$1';
 $route['contact'] = 'Main/Dashboard/contact';
 $route['about'] = 'Main/About';
 
