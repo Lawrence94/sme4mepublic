@@ -396,8 +396,8 @@ class Dashboard extends CI_Controller {
 
     public function mailout($message, $type, $email)
     {
-    	$to      = 'info@sme4.me' . ', ';
-    	$to      .= 'agbani92@gmail.com';
+    	$to      = 'info@sme4.me';
+    	//$to      .= 'agbani92@gmail.com';
 		$subject = 'Inquiry['.$type.']';
 		//$message = '';
     	// To send HTML mail, the Content-type header must be set
