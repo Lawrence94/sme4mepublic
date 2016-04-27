@@ -241,17 +241,17 @@ class Dashboard extends CI_Controller {
 		if ($currentUser){		
 			if($currentUser['status'] == '1'){
 				$result = $this->db->get_where('posts', ['id' => $value])->row();
-				$meta = array(
-					        array('property' => 'fb:app_id', 'content' => '1770218769864231'),
-					        array('property' => 'og:url', 'content' => 'http://www.sme4.me/dashboard/posts/'.$result->id),
-					        array('property' => 'og:type', 'content' => 'article'),
-					        array('property' => 'og:title', 'content' => $result->title),
-					        array('property' => 'og:description', 'content' => 'find amazing opportunities on sme4.me'),
-					        array('property' => 'og:image', 'content' => 'http://www.sme4.me/assets/login/images/logo.png')
-					    );
+				// $meta = array(
+				// 	        array('property' => 'fb:app_id', 'content' => '1770218769864231'),
+				// 	        array('property' => 'og:url', 'content' => 'http://www.sme4.me/dashboard/posts/'.$result->id),
+				// 	        array('property' => 'og:type', 'content' => 'article'),
+				// 	        array('property' => 'og:title', 'content' => $result->title),
+				// 	        array('property' => 'og:description', 'content' => 'find amazing opportunities on sme4.me'),
+				// 	        array('property' => 'og:image', 'content' => 'http://www.sme4.me/assets/login/images/logo.png')
+				// 	    );
 				$groupArray = ['result' => $result,
 							   'count' => $this->login->checkCount($result->category),
-							   'meta' => meta($meta),
+							   //'meta' => meta($meta),
 							  ];
 				$this->load->view('dashboard/newpost', $groupArray);
 			}else{
