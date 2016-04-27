@@ -673,29 +673,33 @@ a {
 		<td></td>
 		<td class="container" width="600">
 			<div class="content">
-				<table class="main" width="100%" cellpadding="0" cellspacing="0" itemprop="action" itemscope itemtype="http://schema.org/ConfirmAction">
+				<table class="main" width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="alert alert-warning">
+							Warning: Your subscription is almost over. Please upgrade.
+						</td>
+					</tr>
 					<tr>
 						<td class="content-wrap">
-							<meta itemprop="name" content="Confirm Email"/>
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<tr>
 									<td class="content-block">
-										Please confirm your email address by clicking the link below.
+										You have <strong>1 day</strong> remaining.
 									</td>
 								</tr>
 								<tr>
 									<td class="content-block">
-										We may need to send you critical information about our service and it is important that we have an accurate email address.
-									</td>
-								</tr>
-								<tr>
-									<td class="content-block" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
-										<a href="http://www.sme4.me" class="btn-primary" itemprop="url">Confirm email address</a>
+										Add your credit card now to upgrade your account to a premium plan to ensure you do not miss out on any Scholarship offers.
 									</td>
 								</tr>
 								<tr>
 									<td class="content-block">
-										&mdash; Smart Money Encyclopedia
+										<a href="http://www.sme4.me" class="btn-primary">Upgrade my account</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="content-block">
+										Thanks for choosing Smart Money Encyclopedia Inc.
 									</td>
 								</tr>
 							</table>
@@ -705,7 +709,7 @@ a {
 				<div class="footer">
 					<table width="100%">
 						<tr>
-							<td class="aligncenter content-block">Follow <a href="http://twitter.com/sme4me">@Sme4me</a> on Twitter.</td>
+							<td class="aligncenter content-block"><a href="http://www.mailgun.com">Unsubscribe</a> from these alerts.</td>
 						</tr>
 					</table>
 				</div></div>
