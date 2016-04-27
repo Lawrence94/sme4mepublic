@@ -208,7 +208,7 @@ class Dashboard extends CI_Controller {
 			$phone = $submit['telephone'];
 			$messag = $submit['message'];
 
-			$message = "Dear Admin, \n \n" . $firstname . " " . $lastname . " with email address, ". $email . "and phone number, " . $phone . 
+			$message = "Dear Admin, \n \n" . $firstname . " " . $lastname . " with email address, ". $email . " and phone number, " . $phone . 
 			" Sent you an inquiry from your site sme4.me, with the following message; \n \n " . $messag;
 
 
