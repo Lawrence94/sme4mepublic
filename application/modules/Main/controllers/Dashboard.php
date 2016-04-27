@@ -676,7 +676,7 @@ a {
 				<table class="main" width="100%" cellpadding="0" cellspacing="0">
 					<tr>
 						<td class="alert alert-warning">
-							Warning: Your subscription is almost over. Please upgrade.
+							Password Reset
 						</td>
 					</tr>
 					<tr>
@@ -684,17 +684,17 @@ a {
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<tr>
 									<td class="content-block">
-										You have <strong>1 day</strong> remaining.
+										You have requested to reset your password.
 									</td>
 								</tr>
 								<tr>
 									<td class="content-block">
-										Add your credit card now to upgrade your account to a premium plan to ensure you do not miss out on any Scholarship offers.
+										If you did not intiate a password reset, please ignore this mail.
 									</td>
 								</tr>
 								<tr>
 									<td class="content-block">
-										<a href="http://www.sme4.me" class="btn-primary">Upgrade my account</a>
+										<a href="http://www.sme4.me" class="btn-primary">Reset Password</a>
 									</td>
 								</tr>
 								<tr>
@@ -707,11 +707,7 @@ a {
 					</tr>
 				</table>
 				<div class="footer">
-					<table width="100%">
-						<tr>
-							<td class="aligncenter content-block"><a href="http://www.mailgun.com">Unsubscribe</a> from these alerts.</td>
-						</tr>
-					</table>
+					
 				</div></div>
 		</td>
 		<td></td>
