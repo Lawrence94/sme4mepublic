@@ -9,7 +9,7 @@
 
 <?php echo "<meta property='fb:app_id' content='1770218769864231'>"; ?>
 <?php echo "<meta property='og:url' content='http://www.sme4.me/dashboard/posts/".$result->id."'>"; ?>
-<?php echo "<meta property='og:type' content='website'>"; ?>
+<?php echo "<meta property='og:type' content='article'>"; ?>
 <meta property="og:title" content="<?= $result->title; ?>">
 <meta property="og:description" content="find amazing opportunities on sme4.me">
 <meta property="og:image" content="http://www.sme4.me/assets/login/images/logo.png">
