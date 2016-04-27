@@ -55,6 +55,7 @@ $route['home'] = 'Main/Home';
 // User Auth
 $route['login'] = 'Main/Login';
 $route['register'] = 'Main/Login/signup';
+$route['profile'] = 'Main/Profile';
 $route['forgotpassword'] = 'Main/Login/forgotpassword';
 $route['reset/(:any)/(:any)/(:any)']  = 'Main/Login/passwrdreset/$1/$2/$3';
 $route['passwordreset/(:any)']  = 'Main/Login/passwordreset/$1';
@@ -62,6 +63,19 @@ $route['passwordreset']  = 'Main/Login/passwordreset';
 
 // Dashboard
 $route['dashboard'] = 'Main/Dashboard';
+$route['dashboard/phd'] = 'Main/Dashboard/getgroup/Phd';
+$route['dashboard/awards'] = 'Main/Dashboard/getgroup/Award';
+$route['dashboard/masters'] = 'Main/Dashboard/getgroup/Master';
+$route['dashboard/internships'] = 'Main/Dashboard/getgroup/Internship';
+$route['dashboard/bachelors'] = 'Main/Dashboard/getgroup/Bachelor';
+$route['dashboard/startups'] = 'Main/Dashboard/getgroup/Startup';
+$route['dashboard/philantropy'] = 'Main/Dashboard/getgroup/Philantropy';
+$route['dashboard/postdoctorate'] = 'Main/Dashboard/getgroup/Postdoctorate';
+$route['dashboard/essay'] = 'Main/Dashboard/getgroup/Essay';
+$route['dashboard/mba'] = 'Main/Dashboard/getgroup/Mba';
+$route['dashboard/loan'] = 'Main/Dashboard/getgroup/Loan';
+$route['contact'] = 'Main/Dashboard/contact';
+$route['about'] = 'Main/About';
 
 // 404
 $route['404_override'] = '';

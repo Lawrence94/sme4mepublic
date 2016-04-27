@@ -41,7 +41,7 @@
       <div id="isotope-container" data-fixed-filter="false">
        <!-- /.block -->
       <div class="block  careers linksection filter-careers aggregator" data-mobile-weight="8">
-      <a class="inner" href="<?= site_url('Main/Profile') ?>" >
+      <a class="inner" href="<?= site_url('profile') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>PROFILE</span></h2>
@@ -61,7 +61,7 @@
           <!-- /count --><!-- </a> --> <!-- /.inner --><!-- </div> -->
        <!-- /.block -->
        <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Phd') ?>">
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('dashoboard/phd') ?>">
           <div class="plus">
        <div class="cross"></div>
            <!-- <a> --> <h2 class="title"><span>PHD</span></h2><!-- </a> -->
@@ -85,7 +85,7 @@
           <!-- /.inner -->
           <!-- </div> -->
         <!-- /.block -->
-        <div class="block  blog aggregator" data-mobile-weight="5"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Award') ?>" >
+        <div class="block  blog aggregator" data-mobile-weight="5"><a class="inner" href="<?= site_url('dashboard/awards') ?>" >
           <div class="plus">
       <div class="cross"></div>
             <h2 class="title"><span>AWARDS</span></h2>
@@ -95,7 +95,7 @@
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <div class="block  work aggregator" data-mobile-weight="2">
-        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Master') ?>">
+        <a class="inner" href="<?= site_url('dashboard/masters') ?>">
           <div class="plus">
             <div class="cross"></div>
            <h2 class="title"><span>MASTERS</span></h2>
@@ -105,7 +105,7 @@
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <div class="block  services linksection aggregator" data-mobile-weight="1">
-        <a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Internship') ?>" >
+        <a class="inner" href="<?= site_url('dashboard/internships') ?>" >
           <div class="plus">
        <div class="cross"></div>
             <h2 class="title"><span>INTERNSHIPS</span></h2>
@@ -115,7 +115,7 @@
           </a> <!-- /.inner --></div>
         <!-- /.block -->
       <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Bachelor') ?>">
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('dashboard/bachelors') ?>">
           <div class="plus">
        <div class="cross"></div>
            <!-- <a> --> <h2 class="title"><span>BACHELORS</span></h2><!-- </a> -->
@@ -125,7 +125,7 @@
           <!-- /count --></a> <!-- /.inner --></div>
         <!-- /.block -->
         <!-- /.block -->
-        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Startup') ?>" >
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('dashboard/startups') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>STARTUPS</span></h2>
@@ -161,7 +161,7 @@
           <!-- /.inner --></div>
         
         <!-- /.block -->
-        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Postdoctorate') ?>" >
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('dashboard/postdoctorate') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>POSTDOC.</span></h2>
@@ -181,7 +181,7 @@
           </a> <!-- /.inner --></div>
 
           <!-- /.block -->
-        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Essay') ?>" >
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('dashboard/essay') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>ESSAYS</span></h2>
@@ -211,7 +211,7 @@
           </a>  --><!-- /.inner --><!-- </div> -->
 
           <!-- /.block -->
-        <div class="block  contact linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Mba') ?>" >
+        <div class="block  contact linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('dashboard/mba') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>MBA</span></h2>
@@ -221,7 +221,7 @@
           </a> <!-- /.inner --></div>
 
           <!-- /.block -->
-        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('Main/Dashboard/getgroup/Loan') ?>" >
+        <div class="block  people linksection aggregator" data-mobile-weight="7"><a class="inner" href="<?= site_url('dashboard/loan') ?>" >
           <div class="plus">
           <div class="cross"></div>
             <h2 class="title"><span>LOANS</span></h2>
@@ -232,7 +232,7 @@
        
         
         <!-- /.block -->
-        <div class="block  contact linksection filter-contact aggregator" data-mobile-weight="1"><a class="inner" href="<?= site_url('Main/Dashboard/contact') ?>" >
+        <div class="block  contact linksection filter-contact aggregator" data-mobile-weight="1"><a class="inner" href="<?= site_url('contact') ?>" >
           <div class="plus">
         <div class="cross"></div>
             <h2 class="title"><span>CONTACT</span></h2>
@@ -242,7 +242,7 @@
         
     
         <!-- /.block -->
-         <div class="block  about linksection filter-about aggregator" data-mobile-weight="6"><a class="inner" href="<?php echo site_url('Main/About');?>" >
+         <div class="block  about linksection filter-about aggregator" data-mobile-weight="6"><a class="inner" href="<?php echo site_url('about');?>" >
           <div class="plus">
         <div class="cross"></div>
             <h2 class="title"><span>ABOUT US</span></h2>

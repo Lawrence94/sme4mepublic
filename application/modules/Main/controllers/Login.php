@@ -72,7 +72,7 @@ class Login extends CI_Controller {
 						if($role == SUPER_ADMINISTRATOR || $role == USER){
 							if($currentUser['status'] == '1'){
 								echo "Logging you in...";
-								redirect('Main/Dashboard');
+								redirect('dashboard');
 							}else{
 								$this->session->set_flashdata('msg0', 'Subscription Expired!');
 								$this->session->set_flashdata('msg1', 'subscription expiration notice!');
@@ -98,7 +98,7 @@ class Login extends CI_Controller {
 		} else {
 			$currentUser = $this->session->userdata('user_vars');
 			if($currentUser){
-				redirect('Main/Dashboard');
+				redirect('dashboard');
 			}else{
 				$data = array(
 					'displayData' => 'display:none'
@@ -145,7 +145,7 @@ class Login extends CI_Controller {
 
 				if (!$status1){
 					//echo "fuck";
-					notify('danger', $signupParse['parseMsg'], site_url('Main/Login'));
+					notify('danger', $signupParse['parseMsg'], site_url('login'));
 				}else{
 					$currentUser = $this->session->userdata('user_vars');
 
@@ -169,17 +169,17 @@ class Login extends CI_Controller {
 						else{
 							# code...
 							echo "Taking you back...";
-							notify('danger', "Please use the admin portal to login or contact administrator", site_url('Main/Login'));
+							notify('danger', "Please use the admin portal to login or contact administrator", site_url('login'));
 						}
 					}else{
 						echo "Taking you back...";
-						notify('danger', "You do not have permission to login here, please contact administrator", site_url('Main/Login'));
+						notify('danger', "You do not have permission to login here, please contact administrator", site_url('login'));
 					}
 				}
 		}else{
 			$currentUser = $this->session->userdata('user_vars');
 			if($currentUser){
-				redirect('Main/Dashboard');
+				redirect('dashboard');
 			}else{
 				$data = array(
 					'displayData' => 'display:none'

@@ -35,7 +35,7 @@ class Payment extends CI_Controller {
 				);
 				$this->load->view('login/payment', $data);
 			}else{
-				redirect('Main/Login/signup');
+				redirect('register');
 			}
 	}
 	
