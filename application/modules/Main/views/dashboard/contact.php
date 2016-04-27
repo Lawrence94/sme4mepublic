@@ -6,6 +6,14 @@
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/contact/css/style.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/contact/css/custom.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/contact/css/responsive.css" media="all" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_RLdCYwzbvDqlQo2TU9KQgLHzdcyZ66umH31ME30FMh0.js"></script>
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_RLdCYwzbvDqlQo2TU9KQgLHzdcyZ66umH31ME30FMh0.js"></script>
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_X3wqWxXtw6R4AIb97o3dAWED9S2GhQf47b9XC3VETVg.js"></script>
