@@ -30,12 +30,13 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:url"                content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>" />
-<meta property="og:type"               content="article" />
-<meta property="og:title"              content="<?= $result->title; ?>" />
-<meta property="og:description"        content="amazing opportunities on sme4.me" />
-<meta property="og:image"              content="<?php echo site_url();?>assets/login/images/logo.png" />
-</head><body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-1029 node-type-article section-blog" >
+<meta property="og:url" content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="<?= $result->title; ?>" />
+<meta property="og:description" content="amazing opportunities on sme4.me" />
+<meta property="og:image" content="<?php echo site_url();?>assets/login/images/logo.png" />
+</head>
+<body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-1029 node-type-article section-blog" >
 <header id="header" role="banner"> <a href="<?php echo site_url('dashboard');?>" title="Home" rel="home" id="logo"> <span class="logo">SME4ME</span> </a> </header>
 <!-- /header -->
 
