@@ -7,7 +7,7 @@
     <meta property="og:url" content="http://www.sme4.me">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Smart Money Encyclopedia">
-	<meta property="og:description" content="amazing opportunities on sme4.me">
+	<meta property="og:description" content="find amazing opportunitiesfor your business and education on sme4.me">
 	<meta property="og:image" content="http://www.sme4.me/assets/login/images/logo.png">	
 	<!-- FONT AWESOME ICON -->
 	<link rel="stylesheet" type="text/css" href="<?php echo site_url();?>assets/sme4me/lib/font-awesome-4.3.0/css/font-awesome.min.css">
