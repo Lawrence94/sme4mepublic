@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" version="HTML+RDFa 1.0" lang="en" dir="ltr">
 <head>
-<meta name=viewport content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Smart Money Encyclopedia</title>
-
+<meta property="fb:app_id" content="1770218769864231">
 <meta property="og:url" content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>">
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?= $result->title; ?>">
