@@ -54,23 +54,31 @@
     </div>
     <div class="buttons">
       <input type="submit" type="button" value="Login" />
+
   </form>
     <span>
       <a href="<?= site_url('Main/Login/signup') ?>" class="entypo-user-add register">Register</a>
     </span>
+
+  </div>
+
+  <div class="hr">
+    <div></div>
+    <a href="<?= site_url('Main/Login/forgotpassword') ?>" class="register">Forgot Password</a>
+    <div></div>
   </div>
   
-  <div class="hr">
+  <!-- <div class="hr">
     <div></div>
     <div>OR</div>
     <div></div>
-  </div>
+  </div> -->
   
-  <div class="social">
+  <!-- <div class="social">
     <a href="javascript:void(0)" class="facebook"></a>
     <a href="javascript:void(0)" class="twitter"></a>
     <a href="javascript:void(0)" class="googleplus"></a>
-  </div>
+  </div> -->
 </div>
 
 <span class="resp-info"></span>
