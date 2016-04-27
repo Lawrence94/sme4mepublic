@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Smart Money Encyclopedia</title>
-<?=facebook_meta($meta)?>
 <meta property="fb:app_id" content="1770218769864231">
 <meta property="og:url" content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>">
 <meta property="og:type" content="website">

@@ -242,9 +242,6 @@ class Dashboard extends CI_Controller {
 				$result = $this->db->get_where('posts', ['id' => $value])->row();
 				$groupArray = ['result' => $result,
 							   'count' => $this->login->checkCount($result->category),
-							   'meta' => ["og:title" => "CodeIgniter Facebook Spark",  
-							   			  "og:type" => "website", "og:description" => "A Facebook spark for CodeIgniter that allows you to make calls to the Facebook Graph API and easily integrate the meta tags for the Open Graph protocol.", 
-							   			  "fb:app_id" => $this->config->item("facebook_app_id")],
 							  ];
 				$this->load->view('dashboard/newpost', $groupArray);
 			}else{
