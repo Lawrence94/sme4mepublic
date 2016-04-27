@@ -155,7 +155,23 @@
     <h2 class="block-title">Share</h2>
   </div>
     
-  <ul class="share"><li><a class="google" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.sme4.me%2Fcontact" target="_blank" >Google+</a></li><li><a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sme4.me%2Fcontact" target="_blank" >Facebook</a></li><li><a class="twitter" href="https://twitter.com/intent/tweet?text=Contact via @sme4_me&amp;url=http%3A%2F%2Fwww.sme4.me%2Fcontact" target="_blank" >Twitter</a></li><li><a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.sme4.me%2Fcontact&amp;title=Contact via @sme4_me" target="_blank" >LinkedIn</a></li><li><a class="pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.sme4.me%2Fcontact&media=http%3A%2F%2Fwww.sme4.me%2F" target="_blank" >Pinterest</a></li></ul>
+  <ul class="share">
+    <li>
+      <a class="google" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.sme4.me%2Fcontact" target="_blank" >Google+</a>
+    </li>
+    <li>
+      <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sme4.me%2Fcontact" target="_blank" >Facebook</a>
+    </li>
+    <li>
+      <a class="twitter" href="https://twitter.com/intent/tweet?text=Contact via @sme4_me&amp;url=http%3A%2F%2Fwww.sme4.me%2Fcontact" target="_blank" >Twitter</a>
+    </li>
+    <li>
+      <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.sme4.me%2Fcontact&amp;title=Contact via @sme4_me" target="_blank" >LinkedIn</a>
+    </li>
+    <li>
+      <a class="pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.sme4.me%2Fcontact&media=http%3A%2F%2Fwww.sme4.me%2F" target="_blank" >Pinterest</a>
+    </li>
+  </ul>
 </div><!-- /.block -->
   </div>
         </aside><!-- /.sidebars -->

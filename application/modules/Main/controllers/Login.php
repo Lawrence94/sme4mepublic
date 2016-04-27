@@ -25,7 +25,7 @@ class Login extends CI_Controller {
 		
 	}
 
-	public function index()
+	public function index($url = '')
 	{
 		
 		if ($this->input->server('REQUEST_METHOD') == 'POST') {
@@ -59,7 +59,7 @@ class Login extends CI_Controller {
 
 				if (!$status1){
 					//echo "fuck";
-					notify('danger', $loginParse['parseMsg'], site_url('Main/Login'));
+					notify('danger', $loginParse['parseMsg'], site_url('login'));
 				}else{
 					$currentUser = $this->session->userdata('user_vars');
 					// var_dump($currentUser);
@@ -71,8 +71,13 @@ class Login extends CI_Controller {
 						$role = $roleCheck->name;
 						if($role == SUPER_ADMINISTRATOR || $role == USER){
 							if($currentUser['status'] == '1'){
-								echo "Logging you in...";
-								redirect('dashboard');
+								//echo "Logging you in...";
+								if (empty($url)) {
+									redirect('dashboard');
+								}else{
+									redirect($url);
+								}
+								
 							}else{
 								$this->session->set_flashdata('msg0', 'Subscription Expired!');
 								$this->session->set_flashdata('msg1', 'subscription expiration notice!');
@@ -86,28 +91,33 @@ class Login extends CI_Controller {
 						else{
 							# code...
 							echo "Taking you back...";
-							notify('danger', "Please use the admin portal to login or contact administrator", site_url('Main/Login'));
+							notify('danger', "Please use the admin portal to login or contact administrator", site_url('login'));
 						}
 					}else{
 						echo "Taking you back...";
-						notify('danger', "You do not have permission to login here, please contact administrator", site_url('Main/Login'));
+						notify('danger', "You do not have permission to login here, please contact administrator", site_url('login'));
 					}
 				}
             }
 				
 		} else {
-			$currentUser = $this->session->userdata('user_vars');
-			if($currentUser){
-				redirect('dashboard');
+			if (empty($url)) {
+				$currentUser = $this->session->userdata('user_vars');
+				if($currentUser){
+					redirect('dashboard');
+				}else{
+					$data = array(
+						'displayData' => 'display:none'
+					);
+
+					//ParseUser::logOut();
+
+					$this->load->view('login/login', $data);
+				}
 			}else{
-				$data = array(
-					'displayData' => 'display:none'
-				);
-
-				//ParseUser::logOut();
-
-				$this->load->view('login/login', $data);
+				notify('danger', "You must be logged in to view that post", site_url('login/'.$url));
 			}
+			
 		}
 
 

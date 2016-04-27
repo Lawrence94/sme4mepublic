@@ -54,7 +54,9 @@ $route['home'] = 'Main/Home';
 
 // User Auth
 $route['login'] = 'Main/Login';
+$route['login/(:any)'] = 'Main/Login/$1';
 $route['register'] = 'Main/Login/signup';
+$route['register/(:any)'] = 'Main/Login/signup/$1';
 $route['profile'] = 'Main/Profile';
 $route['forgotpassword'] = 'Main/Login/forgotpassword';
 $route['reset/(:any)/(:any)/(:any)']  = 'Main/Login/passwrdreset/$1/$2/$3';
