@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" version="HTML+RDFa 1.0" lang="en" dir="ltr">
+<head>
 <meta name=viewport content="width=device-width, initial-scale=1">
 
 <title>Smart Money Encyclopedia</title>
