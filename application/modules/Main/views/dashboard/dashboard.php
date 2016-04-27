@@ -61,7 +61,7 @@
           <!-- /count --><!-- </a> --> <!-- /.inner --><!-- </div> -->
        <!-- /.block -->
        <!-- /.block -->
-        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('dashoboard/phd') ?>">
+        <div class="block  work aggregator" data-mobile-weight="2"><a class="inner" href="<?= site_url('dashboard/phd') ?>">
           <div class="plus">
        <div class="cross"></div>
            <!-- <a> --> <h2 class="title"><span>PHD</span></h2><!-- </a> -->
