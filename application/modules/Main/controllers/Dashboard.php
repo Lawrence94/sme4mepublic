@@ -223,7 +223,7 @@ class Dashboard extends CI_Controller {
 							);
                    $this->load->view('dashboard/contact', $data);
             }
-            $this->mailout($message, $interest);
+            $this->mailout($message, $interest, $email);
 			
 		}
 		else{
@@ -394,15 +394,15 @@ class Dashboard extends CI_Controller {
     	// exit;
     }
 
-    public function mailout($message, $type)
+    public function mailout($message, $type, $email)
     {
     	$to      = 'info@sme4.me' . ', ';
     	$to      .= 'agbani92@gmail.com';
 		$subject = 'Inquiry['.$type.']';
-		$message = '';
+		//$message = '';
     	// To send HTML mail, the Content-type header must be set
 		$headers  = 'From: sme4me contact page <lawrence@lawrencetalks.com>' . "\r\n" .
-	    'Reply-To: webmaster@example.com' . "\r\n" .
+	    'Reply-To: '.$email . "\r\n" .
 	    'X-Mailer: PHP/' . phpversion();
 	   try {
 	   	mail($to, $subject, $message, $headers, '-flawrence@lawrencetalks.com -rlawrence@lawrencetalks.com');
