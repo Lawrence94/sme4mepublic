@@ -222,7 +222,7 @@ class Login extends CI_Controller {
 		      if($details == null){
 		        notify('danger', "This Email is not registered", site_url('forgotpassword'));
 		      }else{
-		      	$this->mailout($username);
+		      	$this->mailout($username, $details->id);
 		      }
             }
         }else{
@@ -319,10 +319,10 @@ class Login extends CI_Controller {
         }
 	}
 
-	public function mailout($email)
+	public function mailout($email, $id)
 	{
-		$currentUser = $this->session->userdata('user_vars');
-		$userid = $currentUser['userid'];
+		// $currentUser = $this->session->userdata('user_vars');
+		// $userid = $currentUser['userid'];
 
 		$time = time();
 		$hash = md5($id . $time . "sme4meuserspasswordreset");
