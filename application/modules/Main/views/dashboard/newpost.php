@@ -13,6 +13,12 @@
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_gQlbxMG_wwGeHhZ0A48UxYM004xIupskuGJjEprYK-g.js"></script>
 <script>jQuery.extend(Drupal.settings, {"mediaelementAll":true,"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});</script>
 
+<meta name="theme-color" content="#ffffff">
+<meta property="og:url" content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="<?= $result->title; ?>" />
+<meta property="og:description" content="amazing opportunities on sme4.me" />
+<meta property="og:image" content="<?php echo site_url();?>assets/login/images/logo.png" />
 <!-- Favicon and touch icons -->
 <link rel="apple-touch-icon" sizes="60x60" href="http://www.sme4.me/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="http://www.sme4.me/apple-icon-72x72.png">
@@ -29,12 +35,7 @@
 <link rel="manifest" href="http://www.sme4.me/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<meta property="og:url" content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="<?= $result->title; ?>" />
-<meta property="og:description" content="amazing opportunities on sme4.me" />
-<meta property="og:image" content="<?php echo site_url();?>assets/login/images/logo.png" />
+
 </head>
 <body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-1029 node-type-article section-blog" >
 <header id="header" role="banner"> <a href="<?php echo site_url('dashboard');?>" title="Home" rel="home" id="logo"> <span class="logo">SME4ME</span> </a> </header>
