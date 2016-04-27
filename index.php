@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/vendor/cifacebook/config/autoload.php';
+require_once __DIR__ . '/vendor/cifacebook/config/facebook.php';
 ob_start();
 /**
  * CodeIgniter

@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Smart Money Encyclopedia</title>
+<?=facebook_meta($meta)?>
 <meta property="fb:app_id" content="1770218769864231">
 <meta property="og:url" content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Smart Money Encyclopedia">
+<meta property="og:title" content="<?= $result->title; ?>">
 <meta property="og:description" content="find amazing opportunities on sme4.me">
 <meta property="og:image" content="http://www.sme4.me/assets/login/images/logo.png">
 <meta name="theme-color" content="#ffffff">
