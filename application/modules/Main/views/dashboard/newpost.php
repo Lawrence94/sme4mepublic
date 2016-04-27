@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" version="HTML+RDFa 1.0" lang="en" dir="ltr">
+<meta property="og:url"                content="http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result->id ?>" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="<?= $result->title ?>" />
+<meta property="og:description"        content="amazing opportunities on sme4.me" />
+<meta property="og:image"              content="<?php echo site_url();?>assets/login/images/logo.png" />
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>Smart Money Encyclopedia</title>
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/main-style.css" media="all" />
@@ -31,7 +36,7 @@
 <meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 </head><body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-1029 node-type-article section-blog" >
-<header id="header" role="banner"> <a href="<?php echo site_url('Main/Dashboard');?>" title="Home" rel="home" id="logo"> <span class="logo">SME4ME</span> </a> </header>
+<header id="header" role="banner"> <a href="<?php echo site_url('dashboard');?>" title="Home" rel="home" id="logo"> <span class="logo">SME4ME</span> </a> </header>
 <!-- /header -->
 
 <div id="main">
