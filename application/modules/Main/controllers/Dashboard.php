@@ -30,6 +30,7 @@ class Dashboard extends CI_Controller {
 	    $this->load->helper(['buildpage_helper']);
 	    $this->load->library(array('Parseinit'));
 	    $this->load->helper(['notification_helper']);
+	    $this->load->helper(['loginval_helper']);
 	    $this->load->model('login/Login_model', 'login');
 	}
 
@@ -196,27 +197,40 @@ class Dashboard extends CI_Controller {
 
 	public function contact()
 	{
-		$currentUser = $this->session->userdata('user_vars');
-		if ($currentUser){		
-			if($currentUser['status'] == '1'){
-				// $result = $this->db->get_where('posts', ['id' => $value])->row();
-				// $groupArray = ['result' => $result,
-				// 			   'count' => $this->login->checkCount($result->category)
-				// 			  ];
-				$this->load->view('dashboard/contact');
-			}else{
-				$this->session->set_flashdata('msg0', 'Subscription Expired!');
-				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
-				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
-				$this->session->set_flashdata('msg3', 'Pay');
-				$this->session->set_flashdata('msg4', 'Logout');
-				redirect('Main/Payment');
-			}
+		//$this->load->view('dashboard/contact');
+		if ($this->input->post('submitted')){
+			$submit = $this->input->post('submitted');		
+
+			$firstname = $submit['firstname'];
+			$interest = $submit['area_of_interest'];
+			$lastname = $submit['surname'];
+			$email = $submit['email'];
+			$phone = $submit['telephone'];
+			$messag = $submit['message'];
+
+			$message = "Dear Admin, \n \n" . $firstname . " " . $lastname . " with email address, ". $email . "and phone number, " . $phone . 
+			" Sent you an inquiry from your site sme4.me, with the following message; \n \n " . $messag;
+
+
+			
+			$this->form_validation->set_rules('submitted[email]', 'Email', 'required|min_length[5]|valid_email|trim');
+
+			//check validation
+            if ($this->form_validation->run() == FALSE)
+            {
+                    $data = array(
+							'displayData' => 'display:show'
+							);
+                   $this->load->view('dashboard/contact', $data);
+            }
+            $this->mailout($message, $interest);
 			
 		}
 		else{
-			echo 'Session Expired';
-			redirect('login', 'refresh');
+			$data = array(
+						'displayData' => 'display:none'
+						);
+			$this->load->view('dashboard/contact', $data);
 		}
 	}
 
@@ -380,335 +394,21 @@ class Dashboard extends CI_Controller {
     	// exit;
     }
 
-    public function mailtest($email)
+    public function mailout($message, $type)
     {
-    	$to      = 'l.agbani@hotmail.co.uk' . ', ';
+    	$to      = 'info@sme4.me' . ', ';
     	$to      .= 'agbani92@gmail.com';
-		$subject = 'Password Reset';
-		$message = '<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="viewport" content="width=device-width" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!-- <link href="styles.css" media="all" rel="stylesheet" type="text/css" /> -->
-<style type="text/css">
-* {
-  margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-  width: 100% !important;
-  height: 100%;
-  line-height: 1.6em;
-  /* 1.6em * 14px = 22.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 22px;*/
-}
-
-
-table td {
-  vertical-align: top;
-}
-
-body {
-  background-color: #f6f6f6;
-}
-
-.body-wrap {
-  background-color: #f6f6f6;
-  width: 100%;
-}
-
-.container {
-  display: block !important;
-  max-width: 600px !important;
-  margin: 0 auto !important;
-  /* makes it centered */
-  clear: both !important;
-}
-
-.content {
-  max-width: 600px;
-  margin: 0 auto;
-  display: block;
-  padding: 20px;
-}
-
-.main {
-  background-color: #fff;
-  border: 1px solid #e9e9e9;
-  border-radius: 3px;
-}
-
-.content-wrap {
-  padding: 20px;
-}
-
-.content-block {
-  padding: 0 0 20px;
-}
-
-.header {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.footer {
-  width: 100%;
-  clear: both;
-  color: #999;
-  padding: 20px;
-}
-.footer p, .footer a, .footer td {
-  color: #999;
-  font-size: 12px;
-}
-
-h1, h2, h3 {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #000;
-  margin: 40px 0 0;
-  line-height: 1.2em;
-  font-weight: 400;
-}
-
-h1 {
-  font-size: 32px;
-  font-weight: 500;
-  /* 1.2em * 32px = 38.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 38px;*/
-}
-
-h2 {
-  font-size: 24px;
-  /* 1.2em * 24px = 28.8px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 29px;*/
-}
-
-h3 {
-  font-size: 18px;
-  /* 1.2em * 18px = 21.6px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 22px;*/
-}
-
-h4 {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-p, ul, ol {
-  margin-bottom: 10px;
-  font-weight: normal;
-}
-p li, ul li, ol li {
-  margin-left: 5px;
-  list-style-position: inside;
-}
-
-
-a {
-  color: #348eda;
-  text-decoration: underline;
-}
-
-.btn-primary {
-  text-decoration: none;
-  color: #FFF;
-  background-color: #FF9F00;
-  border: solid #FF9F00;
-  border-width: 10px 20px;
-  line-height: 2em;
-  /* 2em * 14px = 28px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-  /*line-height: 28px;*/
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 5px;
-  text-transform: capitalize;
-}
-
-.last {
-  margin-bottom: 0;
-}
-
-.first {
-  margin-top: 0;
-}
-
-.aligncenter {
-  text-align: center;
-}
-
-.alignright {
-  text-align: right;
-}
-
-.alignleft {
-  text-align: left;
-}
-
-.clear {
-  clear: both;
-}
-
-.alert {
-  font-size: 16px;
-  color: #fff;
-  font-weight: 500;
-  padding: 20px;
-  text-align: center;
-  border-radius: 3px 3px 0 0;
-}
-.alert a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-}
-.alert.alert-warning {
-  background-color: #FF9F00;
-}
-.alert.alert-bad {
-  background-color: #D0021B;
-}
-.alert.alert-good {
-  background-color: #68B90F;
-}
-
-.invoice {
-  margin: 40px auto;
-  text-align: left;
-  width: 80%;
-}
-.invoice td {
-  padding: 5px 0;
-}
-.invoice .invoice-items {
-  width: 100%;
-}
-.invoice .invoice-items td {
-  border-top: #eee 1px solid;
-}
-.invoice .invoice-items .total td {
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
-  font-weight: 700;
-}
-
-@media only screen and (max-width: 640px) {
-  body {
-    padding: 0 !important;
-  }
-
-  h1, h2, h3, h4 {
-    font-weight: 800 !important;
-    margin: 20px 0 5px !important;
-  }
-
-  h1 {
-    font-size: 22px !important;
-  }
-
-  h2 {
-    font-size: 18px !important;
-  }
-
-  h3 {
-    font-size: 16px !important;
-  }
-
-  .container {
-    padding: 0 !important;
-    width: 100% !important;
-  }
-
-  .content {
-    padding: 0 !important;
-  }
-
-  .content-wrap {
-    padding: 10px !important;
-  }
-
-  .invoice {
-    width: 100% !important;
-  }
-}
-</style>
-</head>
-
-<body itemscope itemtype="http://schema.org/EmailMessage">
-
-<table class="body-wrap">
-	<tr>
-		<td></td>
-		<td class="container" width="600">
-			<div class="content">
-				<table class="main" width="100%" cellpadding="0" cellspacing="0">
-					<tr>
-						<td class="alert alert-warning">
-							Password Reset
-						</td>
-					</tr>
-					<tr>
-						<td class="content-wrap">
-							<table width="100%" cellpadding="0" cellspacing="0">
-								<tr>
-									<td class="content-block">
-										You have requested a password reset.
-									</td>
-								</tr>
-								<tr>
-									<td class="content-block">
-										If you did not intiate a password reset, please ignore this mail.
-									</td>
-								</tr>
-								<tr>
-									<td class="content-block">
-										<a href="http://www.sme4.me" class="btn-primary">Reset Password</a>
-									</td>
-								</tr>
-								<tr>
-									<td class="content-block">
-										Thanks for choosing Smart Money Encyclopedia Inc.
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
-				<div class="footer">
-					
-				</div></div>
-		</td>
-		<td></td>
-	</tr>
-</table>
-
-</body>
-</html>';
+		$subject = 'Inquiry['.$type.']';
+		$message = '';
     	// To send HTML mail, the Content-type header must be set
-		$headers  = 'MIME-Version: 1.0' . "\r\n";
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-		// Additional headers
-		//$headers .= 'To: Lawrence <l.agbani@hotmail.co.uk>' . "\r\n";
-		$headers .= 'From: Sme4.me <lawrence@lawrencetalks.com>' . "\r\n";
-		//$headers .= 'Cc: agbani92@gmail.com' . "\r\n";
-		//$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
+		$headers  = 'From: sme4me contact page <lawrence@lawrencetalks.com>' . "\r\n" .
+	    'Reply-To: webmaster@example.com' . "\r\n" .
+	    'X-Mailer: PHP/' . phpversion();
 	   try {
 	   	mail($to, $subject, $message, $headers, '-flawrence@lawrencetalks.com -rlawrence@lawrencetalks.com');
-	   	echo "Mail sent ";
+	   	notify('info', "Your Request has been sent successfully", site_url('contact'));
 	   } catch (Exception $e) {
-	   	echo "THere was a problem " . $e;
+	   	notify('info', "There was an error " . $e->getMessage(), site_url('contact'));
 	   }
 	   
     }

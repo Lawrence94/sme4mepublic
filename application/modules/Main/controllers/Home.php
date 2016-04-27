@@ -30,7 +30,7 @@ class Home extends CI_Controller {
 	{
 		$currentUser = $this->session->userdata('user_vars');
 		if($currentUser){
-			redirect('Main/Dashboard');
+			redirect('dashboard');
 		}else{
 			$data = array(
 				'realcash' => $this->login->checkCash()

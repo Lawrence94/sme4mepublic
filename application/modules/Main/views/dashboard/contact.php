@@ -54,10 +54,13 @@
 
       
           </header>
-  
-  <form class="webform-client-form" enctype="multipart/form-data" action="/contact" method="post" id="webform-client-form-668" accept-charset="UTF-8"><div><div class="form-item webform-component webform-component-select webform-container-inline" id="webform-component-area-of-interest">
+  <?php echo show_notification(); ?>
+  <span style="<?= $displayData ?>" >
+  <?php echo show_valnotif(); ?>
+  </span>
+  <form class="webform-client-form" enctype="multipart/form-data" action="<?php echo site_url('contact');?>" method="post" id="webform-client-form-668" accept-charset="UTF-8"><div><div class="form-item webform-component webform-component-select webform-container-inline" id="webform-component-area-of-interest">
   <label for="edit-submitted-area-of-interest">Type of enquiry <span class="form-required" title="This field is required.">*</span></label>
- <select placeholder="Type of enquiry" id="edit-submitted-area-of-interest" name="submitted[area_of_interest]" class="form-select required"><option value="" selected="selected">- Select -</option><option value="smartmoneyencyclopedia@gmail.com">General Enquiry</option><option value="smartmoneyencyclopedia@gmail.com">Scholarships</option><option value="smartmoneyencyclopedia@gmail.com">Internship</option><option value="smartmoneyencyclopedia@gmail.com">Philantrophy</option><option value="smartmoneyencyclopedia@gmail.com"> Opportunities</option><option value="smartmoneyencyclopedia@gmail.com"> Start-Up</option><option value="smartmoneyencyclopedia@gmail.com">Admin</option></select>
+ <select placeholder="Type of enquiry" id="edit-submitted-area-of-interest" name="submitted[area_of_interest]" class="form-select required"><option value="" selected="selected">- Select -</option><option value="General Enquiry">General Enquiry</option><option value="Scholarships">Scholarships</option><option value="Internship">Internship</option><option value="Philantrophy">Philantrophy</option><option value="sOpportunities"> Opportunities</option><option value="Start-Up"> Start-Up</option><option value="Admin">Admin</option></select>
 </div>
 <div class="form-item webform-component webform-component-textfield" id="webform-component-firstname">
   <label for="edit-submitted-firstname">First name <span class="form-required" title="This field is required.">*</span></label>
@@ -129,7 +132,7 @@
     <div id="block-blonde-global-blocks-home" class="block block-blonde-global-blocks first odd">
 
       
-  <a href="<?= site_url('dashboard') ?>"><div class="title-wrapper"><h2><span class="icon">Homepage</span></h2></div></a>
+  <a href="<?= site_url('home') ?>"><div class="title-wrapper"><h2><span class="icon">Homepage</span></h2></div></a>
 </div><!-- /.block -->
 <div id="block-blonde-global-blocks-site-section" class="block block-blonde-global-blocks last even">
 
