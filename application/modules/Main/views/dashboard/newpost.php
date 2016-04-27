@@ -4,12 +4,13 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 
 <title>Smart Money Encyclopedia</title>
-<meta name="theme-color" content="#ffffff">
+
 <meta property="og:url" content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>">
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?= $result->title; ?>">
 <meta property="og:description" content="find amazing opportunities on sme4.me">
 <meta property="og:image" content="http://www.sme4.me/assets/login/images/logo.png">
+<meta name="theme-color" content="#ffffff">
 
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/main-style.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/style.css" media="all" />
