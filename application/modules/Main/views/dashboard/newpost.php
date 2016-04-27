@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" version="HTML+RDFa 1.0" lang="en" dir="ltr">
-<meta property="og:url"                content="http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result->id ?>" />
+<meta property="og:url"                content="http://www.sme4.me/dashboard/posts/<?= $result->id ?>" />
 <meta property="og:type"               content="article" />
-<meta property="og:title"              content="<?= $result->title ?>" />
+<meta property="og:title"              content="<?= $result->title; ?>" />
 <meta property="og:description"        content="amazing opportunities on sme4.me" />
 <meta property="og:image"              content="<?php echo site_url();?>assets/login/images/logo.png" />
 <meta name=viewport content="width=device-width, initial-scale=1">
