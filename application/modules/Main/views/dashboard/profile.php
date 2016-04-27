@@ -54,7 +54,7 @@
 
             <ul class="nav">
                 <li>
-                    <a href="Dashboard">
+                    <a href="dashboard">
                         <i class="pe-7s-graph"></i>
                         <p>Opportunities</p>
                     </a>
@@ -68,7 +68,7 @@
                 
                 </li>
 				<li class="active-pro">
-                    <a href="Dashboard">
+                    <a href="dashboard">
                         <i class="pe-7s-rocket"></i>
                         <p>Opportunities</p>
                     </a>
