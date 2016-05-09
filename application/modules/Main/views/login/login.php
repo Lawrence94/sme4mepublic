@@ -1,94 +1,73 @@
 
 <!DOCTYPE html>
-<html >
- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <head>
-    <meta charset="UTF-8">
+<html lang="en">
+<head>
     <title>Smart Money Ecycopedia |Login</title>
-    <!-- Favicon and touch icons -->
-       <link rel="apple-touch-icon" sizes="60x60" href="http://www.sme4.me/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://www.sme4.me/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="http://www.sme4.me/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://www.sme4.me/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="http://www.sme4.me/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="http://www.sme4.me/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="http://www.sme4.me/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="http://www.sme4.me/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="http://www.sme4.me/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="http://www.sme4.me/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="http://www.sme4.me/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="http://www.sme4.me/favicon-16x16.png">
-    <link rel="manifest" href="http://www.sme4.me/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-       
-    
-        <link rel="stylesheet" href="<?php echo site_url();?>assets/login/css/style.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-    
-    
-    
-  </head>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-  <body>
-  
-  </span>
-    <div class="loginpanel">
-    <?php echo show_notification(); ?>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<link href="https://format.com/login" rel="canonical">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+<link rel="stylesheet" media="screen" href="<?php echo site_url();?>assets/login/css/style.css" />
+<link rel="stylesheet" media="screen" href="<?php echo site_url();?>assets/login/css/login.css" />
+<link rel="shortcut icon" type="image/png" href="<?php echo site_url();?>assets/login/css/fav.png"/>
+
+</head>
+<body class="sessions new">
+<div class="login"> <a class="logo" href="<?php echo site_url('login');?>"><img alt="SME4ME" src="<?php echo site_url();?>assets/login/css/logo.png" /> </a>
+  <div id="login_form">
+  <?php echo show_notification(); ?>
   <span style="<?= $displayData ?>" >
   <?php echo show_valnotif(); ?>
   </span>
-  <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
-  <form class="contact_form" action="<?php echo site_url('login');?>" method="post" name="contact_form">
-    <div class="txt">
-      <input id="user" type="text" name="txtusername" placeholder="Username" required/>
-      <label for="user" class="entypo-user"></label>
-    </div>
-    <div class="txt">
-      <input id="pwd" type="hidden" name="url" value="<?php echo empty($url)? '' : $url;?>" />
-      <input id="pwd" type="password" name="txtpassword" placeholder="Password" />
-      <label for="pwd" class="entypo-lock"></label>
-    </div>
-    <div class="buttons">
-      <input type="submit" type="button" value="Login" />
-
-  </form>
-    <span>
-      <a href="<?= empty($url)? site_url('register') : site_url('register/'.$url); ?>" class="entypo-user-add register">Register</a>
-    </span>
-
+    <form validate class="js-login-form" action="<?php echo site_url('login');?>" accept-charset="UTF-8" method="post">
+      <fieldset>
+        <label for="email">Email</label>
+        <input type="email" name="txtusername" id="email" required autofocus />
+      </fieldset>
+      <fieldset>
+        <label for="password">Password</label>
+        <a class="forgot-password" href="<?= site_url('forgotpassword') ?>" tabindex="-1">I Forgot</a>
+        <input type="hidden" name="url" value="<?php echo empty($url)? '' : $url;?>" />
+        <input type="password" min="8" name="txtpassword" id="password" required />
+      </fieldset>
+      <fieldset>
+        <table>
+          <tr>
+            <td><input type="submit" name="commit" value="Login" class="button green login-small" /></td>
+            <td class="remember-me"><div class="remember-me-checkbox">
+                <input type="checkbox" name="remember_me" id="remember_me" value="1" />
+                <label class="lbl" for="remember_me"></label>
+              </div>
+              <label for="remember_me">Stay Logged In</label></td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
   </div>
 
-  <div class="hr">
-    <div></div>
-    <a href="<?= site_url('forgotpassword') ?>" class="register">Forgot Password</a>
-    <div></div>
-  </div>
-  
-  <!-- <div class="hr">
-    <div></div>
-    <div>OR</div>
-    <div></div>
-  </div> -->
-  
-  <!-- <div class="social">
-    <a href="javascript:void(0)" class="facebook"></a>
-    <a href="javascript:void(0)" class="twitter"></a>
-    <a href="javascript:void(0)" class="googleplus"></a>
-  </div> -->
 </div>
+<div class="image-credit">
+  <div class="image-credit"></div>
+  Photo Licensed to SME4ME By <a href="http://sme4me.com/" id="background_credit_name" target="_blank"></a> </div>
+<span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/1.jpg" data-url="<?php echo site_url();?>assets/login/css/1.jpg" id="background_1"></span> 
 
-<span class="resp-info"></span>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/2.jpg" data-url="<?php echo site_url();?>assets/login/css/2.jpg" id="background_2"></span> 
 
-    
-    
-    
-    
-  </body>
-  
-  </html>
+<span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/3.jpg" data-url="<?php echo site_url();?>assets/login/css/3.jpg" id="background_3"></span> 
+
+<script src="<?php echo site_url();?>assets/login/js/site_background.js"></script> 
+<script>
+  SiteBackground.loadFromParam(null)
+</script>
+<div class="sign-up"> <span>Don’t have an account?</span> <a class="button translucent" href="<?= empty($url)? site_url('register') : site_url('register/'.$url); ?>">Sign Up</a> </div>
+<div class="overlay"></div>
+</body>
+</html>

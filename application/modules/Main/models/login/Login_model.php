@@ -54,15 +54,16 @@ class Login_model extends CI_Model {
       }
     }
 
-    public function doSignup($fullname, $username, $password)
+    public function doSignup($fullname, $username, $password, $phone = '')
     {
-      // create the new company owner
+      // create the new user
       $created = new DateTime('now');
       $end = new DateTime('+2 day');
       $datadb = ['fullname' => $fullname,
                  'username' => $username,
                  'password' => $password,
                  'email' => $username,
+                 'phone' => $phone,
                  'aid' => 5,
                  'dateCreated' => $created->format('Y-m-d H:i:s'),
                  'expDate'=> $end->format('Y-m-d H:i:s'),

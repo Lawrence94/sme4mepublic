@@ -149,15 +149,19 @@ class Login extends CI_Controller {
 
 			$username = $signup['username'];
 			$password = $signup['password'];
+			$password1 = $signup['password1'];
 			$fullname = $signup['fullname'];
+			$phone = $signup['phone'];
 
 			$formurl = $this->input->post('url');
 
 			$status1 = true; 
 
 			$this->form_validation->set_rules('signup[fullname]', 'Full Name', 'required|min_length[3]');
+			$this->form_validation->set_rules('signup[phone]', 'Phone', 'required|min_length[5]');
 			$this->form_validation->set_rules('signup[username]', 'Email', 'required|min_length[5]|valid_email|trim');
-			$this->form_validation->set_rules('signup[password]', 'Password', 'required|min_length[8]');
+			$this->form_validation->set_rules('signup[password]', 'Password', 'required|min_length[8]|callback_password_check');
+			$this->form_validation->set_rules('signup[password1]', 'Password  Confirmation', 'required|matches[signup[password]]|callback_password_check');
 
 			//check validation
             if ($this->form_validation->run() == FALSE)
@@ -166,9 +170,8 @@ class Login extends CI_Controller {
 							'displayData' => 'display:show'
 							);
                    $this->load->view('login/signup', $data);
-            }
-
-			$signupParse = $this->login->doSignup($fullname, $username, $password);
+            }else{
+				$signupParse = $this->login->doSignup($fullname, $username, $password, $phone);
 
 				if (!$signupParse['status']){
 					$status1 = false;
@@ -215,6 +218,7 @@ class Login extends CI_Controller {
 						notify('danger', "You do not have permission to login here, please contact administrator", site_url('login'));
 					}
 				}
+			}
 		}else{
 			if (empty($url)) {
 				$currentUser = $this->session->userdata('user_vars');
@@ -375,6 +379,14 @@ class Login extends CI_Controller {
         }
 	}
 
+public function password_check($str)
+{
+   if (preg_match('#[0-9]#', $str) && preg_match('#[a-zA-Z]#', $str)) {
+     return TRUE;
+   }
+   return FALSE;
+}
+
 	public function mailout($email, $id)
 	{
 		// $currentUser = $this->session->userdata('user_vars');
@@ -386,11 +398,13 @@ class Login extends CI_Controller {
 		$to      = $email;
     	//$to      .= 'agbani92@gmail.com';
 		$subject = 'Password Reset';
-		$message = '<html xmlns="http://www.w3.org/1999/xhtml">
+		$message = '
+		<!DOCTYPE html>
+		<html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<!-- <link href="styles.css" media="all" rel="stylesheet" type="text/css" /> -->
+		
 		<style type="text/css">
 		* {
 		  margin: 0;
@@ -409,8 +423,7 @@ class Login extends CI_Controller {
 		  width: 100% !important;
 		  height: 100%;
 		  line-height: 1.6em;
-		  /* 1.6em * 14px = 22.4px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
-		  /*line-height: 22px;*/
+		  
 		}
 
 
@@ -431,7 +444,6 @@ class Login extends CI_Controller {
 		  display: block !important;
 		  max-width: 600px !important;
 		  margin: 0 auto !important;
-		  /* makes it centered */
 		  clear: both !important;
 		}
 
@@ -718,8 +730,6 @@ class Login extends CI_Controller {
 	   	echo "THere was a problem " . $e->getMessage();
 	   }
 	}
-
-
 }
 
 /* End of file login_controller.php */

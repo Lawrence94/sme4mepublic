@@ -1,90 +1,57 @@
-
 <!DOCTYPE html>
-<html >
- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <head>
-    <meta charset="UTF-8">
+<html lang="en">
+<head>
     <title>Smart Money Ecycopedia |Login</title>
-    <!-- Favicon and touch icons -->
-       <link rel="apple-touch-icon" sizes="60x60" href="http://www.sme4.me/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://www.sme4.me/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="http://www.sme4.me/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://www.sme4.me/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="http://www.sme4.me/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="http://www.sme4.me/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="http://www.sme4.me/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="http://www.sme4.me/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="http://www.sme4.me/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="http://www.sme4.me/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="http://www.sme4.me/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="http://www.sme4.me/favicon-16x16.png">
-    <link rel="manifest" href="http://www.sme4.me/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="http://www.sme4.me/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-       
-    
-        <link rel="stylesheet" href="<?php echo site_url();?>assets/login/css/style.css">
 
-    
-    
-    
-  </head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-  <body>
-  
-  </span>
-    <div class="loginpanel">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<link href="https://format.com/login" rel="canonical">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+<link rel="stylesheet" media="screen" href="<?php echo site_url();?>assets/login/css/style.css" />
+<link rel="stylesheet" media="screen" href="<?php echo site_url();?>assets/login/css/login.css" />
+<link rel="shortcut icon" type="image/png" href="<?php echo site_url();?>assets/login/css/fav.png"/>
+
+</head>
+<body class="sessions new">
+<div class="login"> <a class="logo" href="<?php echo site_url('register');?>"><img alt="SME4ME" src="<?php echo site_url();?>assets/login/css/logo.png" /> </a>
+  <div id="forgot_form">
     <?php echo show_notification(); ?>
-  <span style="<?= $displayData ?>" >
-  <?php echo show_valnotif(); ?>
-  </span>
-  <img src ="<?php echo site_url();?>assets/login/images/logo.png" alt="logo"  />
-  <form class="contact_form" action="<?php echo site_url('Main/Login/forgotpassword');?>" method="post" name="contact_form">
-    <div class="txt">
-      <input id="user" type="text" name="txtusername" placeholder="Email Address" required/>
-      <label for="user" class="entypo-user"></label>
-    </div>
-    
-    <div class="buttons">
-      <input type="submit" type="button" value="Reset Password" />
-
-  </form>
-    <span>
-      <a href="<?= site_url('login') ?>" class="entypo-user-add register">Login</a>
+    <span style="<?= $displayData ?>" >
+    <?php echo show_valnotif(); ?>
     </span>
-
+    <form novalidate class="js-login-form-forgot" action="<?php echo site_url('forgotpassword');?>" accept-charset="UTF-8" method="post">
+      <fieldset>
+        <label for="email">Email</label>
+        <input type="email" name="txtusername" id="email" required />
+      </fieldset>
+      <fieldset>
+        <input type="submit" name="commit" value="Reset Password" class="button green forgot" />
+        <div class="login-return"> <a href="<?php echo site_url('login');?>" tabindex="-1">Return to Login</a> </div>
+      </fieldset>
+    </form>
   </div>
-
-  <!-- <div class="hr">
-    <div></div>
-    <a href="<?= site_url('login') ?>" class="register">Login</a>
-    <div></div>
-  </div> -->
-  
-  <!-- <div class="hr">
-    <div></div>
-    <div>OR</div>
-    <div></div>
-  </div> -->
-  
-  <!-- <div class="social">
-    <a href="javascript:void(0)" class="facebook"></a>
-    <a href="javascript:void(0)" class="twitter"></a>
-    <a href="javascript:void(0)" class="googleplus"></a>
-  </div> -->
 </div>
+<div class="image-credit">
+  <div class="image-credit"></div>
+  Photo Licensed to SME4ME By <a href="http://sme4.me/" id="background_credit_name" target="_blank"></a> </div>
+<span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/1.jpg" data-url="<?php echo site_url();?>assets/login/css/1.jpg" id="background_1"></span> 
 
-<span class="resp-info"></span>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/2.jpg" data-url="<?php echo site_url();?>assets/login/css/2.jpg" id="background_2"></span> 
 
-    
-    
-    
-    
-  </body>
-  
-  </html>
+<span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/3.jpg" data-url="<?php echo site_url();?>assets/login/css/3.jpg" id="background_3"></span> 
+
+<script src="<?php echo site_url();?>assets/login/js/site_background.js"></script> 
+<script>
+  SiteBackground.loadFromParam(null)
+</script>
+<div class="overlay"></div>
+</body>
+</html>
