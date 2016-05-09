@@ -12,6 +12,8 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+<script src="<?php echo site_url();?>assets/login/js/site_background.js"></script> 
+
 <link href="https://format.com/login" rel="canonical">
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
@@ -63,7 +65,7 @@
 
 <span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/3.jpg" data-url="<?php echo site_url();?>assets/login/css/3.jpg" id="background_3"></span> 
 
-<script src="<?php echo site_url();?>assets/login/js/site_background.js"></script> 
+
 <script>
   SiteBackground.loadFromParam(null)
 </script>
