@@ -229,42 +229,31 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card card-user">
-                            <div class="image">
-                                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
-                            </div>
-                            <div class="content">
-                                <div class="author">
-                                     <a href="#">
-                                    <img class="avatar border-gray" src="<?php echo site_url();?>assets/profile/img/faces/face-0.jpg" alt="..."/>
-
-                                      <h4 class="title">
+                            <hr>
+                            <div class="text-center">
+                                <h4 class="title">
                                         <?php
                                             if ($accesslevel == '1') {
                                         ?>
-                                        <?php echo $firstname . ' ' . $lastname ?>
+                                        <?php echo 'Hello ' . $firstname . ' ' . $lastname ?>
                                         <?php
                                             }else{
                                         ?>
-                                        <?php echo $fullname ?>
+                                        <?php echo 'Hello ' . $fullname ?>
                                         <?php
                                             }
                                         ?>
                                          <br />
                                          <small><?php echo $username ?></small>
-                                      </h4>
-                                    </a>
-                                </div>
-                                <p class="description text-center"> "You have <br>
-                                                    <?php echo $daysleft; ?> <br>
-                                                    left on your subscription"
-                                </p>
-                            </div>
-                            <hr>
-                            <div class="text-center">
-                                <!-- <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                                <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
-                                <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button> -->
-
+                                         <br />
+                                         <br />
+                                         Time Left on your Subscription
+                                         <br />
+                                         <br />
+                                         <?php echo $daysleft; ?>
+                                         <br />
+                                         <br />
+                                </h4>
                             </div>
                         </div>
                     </div>

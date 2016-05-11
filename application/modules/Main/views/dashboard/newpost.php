@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Smart Money Encyclopedia</title>
-
+<script src="<?php echo site_url();?>assets/js/jquery.min.js"></script>
 <?php echo "<meta property='fb:app_id' content='1770218769864231'>"; ?>
-<?php echo "<meta property='og:url' content='http://www.sme4.me/dashboard/posts/".$result->id."'>"; ?>
+<?php echo "<meta property='og:url' content='http://www.sme4.me/dashboard/posts/".$result[0]->id."'>"; ?>
 <?php echo "<meta property='og:type' content='article'>"; ?>
-<meta property="og:title" content="<?= $result->title; ?>">
+<meta property="og:title" content="<?= $result[0]->title; ?>">
 <meta property="og:description" content="find amazing opportunities on sme4.me">
 <meta property="og:image" content="http://www.sme4.me/assets/login/images/logo.png">
 <meta name="theme-color" content="#ffffff">
@@ -20,6 +20,7 @@
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/custom.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/assets-for-website/css/responsive.css" media="all" />
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_RLdCYwzbvDqlQo2TU9KQgLHzdcyZ66umH31ME30FMh0.js"></script>
+<script src="<?php echo site_url();?>assets/js/add_company.js"></script>
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_RLdCYwzbvDqlQo2TU9KQgLHzdcyZ66umH31ME30FMh0.js"></script>
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_X3wqWxXtw6R4AIb97o3dAWED9S2GhQf47b9XC3VETVg.js"></script>
 <script src="<?php echo site_url();?>assets/assets-for-website/js/js_CC-zfeuQHcDhFtVRuKW53h30TL7j_105J32Nz8b8R38.js"></script>
@@ -51,7 +52,7 @@
 
 <div id="main">
   <div id="content" class="column" role="main"> <a id="main-content"></a>
-    <div class="post-date"> Deadline: <?= $result->deadline ?> </div>
+    <div class="post-date"> Deadline: <?= $result[0]->deadline ?> </div>
     <div class="region region-content">
       <div id="block-system-main" class="block block-system first last odd">
         <article>
@@ -59,21 +60,26 @@
           <div class="field field-name-body field-type-text-with-summary field-label-hidden">
             <div class="field-items">
               <div class="field-item even" property="content:encoded">
-              <h1 class="title" id="page-title"><?= $result->title ?></h1>
+              <h1 class="title" id="page-title"><?= $result[0]->title ?></h1>
                 <p align="center">
                   
 
-                  <strong>Purpose:</strong> <?= $result->purpose ?><br>
-                  <strong>Eligibility:</strong> <?= $result->eligibility ?><br>
-                  <strong>Level of Study:</strong> <?= $result->level ?><br>
-                  <strong>Type:</strong> <?= $result->category ?><br>
+                  <strong>Purpose:</strong> <?= $result[0]->purpose ?><br>
+                  <strong>Eligibility:</strong> <?= $result[0]->eligibility ?><br>
+                  <strong>Level of Study:</strong> <?= $result[0]->level ?><br>
+                  <strong>Type:</strong> <?= $result[0]->category ?><br>
                   <!-- <strong>Length of Study:</strong> 1 year<br> -->
-                  <strong>Value:</strong> <?= $result->value ?><br>
-                  <strong>Courses:</strong> <?= $result->frequency ?><br>
+                  <strong>Value:</strong> <?= $result[0]->value ?><br>
+                  <strong>Courses:</strong> <?= $result[0]->frequency ?><br>
                   <!-- <strong> Study Establishment:</strong> <?= $result->establishment ?><br> -->
-                  <strong>Country of Study:</strong> <?= $result->country ?> <br><br>
+                  <strong>Country of Study:</strong> <?= $result[0]->country ?> <br><br>
                   <!-- <strong>No. of awards offered:</strong> <?= $result->awards ?><br><br> -->
-                  <a href="<?= $result->weblink ?>" target="_blank" class="form-submit"> Visit Website </a>
+                  <a href="<?= $result[0]->weblink ?>" target="_blank" class="form-submit"> Visit Website </a>
+                  <br>
+                  <br>
+                  <a id="save" data-postid="<?= $result[0]->id ?>" data-uri="<?= site_url('Main/Dashboard/unsave/'.$result[0]->id) ?>" data-url="<?= site_url('Main/Dashboard/save/'.$result[0]->id) ?>" class="form-submit">
+                  <?= $result[1] ?>
+                  </a>
 
 
 
@@ -99,8 +105,8 @@
         </a> </div>
       <!-- /.block -->
       <div id="block-blonde-global-blocks-site-section" class="block block-blonde-global-blocks even"> 
-         <a class="section-link section-work" href="<?= site_url('Main/Dashboard/getgroup/'.$result->category) ?>">
-         <span class="line"><?= $result->category ?></span>
+         <a class="section-link section-work" href="<?= site_url('Main/Dashboard/getgroup/'.$result[0]->category) ?>">
+         <span class="line"><?= $result[0]->category ?></span>
               <span class="section-total"><span><?php echo $count  ?></span>
         </span>
         <div class="minusicon"></div>
@@ -139,19 +145,19 @@
     <h2 class="block-title">Share</h2>
   <ul class="share">
     <li>
-      <a class="google" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result->id ?>" target="_blank" >Google+</a>
+      <a class="google" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result[0]->id ?>" target="_blank" >Google+</a>
     </li>
-    <li>
+    <!-- <li>
       <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result->id ?>" target="_blank" >Facebook</a>
+    </li> -->
+    <li>
+      <a class="twitter" href="https://twitter.com/intent/tweet?text=Contact via @sme4_me&amp;url=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result[0]->id ?>" target="_blank" >Twitter</a>
     </li>
     <li>
-      <a class="twitter" href="https://twitter.com/intent/tweet?text=Contact via @sme4_me&amp;url=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result->id ?>" target="_blank" >Twitter</a>
+      <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result[0]->id ?> via @sme4_me" target="_blank" >LinkedIn</a>
     </li>
     <li>
-      <a class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.blonde.net%2Fblog%2F2016%2F02%2F09%2Fgreat-ux-design-examples&amp;title=This+is+what+great+UX+looks+like.+%28Episode+1%29 via @blondedigital" target="_blank" >LinkedIn</a>
-    </li>
-    <li>
-      <a class="pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.blonde.net%2Fblog%2F2016%2F02%2F09%2Fgreat-ux-design-examples&media=http%3A%2F%2Fwww.blonde.net%2F" target="_blank" >Pinterest</a>
+      <a class="pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.sme4.me%2Fdashboard%2Fposts%2F<?= $result[0]->id ?>&media=http%3A%2F%2Fwww.sme4.me%2F" target="_blank" >Pinterest</a>
     </li>
   </ul>
 

@@ -39,7 +39,7 @@
     <div id="block-system-main" class="block block-system first last odd">
       <div id="isotope-container" data-fixed-filter="false">
          <div class="block  back-title aggregator" data-mobile-weight="3">
-         <a href="<?php echo site_url('Main/Dashboard');?>">
+         <a href="<?php echo site_url('dashboard');?>">
           <div class="inner">
             
               <h1><span class="subtitle">Switch back  to the homepage<br/>

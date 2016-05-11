@@ -87,84 +87,6 @@ class Dashboard extends CI_Controller {
 		
 	}
 
-	// public function newpost()
-	// {
-	// 	$currentUser = ParseUser::getCurrentUser();
-	// 	$adminName = $this->menu_header();
-	// 	if ($currentUser){		
-		
-	// 		$dashView = $this->load->view('dashboard/newpost', $adminName, true);
-	// 		buildPage($dashView, 'Dashboard - New Post');
-	// 	}
-	// 	else{
-	// 		echo 'hey';
-	// 		redirect('Main/Login', 'refresh');
-	// 	}
-	// }
-
-	// public function makepost()
-	// {
-	// 	if ($this->input->post('adminpost')) {
-	// 		$post = $this->input->post('adminpost');
-	// 		$status1 = true;
-
-	// 		$posttitle = $post['title'];
-	// 		$purpose = $post['purpose'];
-	// 		$eligibility = $post['eligibility'];
-	// 		$level = $post['level'];
-	// 		$value = $post['value'];
-	// 		$valuedoll = $post['valuedoll'];
-	// 		$frequency = $post['freq'];
-	// 		$est = $post['est'];
-	// 		$country = $post['country'];
-	// 		$awards = $post['awards'];
-	// 		$deadline = $post['deadline'];
-	// 		$weblink = $post['weblink'];
-	// 		$singlecat = $post['catsingle'];
-	// 		//$multicat = $post['catmulti'];
-	// 		$datecreated = date('Y-m-d h:i:s');
-
-	// 		// var_dump($multicat);
-	// 		// exit;
-
-	// 		//$multijson = json_encode($multicat);
-
-	// 		$postArray = ['title' => $posttitle,
-	// 					  'purpose' => $purpose,
-	// 					  'eligibility' => $eligibility,
-	// 					  'level' => $level,
-	// 					  'value' => $value,
-	// 					  'valuedoll' => $valuedoll,
-	// 					  'frequency' => $frequency,
-	// 					  'establishment' => $est,
-	// 					  'country' => $country,
-	// 					  'awards' => $awards,
-	// 					  'deadline' => $deadline,
-	// 					  'weblink' => $weblink,
-	// 					  'category' => $singlecat,
-	// 					  'categories' => '',
-	// 					  'datecreated' => $datecreated,
-	// 					 ];
-
-	// 		 // var_dump($postArray);
-	// 		 // exit;
-
-	// 		$postdb = $this->login->doPost($postArray);
-
-	// 			if (!$postdb['status']){
-	// 				$status1 = false;
-	// 			}
-
-	// 			if (!$status1){
-	// 				//echo "fuck";
-	// 				notify('danger', $loginParse['parseMsg'], 'Admin/Dashboard/newpost');
-	// 			}else{
-	// 				echo "Please wait, we'll take you back to the dashboard right away...";
-	// 				notify('success', 'Post added sucessfully', 'Admin/Dashboard/newpost');
-	// 			}
-	// 	}
-	// }
-
 	public function getgroup($value)
 	{
 		$currentUser = $this->session->userdata('user_vars');
@@ -240,19 +162,25 @@ class Dashboard extends CI_Controller {
 		$currentUser = $this->session->userdata('user_vars');
 		if ($currentUser){		
 			if($currentUser['status'] == '1'){
-				$result = $this->db->get_where('posts', ['id' => $value])->row();
-				// $meta = array(
-				// 	        array('property' => 'fb:app_id', 'content' => '1770218769864231'),
-				// 	        array('property' => 'og:url', 'content' => 'http://www.sme4.me/dashboard/posts/'.$result->id),
-				// 	        array('property' => 'og:type', 'content' => 'article'),
-				// 	        array('property' => 'og:title', 'content' => $result->title),
-				// 	        array('property' => 'og:description', 'content' => 'find amazing opportunities on sme4.me'),
-				// 	        array('property' => 'og:image', 'content' => 'http://www.sme4.me/assets/login/images/logo.png')
-				// 	    );
-				$groupArray = ['result' => $result,
-							   'count' => $this->login->checkCount($result->category),
-							   //'meta' => meta($meta),
-							  ];
+				$r1 = $this->db->get_where('posts', ['id' => $value])->row();
+				$r2 = $this->db->get_where('savedopp', ['postid' => $value, 'userid' => $currentUser['userid']])->row();
+				$groupArray = [];
+				if (!empty($r2)) {
+					$saved = 'Remove';
+					$r3 = [$saved];
+					$result = array_merge($r1, $r3);
+					$groupArray = ['result' => $result,
+								   'count' => $this->login->checkCount($result[0]->category),
+								  ];
+				}else{
+					$saved = 'Save for later';
+					$r3 = [$saved];
+					$result = array_merge([$r1], $r3);
+					$groupArray = ['result' => $result,
+								   'count' => $this->login->checkCount($result[0]->category),
+								  ];
+				}
+				
 				$this->load->view('dashboard/newpost', $groupArray);
 			}else{
 				$this->session->set_flashdata('msg0', 'Subscription Expired!');
@@ -403,6 +331,56 @@ class Dashboard extends CI_Controller {
     	
     	// echo "Remaining Days ".$diff->format("%R%a days");
     	// exit;
+    }
+
+    public function save($val)
+    {
+    	$currentUser = $this->session->userdata('user_vars');
+    	if($currentUser){
+    		try{
+	    		$datadb = ['userid' => $currentUser['userid'], 'postid' => $val];
+		    	$this->db->insert('savedopp', $datadb);
+		    	$result = ['result' => 'true'
+		    			  ];
+				echo json_encode($result);
+	    	}
+	    	catch(Exception $ex){
+	    		$result[] = ['result' => 'false'
+		    			  	];
+			    echo json_encode($result);
+	    	}
+    	}else{
+    		$result[] = ['result' => 'false'
+	    			  	];
+		    echo json_encode($result);
+    	}
+    	
+    }
+
+    public function unsave($val)
+    {
+    	$currentUser = $this->session->userdata('user_vars');
+    	if($currentUser){
+    		try{
+    			$r1 = $this->db->get_where('savedopp', ['userid' => $currentUser['userid'], 'postid' => $val])->row();
+	    		
+		    	$this->db->where('id', $r1->id);
+				$this->db->delete('savedopp'); 
+				
+		    	$result = ['result' => 'true'
+		    			  ];
+				echo json_encode($result);
+	    	}
+	    	catch(Exception $ex){
+	    		$result[] = ['result' => 'false'
+		    			  	];
+			    echo json_encode($result);
+	    	}
+    	}else{
+    		$result[] = ['result' => 'false'
+	    			  	];
+		    echo json_encode($result);
+    	}
     }
 
     public function mailout($message, $type, $email)
