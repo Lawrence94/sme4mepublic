@@ -168,7 +168,7 @@ class Dashboard extends CI_Controller {
 				if (!empty($r2)) {
 					$saved = 'Remove';
 					$r3 = [$saved];
-					$result = array_merge($r1, $r3);
+					$result = array_merge([$r1], $r3);
 					$groupArray = ['result' => $result,
 								   'count' => $this->login->checkCount($result[0]->category),
 								  ];

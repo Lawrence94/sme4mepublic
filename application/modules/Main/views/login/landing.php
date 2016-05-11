@@ -170,9 +170,9 @@
                         <div class="clearfix"></div>
 
                         <!-- Start: Download Button -->
-                        <!-- <div class="button-group">
-                            <a href="http://sme4.me/sample" class="btn btn-icon" style="visibility: visible;">See Opportunities</a>
-                        </div> -->
+                        <div class="button-group">
+                            <a href="<?php echo site_url('home');?>" class="btn btn-icon" style="visibility: visible;">See Opportunities</a>
+                        </div>
                         <!-- End: Download Button -->
 
                         <p class="btn-text-link wow fadeInDown animated" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInDown;">By clicking "Get Started" I agree to SME4ME's <a href="#">Terms of Service</a>.</p>

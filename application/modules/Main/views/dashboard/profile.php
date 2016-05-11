@@ -54,9 +54,9 @@
 
             <ul class="nav">
                 <li>
-                    <a href="dashboard">
+                    <a href="myopportunities">
                         <i class="pe-7s-graph"></i>
-                        <p>Opportunities</p>
+                        <p>My Opportunities</p>
                     </a>
                 </li>
                 <li class="active">
@@ -268,17 +268,17 @@
                 <nav class="pull-left">
                     <ul>
                         <li>
-                            <a href="<?php echo site_url('Main/Dashboard');?>">
+                            <a href="<?php echo site_url('dashboard');?>">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo site_url('Main/About');?>">
+                            <a href="<?php echo site_url('about');?>">
                                 Company
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo site_url('Main/Dashboard/contact');?>">
+                            <a href="<?php echo site_url('contact');?>">
                                 Contact
                             </a>
                         </li>

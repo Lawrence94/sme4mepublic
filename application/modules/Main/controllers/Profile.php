@@ -30,13 +30,13 @@ class Profile extends CI_Controller {
 				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
 				$this->session->set_flashdata('msg3', 'Pay');
 				$this->session->set_flashdata('msg4', 'Logout');
-				redirect('Main/Payment');
+				redirect('payment');
 			}
 			
 		}
 		else{
 			//echo 'hey';
-			redirect('Main/Login', 'refresh');
+			redirect('login', 'refresh');
 		}
 	}
 
@@ -62,12 +62,44 @@ class Profile extends CI_Controller {
 				}
 
 				if (!$status1){
-					notify('danger', $signupParse['parseMsg'], site_url('Main/Profile'));
+					notify('danger', $signupParse['parseMsg'], site_url('profile'));
 				}else{
-					notify('success', 'Profile edit successful', site_url('Main/Profile'));
+					notify('success', 'Profile edit successful', site_url('profile'));
 				}
 		}
 		
+	}
+
+	public function opportunities()
+	{
+		$currentUser = $this->session->userdata('user_vars');
+		$results = $this->db->get_where('savedopp', ['userid' => $currentUser['userid']])->result();
+		$r = [];
+		foreach ($results as $result) {
+			$r[] = $this->db->get_where('posts', ['id' => $result->postid])->row();
+		}
+		$data = ['results' => $r];
+		if ($currentUser){		
+		
+			if($currentUser['status'] == '1'){
+
+				$this->load->view('dashboard/myopp', $data);
+
+			}else{
+
+				$this->session->set_flashdata('msg0', 'Subscription Expired!');
+				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
+				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
+				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg4', 'Logout');
+				redirect('payment');
+			}
+			
+		}
+		else{
+			//echo 'hey';
+			redirect('login', 'refresh');
+		}
 	}
 
 	public function menu_header(){
@@ -115,7 +147,7 @@ class Profile extends CI_Controller {
 
 		} else {
     		// show the signup or login page
-    		redirect('Main/Login','refresh');
+    		redirect('login','refresh');
 		}
     }
 

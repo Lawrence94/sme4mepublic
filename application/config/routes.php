@@ -59,6 +59,7 @@ $route['login/(:any)'] = 'Main/Login/login/$1';
 $route['register'] = 'Main/Login/signup';
 $route['register/(:any)'] = 'Main/Login/signup/$1';
 $route['profile'] = 'Main/Profile';
+$route['myopportunities'] = 'Main/Profile/opportunities';
 $route['forgotpassword'] = 'Main/Login/forgotpassword';
 $route['reset/(:any)/(:any)/(:any)']  = 'Main/Login/passwrdreset/$1/$2/$3';
 $route['passwordreset/(:any)']  = 'Main/Login/passwordreset/$1';

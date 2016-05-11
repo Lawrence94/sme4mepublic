@@ -62,7 +62,6 @@
               <div class="field-item even" property="content:encoded">
               <h1 class="title" id="page-title"><?= $result[0]->title ?></h1>
                 <p align="center">
-                  
 
                   <strong>Purpose:</strong> <?= $result[0]->purpose ?><br>
                   <strong>Eligibility:</strong> <?= $result[0]->eligibility ?><br>
@@ -80,8 +79,6 @@
                   <a id="save" data-postid="<?= $result[0]->id ?>" data-uri="<?= site_url('Main/Dashboard/unsave/'.$result[0]->id) ?>" data-url="<?= site_url('Main/Dashboard/save/'.$result[0]->id) ?>" class="form-submit">
                   <?= $result[1] ?>
                   </a>
-
-
 
                 </p>
               </div>
