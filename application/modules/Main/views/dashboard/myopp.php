@@ -151,6 +151,7 @@
                                         <th>Type</th>
                                         <th>Value</th>
                                         <th>Link</th>
+                                        <th>Details</th>
                                         <th>Action</th>
                                       </tr>
                                     </thead>
@@ -163,6 +164,7 @@
                                         <td><?= $result->category ?></td>
                                         <td><?= $result->value ?></td>
                                         <td><a href="<?= $result->weblink ?>" target="_blank">Visit Website</a></td>
+                                        <td><a href="<?= site_url('dashboard/posts/' . $result->id) ?>">More Details</a></td>
                                         <td><a id="oppremove" href="#" data-uri="<?= site_url('Main/Dashboard/save/'.$result->id) ?>" data-url="<?= site_url('Main/Dashboard/unsave/'.$result->id) ?>">Remove</a></td>
                                       </tr>
                                     <?php }
