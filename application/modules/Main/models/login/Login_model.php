@@ -90,7 +90,7 @@ class Login_model extends CI_Model {
       return count($result);
     }
 
-    public function doProfileEdit($fullname='', $username='', $userid, $firstname='', $lastname='')
+    public function doProfileEdit($fullname='', $username='', $userid, $firstname='', $lastname='', $phone='', $password='')
     {
       try {
         $currentUser = $this->session->userdata('user_vars');
@@ -103,9 +103,18 @@ class Login_model extends CI_Model {
                         'username' => $username,
                        ];
         }else{
-          $postArray = ['fullname' => $fullname,
-                        'username' => $username,
-                       ];
+          if (!empty($password)) {
+            $postArray = ['fullname' => $fullname,
+                          'username' => $username,
+                          'password' => $password
+                         ];
+          }else{
+            $postArray = ['fullname' => $fullname,
+                          'username' => $username,
+                          'phone' => $phone
+                         ];
+          }
+          
         }
         
         $this->db->where('id', $userid);
@@ -143,6 +152,7 @@ class Login_model extends CI_Model {
                                         'fullname' => $details->fullname,
                                         'firstname' => $details->firstname,
                                         'lastname' => $details->lastname,
+                                        'phone' => $details->phone,
                                         'accesslevel' => $details->aid,
                                         'status' => $details->status,
                                         'k' => $key,

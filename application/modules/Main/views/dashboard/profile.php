@@ -183,43 +183,28 @@
                                     ?>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control" disabled placeholder="Home Address">
+                                                <label>Password</label>
+                                                <input type="password" name="editprofile[password]" class="form-control" placeholder="Enter a new password">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Phone number</label>
+                                                <input type="text" name="editprofile[phone]" value="<?php echo $phone ?>" class="form-control" placeholder="Enter a phone number">
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>City</label>
-                                                <input type="text" class="form-control" disabled placeholder="City">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Country</label>
-                                                <input type="text" class="form-control" disabled placeholder="Country">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Postal Code</label>
-                                                <input type="number" class="form-control" disabled placeholder="ZIP Code">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>About Me</label>
                                                 <textarea rows="5" disabled class="form-control" placeholder="Here can be your description" value="Mike">You can use this section once we are done working on it!.</textarea>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
                                     <div class="clearfix"></div>

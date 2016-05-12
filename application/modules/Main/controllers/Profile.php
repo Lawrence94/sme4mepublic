@@ -52,10 +52,12 @@ class Profile extends CI_Controller {
 			$firstname = $edit['firstname'];
 			$lastname = $edit['lastname'];
 			$fullname = $edit['fullname'];
+			$phone = $edit['phone'];
+			$assword = $edit['password'];
 
 			$status1 = true; 
 
-			$signupParse = $this->login->doProfileEdit($fullname, $username, $userid, $firstname, $lastname);
+			$signupParse = $this->login->doProfileEdit($fullname, $username, $userid, $firstname, $lastname, $phone, $password);
 
 				if (!$signupParse['status']){
 					$status1 = false;
@@ -119,6 +121,7 @@ class Profile extends CI_Controller {
     		$lastName = $currentUser["lastname"];
     		$username = $currentUser["username"];
     		$fullname = $currentUser['fullname'];
+    		$phone = $currentUser['phone'];
 
     		$accessid = $currentUser['accesslevel'];
     		$userid = $currentUser['userid'];
@@ -138,6 +141,7 @@ class Profile extends CI_Controller {
         	'lastname' => $lastName,
         	'username' => $username,
         	'fullname' => $fullname,
+        	'phone' => $phone,
         	'daysleft' => $diff->format("%R%a days"),
         	'redirect' => $url,
         	'accesslevel' => $accessid,
