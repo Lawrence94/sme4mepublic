@@ -40,6 +40,8 @@
 
     <script type="text/javascript" src="<?php echo site_url();?>assets/login/js/city_state.js"></script>
 
+     <script src="<?php echo site_url();?>assets/js/add_company.js"></script>
+
 </head>
 <body>
 
@@ -196,7 +198,7 @@
                                             <div class="form-group">
                                                 <label>Nationality</label>
                                                 <br>
-                                                <select required name="editprofile[country]">
+                                                <select data-var="<?php echo $country ?>" id="nat" required name="editprofile[country]">
                                                 <option value="" selected="selected">--Select--</option>
                                                 <option value=""></option>
                                                 <script type="text/javascript">

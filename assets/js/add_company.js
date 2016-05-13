@@ -1,6 +1,10 @@
 
 $(document).ready(function() {	
 
+    var country = $('#nat').data('var');
+
+    $("#nat option[value="+country+"]").prop("selected", true);
+
     var jb_this;
 
     $('.oppremove').hover(function() {

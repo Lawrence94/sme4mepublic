@@ -152,7 +152,7 @@ class Login_model extends CI_Model {
                                         'fullname' => $details->fullname,
                                         'firstname' => $details->firstname,
                                         'lastname' => $details->lastname,
-                                        'phone' => $details->phone,
+                                        'country' => $details->country,
                                         'accesslevel' => $details->aid,
                                         'status' => $details->status,
                                         'k' => $key,
