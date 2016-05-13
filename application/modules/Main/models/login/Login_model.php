@@ -54,7 +54,7 @@ class Login_model extends CI_Model {
       }
     }
 
-    public function doSignup($fullname, $username, $password, $phone = '')
+    public function doSignup($fullname, $username, $password, $country = '')
     {
       // create the new user
       $created = new DateTime('now');
@@ -63,7 +63,7 @@ class Login_model extends CI_Model {
                  'username' => $username,
                  'password' => $password,
                  'email' => $username,
-                 'phone' => $phone,
+                 'country' => $country,
                  'aid' => 5,
                  'dateCreated' => $created->format('Y-m-d H:i:s'),
                  'expDate'=> $end->format('Y-m-d H:i:s'),

@@ -16,9 +16,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="http://www.sme4.me/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://www.sme4.me/favicon-16x16.png">
 
-<script src="<?php echo site_url();?>assets/js/jquery.min.js"></script>
 
-<script src="<?php echo site_url();?>assets/js/add_company.js"></script>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -165,14 +163,14 @@
                                         <td><?= $result->value ?></td>
                                         <td><a href="<?= $result->weblink ?>" target="_blank">Visit Website</a></td>
                                         <td><a href="<?= site_url('dashboard/posts/' . $result->id) ?>">More Details</a></td>
-                                        <td><a id="oppremove" href="#" data-uri="<?= site_url('Main/Dashboard/save/'.$result->id) ?>" data-url="<?= site_url('Main/Dashboard/unsave/'.$result->id) ?>">Remove</a></td>
+                                        <td><div class="opp"><a class="oppremove" id="oppremove" href="#" data-uri="<?= site_url('Main/Dashboard/save/'.$result->id) ?>" data-url="<?= site_url('Main/Dashboard/unsave/'.$result->id) ?>">Remove</a></div></td>
                                       </tr>
                                     <?php }
                                     ?>
                                     </tbody>
                                     <tfoot>
                                       <tr>
-                                        <td colspan="5" class="text-center">For More Opportunities <a href="dashboard" target="_blank">Opportunities</a> </td>
+                                        <td colspan="5" class="text-center"><a href="dashboard" target="_blank">Opportunities</a> </td>
                                       </tr>
                                     </tfoot>
                                 </table>
@@ -261,6 +259,8 @@
     <script src='http://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js'></script>
 
     <script src="<?php echo site_url();?>assets/datatable/js/index.js"></script>
+
+    <script src="<?php echo site_url();?>assets/js/add_company.js"></script>
 
     
 

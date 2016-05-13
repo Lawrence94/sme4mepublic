@@ -123,10 +123,10 @@ $("#ajax_custom_cont_wrapper").css({display: "none"});
   
   <div class="profile-biog">
   
-    <div><h2>Me on me</h2></div><p>I founded SMe4.me out of the pain I see in the eyes of many of today’s African youth who tell  me that “ I am not getting an education, starting a business, becoming the best I can be…… because I don’t have the financial resources or in their words “CAPITAL” to. I believe strongly in my calling to facilitate change by providing young people with the resources and opportunities to maximize their potential. 
+    <div><h2>About Me</h2></div><p>I founded SMe4.me out of the pain I see in the eyes of many of today’s African youth who tell  me that “ I am not getting an education, starting a business, becoming the best I can be…… because I don’t have the financial resources or in their words “CAPITAL” to. I believe strongly in my calling to facilitate change by providing young people with the resources and opportunities to maximize their potential. 
 My legacy will not just be characterized by stratospheric success or great wealth; it will be defined fundamentally by the multitude that succeeded because I gave them a platform too.
 
-</p><div><h2>Me in other places</h2></div><p>
+</p><div><h2>Contact Me</h2></div><p>
 <br />Me on <a Me on <a title="Me on Twitter" href="https://twitter.com/suanu" target="_blank">Twitter</a>
  
   

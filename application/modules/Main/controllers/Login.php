@@ -151,14 +151,14 @@ class Login extends CI_Controller {
 			$password = $signup['password'];
 			$password1 = $signup['password1'];
 			$fullname = $signup['fullname'];
-			$phone = $signup['phone'];
+			$country = $signup['country'];
 
 			$formurl = $this->input->post('url');
 
 			$status1 = true; 
 
 			$this->form_validation->set_rules('signup[fullname]', 'Full Name', 'required|min_length[3]');
-			$this->form_validation->set_rules('signup[phone]', 'Phone', 'required|min_length[5]');
+			$this->form_validation->set_rules('signup[country]', 'Country', 'required|min_length[5]');
 			$this->form_validation->set_rules('signup[username]', 'Email', 'required|min_length[5]|valid_email|trim');
 			$this->form_validation->set_rules('signup[password]', 'Password', 'required|min_length[8]|callback_password_check');
 			$this->form_validation->set_rules('signup[password1]', 'Password  Confirmation', 'required|matches[signup[password]]|callback_password_check');
@@ -171,7 +171,7 @@ class Login extends CI_Controller {
 							);
                    $this->load->view('login/signup', $data);
             }else{
-				$signupParse = $this->login->doSignup($fullname, $username, $password, $phone);
+				$signupParse = $this->login->doSignup($fullname, $username, $password, $country);
 
 				if (!$signupParse['status']){
 					$status1 = false;

@@ -41,7 +41,7 @@
 <link rel="publisher" href="../index.html" />
 <meta name="copyright" content="Smart Money Encyclopedia" />
 <meta property="og:url" content="suanu.html" />
-      <title>Suanu Moni-Nwinia| SME</title>
+      <title>Wisdom| SME</title>
       <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_Tx6mD8ReiXQOFUHtGp0DXqJXGAQE9-yJ1gK_yazmHpg.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_kvaqtp5WyrrHbRp04EMjxDRU1slGUfavu9v2bsvcoDU.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_2OP-6SpHqK685V1LHa1kDFqdsUn40Mr3hqO0fnBInUE.css" media="all" />
@@ -123,11 +123,11 @@ $("#ajax_custom_cont_wrapper").css({display: "none"});
   
   <div class="profile-biog">
   
-    <div><h2>Me on me</h2></div><p>I have a digital communication background and I’m currently acquiring a degree in Computer Science. I am very passionate about what I do and I love meeting new people.
+    <div><h2>About Me</h2></div><p>I have a digital communication background and I’m currently acquiring a degree in Computer Science. I am very passionate about what I do and I love meeting new people.
 Outside work, I listen to music and inspirational messages. I have also taken up swimming as a hobby.
 My story is simple; I grew up with aspirations of being an engineer but ended up developing a love for ICT. I am confident in my ability to excel and eager to maximize my potential. 
 
-</p><div><h2>Me in other places</h2></div><p>
+</p><div><h2>Contact Me</h2></div><p>
 <br />Me on <a Me on <a title="Me on Twitter" href="https://twitter.com/" target="_blank">Twitter</a>
  
   

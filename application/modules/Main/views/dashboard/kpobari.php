@@ -41,7 +41,7 @@
 <link rel="publisher" href="../index.html" />
 <meta name="copyright" content="Smart Money Encyclopedia" />
 <meta property="og:url" content="suanu.html" />
-      <title>Suanu Moni-Nwinia| SME</title>
+      <title>Kpobari| SME</title>
       <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_Tx6mD8ReiXQOFUHtGp0DXqJXGAQE9-yJ1gK_yazmHpg.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_kvaqtp5WyrrHbRp04EMjxDRU1slGUfavu9v2bsvcoDU.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_2OP-6SpHqK685V1LHa1kDFqdsUn40Mr3hqO0fnBInUE.css" media="all" />
@@ -123,10 +123,10 @@ $("#ajax_custom_cont_wrapper").css({display: "none"});
   
   <div class="profile-biog">
   
-    <div><h2>Me on me</h2></div><p>I coordinate daily business operations at Smart Money Encyclopedia with excellence and cohesiveness as my watch words.  At the SME, we strive to deliver timely, accurate and usable data to our increasing client base. I ensure the best hands are recruited to ensure efficiency in a dynamic working environment.
+    <div><h2>About Me</h2></div><p>I coordinate daily business operations at Smart Money Encyclopedia with excellence and cohesiveness as my watch words.  At the SME, we strive to deliver timely, accurate and usable data to our increasing client base. I ensure the best hands are recruited to ensure efficiency in a dynamic working environment.
 I hold two Bachelor degrees in Marketing and Business Information Systems and an MBA with specialty in Information Systems Management from Anglia Ruskin University, United Kingdom. 
 
-</p><div><h2>Me in other places</h2></div><p>
+</p><div><h2>Contact Me</h2></div><p>
 <br />Me on <a Me on <a title="Me on Twitter" href="https://twitter.com/" target="_blank">Twitter</a>
  
   

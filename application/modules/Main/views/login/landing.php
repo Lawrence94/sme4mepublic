@@ -92,14 +92,14 @@
                             </div>
                             
                             
-                            <div class="collapse navbar-collapse" id="navbar-collapse">
+                            <!-- <div class="collapse navbar-collapse" id="navbar-collapse">
                                 <ul id="navbar-nav" class="nav navbar-nav navbar-right">
                                     <li><a class="navbar-nav-hover" href="#">HOME</a></li>
                                     <li><a class="navbar-nav-hover" href="<?php echo site_url('about');?>">ABOUT US</a></li>
                                     <li><a class="navbar-nav-hover" href="#">CLIENTS</a></li>
                                     <li><a class="navbar-nav-hover" href="#">FAQ</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                             
                         </div>
                     </nav>
@@ -124,7 +124,7 @@
                                     
                                     <!-- Requirment Goes Here -->
                                     <div class="requirement wow fadeInUp animated" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                                        <p>We deliver timely funding solutions based on your preference;</p>
+                                        <p>We deliver timely funding solutions based on your preference</p>
                                     </div>
 
                                    <!-- <a href="how_it_works.html" class="btn btn-fill btn-icon wow fadeInLeft animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">How it works</a> -->
@@ -158,7 +158,7 @@
                         <!-- Start: Section Header -->
                         <div class="section-header col-md-8 col-md-offset-2">
                         
-                            <h2 class="section-heading"><?php echo $realcash; ?> worth of Funding for Africans</h2>
+                            <h2 class="section-heading">$<?php echo $realcash; ?> worth of Funding for Africans</h2>
                             <p>We provide the most efficiently curated platform granting Africa's youth population 
 							timely access to funding opportunities for education, entrepreneurship, 
 							empowerment and economic development. We are passionate about harnessing Africa's potential; 
@@ -196,8 +196,8 @@
                     <!-- Social Icon Goes Here  -->
                     <div class="social-icon social-icon-color col-sm-12 col-md-4">
                         <ul class="nav navbar-right">
-                            <li><a href="#" data-color="#3C5A99" title="Facebook"> <i class="fa fa-facebook"></i> f </a></li>
-                            <li><a href="#" data-color="#28A9E0" title="Twitter"> <i class="fa fa-twitter"></i> t </a></li>
+                            <li><a href="https://www.facebook.com/SMeforMe" data-color="#3C5A99" title="Facebook"> <i class="fa fa-facebook"></i> f </a></li>
+                            <li><a href="https://www.twitter.com/SMe4_Me" data-color="#28A9E0" title="Twitter"> <i class="fa fa-twitter"></i> t </a></li>
                         </ul>
                     </div>
 

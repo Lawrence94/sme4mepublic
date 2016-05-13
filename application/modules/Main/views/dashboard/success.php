@@ -41,7 +41,7 @@
 <link rel="publisher" href="../index.html" />
 <meta name="copyright" content="Smart Money Encyclopedia" />
 <meta property="og:url" content="suanu.html" />
-      <title>Suanu Moni-Nwinia| SME</title>
+      <title>Success| SME</title>
       <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_Tx6mD8ReiXQOFUHtGp0DXqJXGAQE9-yJ1gK_yazmHpg.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_kvaqtp5WyrrHbRp04EMjxDRU1slGUfavu9v2bsvcoDU.css" media="all" />
 <link type="text/css" rel="stylesheet" href="<?php echo site_url();?>assets/people/sites/default/files/css/css_2OP-6SpHqK685V1LHa1kDFqdsUn40Mr3hqO0fnBInUE.css" media="all" />
@@ -123,12 +123,12 @@ $("#ajax_custom_cont_wrapper").css({display: "none"});
   
   <div class="profile-biog">
   
-    <div><h2>Me on me</h2></div><p>I have expertise in service delivery; providing clients with quality and full satisfaction.
+    <div><h2>About Me</h2></div><p>I have expertise in service delivery; providing clients with quality and full satisfaction.
 The idea behind Smart Money encyclopedia was so inspiring that I was more than happy to get on board. My task here is to extract, interpret, upload, update and maintain our database
 When I’m not working, I’m either playing video games or surfing the net.
 I’m a computer science graduate with a passion for learning new skills. I am proficient in Visual basic, CSharp, ASP dot net, HTML and SQL
 
-</p><div><h2>Me in other places</h2></div><p>
+</p><div><h2>Contact Me</h2></div><p>
 <br />Me on <a Me on <a title="Me on Twitter" href="https://twitter.com/" target="_blank">Twitter</a>
  
   

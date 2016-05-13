@@ -19,6 +19,8 @@
 <link rel="stylesheet" media="screen" href="<?php echo site_url();?>assets/login/css/login.css" />
 <link rel="shortcut icon" type="image/png" href="<?php echo site_url();?>assets/login/css/fav.png"/>
 
+<script type="text/javascript" src="<?php echo site_url();?>assets/login/js/city_state.js"></script>
+
 </head>
 <body class="sessions new">
 <div class="login"> <a class="logo" href="<?php echo site_url('register');?>"><img alt="SME4ME" src="<?php echo site_url();?>assets/login/css/logo.png" /> </a>
@@ -38,8 +40,16 @@
         <input type="email" name="signup[username]" min="8" id="email" required autofocus />
       </fieldset>
        <fieldset>
-        <label for="email">Phone Number</label>
-        <input type="text" name="signup[phone]" id="email" required autofocus />
+        <label for="email">Select Country</label>
+        <br>
+        <select required name="signup[country]">
+        <option value="" selected="selected">--Select--</option>
+        <option value=""></option>
+        <script type="text/javascript">
+          setCountries(this);
+        </script>
+        </select><!-- 
+        <input type="text" name="signup[phone]" id="email" required autofocus /> -->
       </fieldset>
       <fieldset>
         <label for="password">Password</label>
