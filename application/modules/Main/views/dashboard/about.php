@@ -116,12 +116,12 @@ by exposing them to self-development opportunities, one youth at a time.
       <div class="view-content">
         <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/suanu');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/suanu.jpg" width="180" height="180" alt="" /></a></div>    
+          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('about/suanu');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/suanu.jpg" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="<?php echo site_url('Main/About/suanu');?>" title="View user profile." class="username" xml:lang="" about="/profile/olly-guest" typeof="sioc:UserAccount" property="foaf:name">Suanu Moni-Nwinia </a></h2>    
           <span class="subtitle">Founder / CEO </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/kpobari');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/kpobs.JPG" width="180" height="180" alt="" /></a></div>    
+          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('about/kpobari');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/kpobs.JPG" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="<?php echo site_url('Main/About/kpobari');?>" title="View user profile." class="username" xml:lang="" about="/profile/manos-riglis" typeof="sioc:UserAccount" property="foaf:name">Kpobari Nwanya </a></h2>    
           <span class="subtitle">Business Development Manager </span>    </div>
   <div class="profile-card">
@@ -131,12 +131,12 @@ by exposing them to self-development opportunities, one youth at a time.
           <span class="subtitle">Lead Developer </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/success');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/success.JPG" width="180" height="180" alt="" /></a></div>    
+          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('about/success');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/success.JPG" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="<?php echo site_url('Main/About/success');?>" title="View user profile." class="username" xml:lang="" about="/profile/phil-adams" typeof="sioc:UserAccount" property="foaf:name">Success Chinwo </a></h2>    
           <span class="subtitle">Database Analyst </span>    </div>
   <div class="profile-card">
       
-          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('Main/About/wisdom');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/wisdom.jpg" width="180" height="180" alt="" /></a></div>    
+          <div class="profile-image-wrapper colorshift"><a href="<?php echo site_url('about/wisdom');?>"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/wisdom.jpg" width="180" height="180" alt="" /></a></div>    
           <h2 class="title"><a href="<?php echo site_url('Main/About/wisdom');?>" title="View user profile." class="username" xml:lang="" about="/profile/louise-goulden" typeof="sioc:UserAccount" property="foaf:name">Wisdom Nwikpo </a></h2>    
           <span class="subtitle">Sales Associate </span>    </div>
 

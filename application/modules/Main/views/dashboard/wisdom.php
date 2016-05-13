@@ -118,7 +118,7 @@ $("#ajax_custom_cont_wrapper").css({display: "none"});
   <div class="profile" typeof="sioc:UserAccount" about="/profile/kpobari">
      <span class="image-shadow">
       <div class="user-picture">
-    <a href="louise-goulden.html" title="View user profile." class="active"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/wisdom.jpg" width="560" height="560" alt="Louise Goulden&#039;s picture" title="Louise Goulden&#039;s picture" /></a>  </div>
+    <a href="#" title="View user profile." class="active"><img typeof="foaf:Image" src="<?php echo site_url();?>assets/people/sites/default/files/styles/180x180/public/users/wisdom.jpg" width="560" height="560" alt="Louise Goulden&#039;s picture" title="Wisdom&#039;s picture" /></a>  </div>
   </span>
   
   <div class="profile-biog">
