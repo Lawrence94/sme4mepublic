@@ -40,7 +40,7 @@
         <input type="email" name="signup[username]" min="8" id="email" required autofocus />
       </fieldset>
        <fieldset>
-        <label for="email">Select Country</label>
+        <label for="email">Nationality</label>
         <br>
         <select required name="signup[country]">
         <option value="" selected="selected">--Select--</option>

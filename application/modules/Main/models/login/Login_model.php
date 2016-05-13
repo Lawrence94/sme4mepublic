@@ -90,7 +90,7 @@ class Login_model extends CI_Model {
       return count($result);
     }
 
-    public function doProfileEdit($fullname='', $username='', $userid, $firstname='', $lastname='', $phone='', $password='')
+    public function doProfileEdit($fullname='', $username='', $userid, $firstname='', $lastname='', $country='', $password='')
     {
       try {
         $currentUser = $this->session->userdata('user_vars');
@@ -111,7 +111,7 @@ class Login_model extends CI_Model {
           }else{
             $postArray = ['fullname' => $fullname,
                           'username' => $username,
-                          'phone' => $phone
+                          'phone' => $country,
                          ];
           }
           

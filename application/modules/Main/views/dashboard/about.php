@@ -161,7 +161,7 @@ by exposing them to self-development opportunities, one youth at a time.
     <div id="block-blonde-global-blocks-home" class="block block-blonde-global-blocks first odd">
 
       
-  <a href="<?php echo site_url('Main/Home');?>"><div class="title-wrapper"><h2><span class="icon">Homepage</span></h2></div></a>
+  <a href="<?php echo site_url('home');?>"><div class="title-wrapper"><h2><span class="icon">Homepage</span></h2></div></a>
 </div><!-- /.block -->
 <div id="block-blonde-global-blocks-site-section" class="block block-blonde-global-blocks last even">
 

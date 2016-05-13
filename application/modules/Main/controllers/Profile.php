@@ -52,12 +52,12 @@ class Profile extends CI_Controller {
 			$firstname = $edit['firstname'];
 			$lastname = $edit['lastname'];
 			$fullname = $edit['fullname'];
-			$phone = $edit['phone'];
+			$country = $edit['country'];
 			$assword = $edit['password'];
 
 			$status1 = true; 
 
-			$signupParse = $this->login->doProfileEdit($fullname, $username, $userid, $firstname, $lastname, $phone, $password);
+			$signupParse = $this->login->doProfileEdit($fullname, $username, $userid, $firstname, $lastname, $country, $password);
 
 				if (!$signupParse['status']){
 					$status1 = false;

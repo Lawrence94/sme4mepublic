@@ -37,6 +37,9 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="<?php echo site_url();?>assets/profile/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="<?php echo site_url();?>assets/login/js/city_state.js"></script>
+
 </head>
 <body>
 
@@ -191,8 +194,16 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Phone number</label>
-                                                <input type="text" name="editprofile[phone]" value="<?php echo $phone ?>" class="form-control" placeholder="Enter a phone number">
+                                                <label>Nationality</label>
+                                                <br>
+                                                <select required name="editprofile[country]">
+                                                <option value="" selected="selected">--Select--</option>
+                                                <option value=""></option>
+                                                <script type="text/javascript">
+                                                  setCountries(this);
+                                                </script>
+                                                </select>
+                                                <!-- <input type="text" name="editprofile[country]" value="<?php echo $country ?>" class="form-control" placeholder="Enter a phone number"> -->
                                             </div>
                                         </div>
                                     </div>
