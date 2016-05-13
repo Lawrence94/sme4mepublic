@@ -48,6 +48,38 @@
 
     <link rel="stylesheet" href="<?php echo site_url();?>assets/datatable/css/style.css">
 
+     <!--   Core JS Files   -->
+    <script src="<?php echo site_url();?>assets/profile/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="<?php echo site_url();?>assets/profile/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="<?php echo site_url();?>assets/profile/js/bootstrap-checkbox-radio-switch.js"></script>
+
+    <!--  Charts Plugin -->
+    <script src="<?php echo site_url();?>assets/profile/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="<?php echo site_url();?>assets/profile/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="<?php echo site_url();?>assets/profile/js/light-bootstrap-dashboard.js"></script>
+
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="<?php echo site_url();?>assets/profile/js/demo.js"></script>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'></script>
+    <script src='http://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js'></script>
+    <script src='http://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js'></script>
+
+    <script src="<?php echo site_url();?>assets/datatable/js/index.js"></script>
+
+    <script src="<?php echo site_url();?>assets/js/add_company.js"></script>
+    
+
 </head>
 <body>
 
@@ -229,39 +261,6 @@
 </div>
 
 
-</body>
-
-    <!--   Core JS Files   -->
-    <script src="<?php echo site_url();?>assets/profile/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="<?php echo site_url();?>assets/profile/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="<?php echo site_url();?>assets/profile/js/bootstrap-checkbox-radio-switch.js"></script>
-
-	<!--  Charts Plugin -->
-	<script src="<?php echo site_url();?>assets/profile/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="<?php echo site_url();?>assets/profile/js/bootstrap-notify.js"></script>
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="<?php echo site_url();?>assets/profile/js/light-bootstrap-dashboard.js"></script>
-
-	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="<?php echo site_url();?>assets/profile/js/demo.js"></script>
-
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'></script>
-    <script src='http://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js'></script>
-    <script src='http://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js'></script>
-
-    <script src="<?php echo site_url();?>assets/datatable/js/index.js"></script>
-
-    <script src="<?php echo site_url();?>assets/js/add_company.js"></script>
-
-    
+</body>    
 
 </html>
