@@ -153,9 +153,9 @@
 							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 						
-						<div class="tag-line">
+						<!-- <div class="tag-line">
 						<a href="#"> <font color="FFFFFF"> How it Works </font> </a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -268,9 +268,9 @@
 							<a href="#"><i class="fa fa-google-plus"></i></a>
 						</div>
 						
-						<div class="tag-line">
+						<!-- <div class="tag-line">
 						<a href="https://youtu.be/iTzpJtk6jJ8"> <font color="#FFFFFF"> How it Works </font> </a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				

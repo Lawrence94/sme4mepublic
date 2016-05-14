@@ -92,14 +92,14 @@
                             </div>
                             
                             
-                            <!-- <div class="collapse navbar-collapse" id="navbar-collapse">
+                            <div class="collapse navbar-collapse" id="navbar-collapse">
                                 <ul id="navbar-nav" class="nav navbar-nav navbar-right">
-                                    <li><a class="navbar-nav-hover" href="#">HOME</a></li>
-                                    <li><a class="navbar-nav-hover" href="<?php echo site_url('about');?>">ABOUT US</a></li>
+                                    <li><a class="navbar-nav-hover" href="<?php echo site_url('login');?>">LOGIN</a></li>
+                                    <!-- <li><a class="navbar-nav-hover" href="<?php echo site_url('about');?>">ABOUT US</a></li>
                                     <li><a class="navbar-nav-hover" href="#">CLIENTS</a></li>
-                                    <li><a class="navbar-nav-hover" href="#">FAQ</a></li>
+                                    <li><a class="navbar-nav-hover" href="#">FAQ</a></li> -->
                                 </ul>
-                            </div> -->
+                            </div>
                             
                         </div>
                     </nav>
