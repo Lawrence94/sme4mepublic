@@ -38,9 +38,13 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="<?php echo site_url();?>assets/profile/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
+    <!--   Core JS Files   -->
+    <script src="<?php echo site_url();?>assets/profile/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="<?php echo site_url();?>assets/profile/js/bootstrap.min.js" type="text/javascript"></script>
+
     <script type="text/javascript" src="<?php echo site_url();?>assets/login/js/city_state.js"></script>
 
-     <script src="<?php echo site_url();?>assets/js/add_company.js"></script>
+     
 
 </head>
 <body>
@@ -52,7 +56,7 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="<?php echo site_url('Main/Home');?>" class="simple-text">
+                <a href="<?php echo site_url('home');?>" class="simple-text">
                     SME4ME
                 </a>
             </div>
@@ -198,7 +202,7 @@
                                             <div class="form-group">
                                                 <label>Nationality</label>
                                                 <br>
-                                                <select data-var="<?php echo $country ?>" id="nat" required name="editprofile[country]">
+                                                <select size="1" data-var="<?php echo $country ?>" id="nat" required name="editprofile[country]">
                                                 <option value="" selected="selected">--Select--</option>
                                                 <option value=""></option>
                                                 <script type="text/javascript">
@@ -288,7 +292,7 @@
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2016 <a href="http://www.sme4.me">SME4ME</a>, made with love 
+                    &copy; 2016 <a href="http://www.sme4.me">SME4ME</a>
                 </p>
             </div>
         </footer>
@@ -298,10 +302,6 @@
 
 
 </body>
-
-    <!--   Core JS Files   -->
-    <script src="<?php echo site_url();?>assets/profile/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="<?php echo site_url();?>assets/profile/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<script src="<?php echo site_url();?>assets/profile/js/bootstrap-checkbox-radio-switch.js"></script>
@@ -320,5 +320,7 @@
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="<?php echo site_url();?>assets/profile/js/demo.js"></script>
+
+    <script src="<?php echo site_url();?>assets/js/add_company.js"></script>
 
 </html>

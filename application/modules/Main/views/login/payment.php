@@ -446,7 +446,12 @@ Smart Money Encylcopedia Payments
       </div>
 		<div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal"><?= $this->session->flashdata('msg3') == NULL ? 'Pay' : $this->session->flashdata('msg3') ?></button>
-          <a href="<?= $this->session->flashdata('msg4') == 'Logout' ? site_url('Main/Dashboard/logout') : $this->session->flashdata('msg5'); ?>">
+          <?php echo $this->session->flashdata('msg5') == NULL ? "<a href=" . site_url('dashboard') . ">" : 
+             "<a href=" . site_url('Main/Dashboard/logout') . ">"
+          ?>
+          <?php echo 
+            "<a href=" . $this->session->flashdata('msg4') == 'Logout' ? site_url('Main/Dashboard/logout') : $this->session->flashdata('msg5') . ">"
+          ?>
             <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
           </a>
         </div>
@@ -462,7 +467,7 @@ Smart Money Encylcopedia Payments
   <div class='payments' >
  
     
-    <div class='button' >
+    <div class='button text-center' >
 	<a href = "<?= site_url('Main/Card') ?>">
       Join Code
 
