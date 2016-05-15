@@ -111,7 +111,7 @@ class Login_model extends CI_Model {
           }else{
             $postArray = ['fullname' => $fullname,
                           'username' => $username,
-                          'phone' => $country,
+                          'country' => $country,
                          ];
           }
           
