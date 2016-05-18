@@ -73,22 +73,8 @@ class Card extends CI_Controller {
 	                			];
 	                	$this->db->where('id', $userid);
 						$this->db->update('userdetails', $data);
-	                	notify('success', 'You have a one year validity', site_url('Main/Card'));
-	                	$currentUser = $this->session->userdata('user_vars');
-	                	$userdetails = ['user_vars' => ['userid' => $currentUser['userid'],
-				                                        'username' => $currentUser['username'],
-				                                        'email' => $currentUser['email'],
-				                                        'fullname' => $currentUser['fullname'],
-				                                        'firstname' => $currentUser['firstname'],
-				                                        'lastname' => $currentUser['lastname'],
-				                                        'country' => $currentUser['country'],
-				                                        'accesslevel' => $currentUser['accesslevel'],
-				                                        'status' => 1,
-				                                        'k' => $currentUser['k'],
-				                                       ]
-                     				    ];
-                     	$this->session->set_userdata( $userdetails );
-						redirect('dashboard','refresh');
+	                	notify('success', 'You have a one year validity, please login again', site_url('login'));
+	                	
 	                }
 				}else{
 					notify('danger', 'This Code has already been used, sorry', site_url('Main/Card'));
