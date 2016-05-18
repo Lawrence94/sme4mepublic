@@ -450,7 +450,7 @@ Smart Money Encylcopedia Payments
             <a href="<?= site_url('dashboard') ?>">
               <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
             </a>
-          <?php }else{ ?>
+          <?php }elseif($this->session->flashdata('msg4') != 'Logout' && $this->session->flashdata('msg5') != NULL){ ?>
             <a href="<?= $this->session->flashdata('msg5') ?>">
               <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
             </a>
