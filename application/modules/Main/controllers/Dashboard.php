@@ -77,7 +77,7 @@ class Dashboard extends CI_Controller {
 				$this->session->set_flashdata('msg3', 'Pay');
 				$this->session->set_flashdata('msg4', 'Logout');
 				$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
-				redirect('Main/Payment');
+				redirect('payment');
 			}
 			
 		}
@@ -108,7 +108,7 @@ class Dashboard extends CI_Controller {
 				$this->session->set_flashdata('msg3', 'Pay');
 				$this->session->set_flashdata('msg4', 'Logout');
 				$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
-				redirect('Main/Payment');
+				redirect('payment');
 			}
 			
 		}
@@ -191,7 +191,7 @@ class Dashboard extends CI_Controller {
 				$this->session->set_flashdata('msg3', 'Pay');
 				$this->session->set_flashdata('msg4', 'Logout');
 				$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
-				redirect('Main/Payment');
+				redirect('payment');
 			}
 			
 		}
