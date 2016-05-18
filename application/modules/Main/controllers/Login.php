@@ -172,51 +172,55 @@ class Login extends CI_Controller {
 							);
                    $this->load->view('login/signup', $data);
             }else{
-				$signupParse = $this->login->doSignup($fullname, $username, $password, $country);
+            	$roleCheck = $this->db->get_where('userdetails', ['username' => $username])->row();
+            	if(!empty($rolecheck)){
+            		notify('danger', 'This email  has been taken', site_url('login'));
+            	}else{
+					$signupParse = $this->login->doSignup($fullname, $username, $password, $country);
 
-				if (!$signupParse['status']){
-					$status1 = false;
-				}
+					if (!$signupParse['status']){
+						$status1 = false;
+					}
 
-				if (!$status1){
-					//echo "fuck";
-					notify('danger', $signupParse['parseMsg'], site_url('login'));
-				}else{
-					$currentUser = $this->session->userdata('user_vars');
-
-					$accessid = $currentUser['accesslevel'];
-					$roleCheck = $this->db->get_where('accesslevel', ['id' => $accessid])->row();
-					
-					if(!empty($roleCheck)){
-						$role = $roleCheck->name;
-						if($role == USER || $role == SUPER_ADMINISTRATOR){
-							//echo "Logging you in...";
-							$this->session->set_flashdata('msg0', 'Welcome!');
-							$this->session->set_flashdata('msg1', 'Thank you for signing up on sme4.me!');
-							$this->session->set_flashdata('msg2', '<p>You have been given a two(2) day free trial!</p>
-																  <p>To extend this time click on "pay" and use one of our various payment
-																options, otherwise click on "continue to site" to use the site for the
-																trial period.</p>');
-							$this->session->set_flashdata('msg3', 'Pay');
-							$this->session->set_flashdata('msg4', 'Continue to site');
-
-							if (empty($formurl)) {
-								$this->session->set_flashdata('msg5', site_url('dashboard'));
-								redirect('payment');
-							}else{
-								$this->session->set_flashdata('msg5', site_url($formurl));
-								redirect('payments/'.$formurl);
-							}
-							
-						}
-						else{
-							# code...
-							echo "Taking you back...";
-							notify('danger', "Please use the admin portal to login or contact administrator", site_url('login'));
-						}
+					if (!$status1){
+						notify('danger', $signupParse['parseMsg'], site_url('login'));
 					}else{
-						echo "Taking you back...";
-						notify('danger', "You do not have permission to login here, please contact administrator", site_url('login'));
+						$currentUser = $this->session->userdata('user_vars');
+
+						$accessid = $currentUser['accesslevel'];
+						$roleCheck = $this->db->get_where('accesslevel', ['id' => $accessid])->row();
+						
+						if(!empty($roleCheck)){
+							$role = $roleCheck->name;
+							if($role == USER || $role == SUPER_ADMINISTRATOR){
+								//echo "Logging you in...";
+								$this->session->set_flashdata('msg0', 'Welcome!');
+								$this->session->set_flashdata('msg1', 'Thank you for signing up on sme4.me!');
+								$this->session->set_flashdata('msg2', '<p>You have been given a two(2) day free trial!</p>
+																	  <p>To extend this time click on "pay" and use one of our various payment
+																	options, otherwise click on "continue to site" to use the site for the
+																	trial period.</p>');
+								$this->session->set_flashdata('msg3', 'Pay');
+								$this->session->set_flashdata('msg4', 'Continue to site');
+
+								if (empty($formurl)) {
+									$this->session->set_flashdata('msg5', site_url('dashboard'));
+									redirect('payment');
+								}else{
+									$this->session->set_flashdata('msg5', site_url($formurl));
+									redirect('payments/'.$formurl);
+								}
+								
+							}
+							else{
+								# code...
+								echo "Taking you back...";
+								notify('danger', "Please use the admin portal to login or contact administrator", site_url('login'));
+							}
+						}else{
+							echo "Taking you back...";
+							notify('danger', "You do not have permission to login here, please contact administrator", site_url('login'));
+						}
 					}
 				}
 			}
