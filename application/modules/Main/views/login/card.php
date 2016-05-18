@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>SME4ME: JOIN CODE</title>
+    <title>SME4ME Subscription</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -141,7 +141,7 @@ body {
           </div>
           <div class="modal-body">
           <h4><?= $this->session->flashdata('msg2') == NULL ? 'You must have been redirected here because your subscription has expired or you are signing up on the platform. 
-          Please click on "pay" to use any of our various payment methods or "continue" to check if you still have acccess ' : $this->session->flashdata('msg2') ?></h4>
+          Please click on "pay" and enter a join code or "continue" to check if you still have acccess ' : $this->session->flashdata('msg2') ?></h4>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal"><?= $this->session->flashdata('msg3') == NULL ? 'Pay' : $this->session->flashdata('msg3') ?></button>
