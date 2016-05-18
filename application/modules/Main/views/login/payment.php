@@ -461,13 +461,13 @@ Smart Money Encylcopedia Payments
               <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
             </a> -->
           <?php //} ?>  
-      </div>
+        </div>
       <!-- /.modal-content -->
-    </div>
+      </div>
     <!-- /.modal-dialog -->
-  </div>
+    </div>
                   <!-- /.modal -->
-</div>
+  </div>
 
 <div class="main">
 

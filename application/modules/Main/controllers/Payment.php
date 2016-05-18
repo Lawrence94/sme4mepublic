@@ -33,7 +33,7 @@ class Payment extends CI_Controller {
 				$data = array(
 					'displayData' => 'display:none'
 				);
-				$this->load->view('login/payment', $data);
+				$this->load->view('login/card', $data);
 			}else{
 				redirect('register');
 			}
@@ -47,7 +47,7 @@ class Payment extends CI_Controller {
 				'displayData' => 'display:none',
 				'url' => $url,
 			);
-			$this->load->view('login/payment', $data);
+			$this->load->view('login/card', $data);
 		}else{
 			redirect('register/'.$url);
 		}

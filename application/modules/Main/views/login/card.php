@@ -124,22 +124,64 @@ body {
 
   <body>
 
-  <?php echo show_notification(); ?>
-              <span style="<?= $displayData ?>" >
-              <?php echo show_valnotif(); ?>
-              </span>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+           <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+            <br>
+            <i class="fa fa-th fa-9x"></i>
+            <h3 id="myModalLabel" class="semi-bold"><?= $this->session->flashdata('msg0') == NULL ? 'Hello!' : $this->session->flashdata('msg0') ?></h3>
+            <p class="no-margin"><h5><?= $this->session->flashdata('msg1') == NULL ? 'Redirection Notice!' : $this->session->flashdata('msg1') ?></h5> 
+        </p>
+            <br>
+          </div>
+          <div class="modal-body">
+          <h4><?= $this->session->flashdata('msg2') == NULL ? 'You must have been redirected here because your subscription has expired or you are signing up on the platform. 
+          Please click on "pay" to use any of our various payment methods or "continue" to check if you still have acccess ' : $this->session->flashdata('msg2') ?></h4>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal"><?= $this->session->flashdata('msg3') == NULL ? 'Pay' : $this->session->flashdata('msg3') ?></button>
+            <?php if($this->session->flashdata('msg5') == NULL ) { ?>
+              <a href="<?= site_url('dashboard') ?>">
+                <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
+              </a>
+            <?php }else{ ?>
+              <a href="<?= $this->session->flashdata('msg5') ?>">
+                <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
+              </a>
+            <?php } ?>
+
+            <?php //if($this->session->flashdata('msg4') == 'Logout' ) { ?>
+              <!-- <a href="<?= site_url('Main/Dashboard/logout') ?>">
+                <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
+              </a> -->
+            <?php //} ?>  
+          </div>
+        <!-- /.modal-content -->
+        </div>
+      <!-- /.modal-dialog -->
+      </div>
+                    <!-- /.modal -->
+    </div>
+
+    <?php echo show_notification(); ?>
+    <span style="<?= $displayData ?>" >
+    <?php echo show_valnotif(); ?>
+    </span>
 
     <div class="credit-card credit-card--with-stripe credit-card--visa l-centered">
-  <div class="credit-card__title">
-    JOIN CODE
-  </div>
-  <form class="credit-card__form" action="<?php echo site_url('Main/Card/doVoucherPay');?>" method="post">
-    <input class="credit-card__number" name="code" placeholder="Enter Join Code" type="text" />
-   <fieldset>
-   <input type="submit" class="form-submit" value="Submit">
-   </fieldset>
-  </form>
-</div>
+      <div class="credit-card__title">
+        JOIN CODE
+      </div>
+      <form class="credit-card__form" action="<?php echo site_url('Main/Card/doVoucherPay');?>" method="post">
+        <input class="credit-card__number" name="code" placeholder="Enter Join Code" type="text" />
+        <fieldset>
+        <input type="submit" class="form-submit" value="Submit">
+        </fieldset>
+      </form>
+    </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     
