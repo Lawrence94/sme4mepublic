@@ -68,7 +68,9 @@ class Card extends CI_Controller {
 		                      ];
 	                if($this->db->insert('subusers', $datadb)){
 	                	$exp = new DateTime('+365 day');
-	                	$data = ['expDate'=> $exp->format('Y-m-d H:i:s')];
+	                	$data = ['expDate'=> $exp->format('Y-m-d H:i:s'),
+	                			 'status' => 1,
+	                			];
 	                	$this->db->where('id', $userid);
 						$this->db->update('userdetails', $data);
 	                	notify('success', 'You have a one year validity', site_url('Main/Card'));
