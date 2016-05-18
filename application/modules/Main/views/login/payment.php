@@ -444,25 +444,24 @@ Smart Money Encylcopedia Payments
         <h4><?= $this->session->flashdata('msg2') == NULL ? 'You must have been redirected here because your subscription has expired or you are signing up on the platform. 
         Please click on "pay" to use any of our various payment methods or "continue" to check if you still have acccess ' : $this->session->flashdata('msg2') ?></h4>
       </div>
-		<div class="modal-footer">
+		  <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal"><?= $this->session->flashdata('msg3') == NULL ? 'Pay' : $this->session->flashdata('msg3') ?></button>
           <?php if($this->session->flashdata('msg5') == NULL ) { ?>
             <a href="<?= site_url('dashboard') ?>">
               <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
             </a>
-          <?php }elseif($this->session->flashdata('msg4') == 'Logout' && $this->session->flashdata('msg5') != NULL){ ?>
+          <?php }else{ ?>
             <a href="<?= $this->session->flashdata('msg5') ?>">
               <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
             </a>
           <?php } ?>
 
-          <?php if($this->session->flashdata('msg4') == 'Logout' ) { ?>
-            <a href="<?= site_url('Main/Dashboard/logout') ?>">
+          <?php //if($this->session->flashdata('msg4') == 'Logout' ) { ?>
+            <!-- <a href="<?= site_url('Main/Dashboard/logout') ?>">
               <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>
-            </a>
-          <?php } ?>
-          
-        </div>
+            </a> -->
+          <?php //} ?>  
+      </div>
       <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->

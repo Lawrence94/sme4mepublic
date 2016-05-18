@@ -67,6 +67,7 @@ $route['passwordreset']  = 'Main/Login/passwordreset';
 
 // Dashboard
 $route['dashboard'] = 'Main/Dashboard';
+$route['dashboard/(:any)'] = 'Main/Dashboard/$1';
 $route['dashboard/phd'] = 'Main/Dashboard/getgroup/Phd';
 $route['dashboard/awards'] = 'Main/Dashboard/getgroup/Award';
 $route['dashboard/masters'] = 'Main/Dashboard/getgroup/Master';

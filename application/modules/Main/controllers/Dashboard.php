@@ -76,6 +76,7 @@ class Dashboard extends CI_Controller {
 				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
 				$this->session->set_flashdata('msg3', 'Pay');
 				$this->session->set_flashdata('msg4', 'Logout');
+				$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
 				redirect('Main/Payment');
 			}
 			
@@ -106,6 +107,7 @@ class Dashboard extends CI_Controller {
 				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
 				$this->session->set_flashdata('msg3', 'Pay');
 				$this->session->set_flashdata('msg4', 'Logout');
+				$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
 				redirect('Main/Payment');
 			}
 			
@@ -188,6 +190,7 @@ class Dashboard extends CI_Controller {
 				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
 				$this->session->set_flashdata('msg3', 'Pay');
 				$this->session->set_flashdata('msg4', 'Logout');
+				$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
 				redirect('Main/Payment');
 			}
 			
