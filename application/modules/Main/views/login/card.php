@@ -183,7 +183,8 @@ body {
         <input type="submit" class="form-submit" value="Submit">
         </fieldset>
       </form>
-      <span class="text-left"><button class="btn-primary">Dashboard</button></span>
+      <span class="text-left"><button class="btn-primary">Continue to site</button></span>
+      <span class="text-right"><button class="btn-primary">Logout</button></span>
     </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
