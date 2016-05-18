@@ -73,6 +73,7 @@ class Card extends CI_Controller {
 	                			];
 	                	$this->db->where('id', $userid);
 						$this->db->update('userdetails', $data);
+						$this->session->unset_userdata('user_vars');
 	                	notify('success', 'You have a one year validity, please login again', site_url('login'));
 	                }
 				}else{
