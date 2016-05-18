@@ -74,7 +74,6 @@ class Card extends CI_Controller {
 	                	$this->db->where('id', $userid);
 						$this->db->update('userdetails', $data);
 	                	notify('success', 'You have a one year validity, please login again', site_url('login'));
-	                	
 	                }
 				}else{
 					notify('danger', 'This Code has already been used, sorry', site_url('Main/Card'));
