@@ -144,7 +144,7 @@ body {
           Please click on "pay" and enter a join code or "continue" to check if you still have acccess ' : $this->session->flashdata('msg2') ?></h4>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal"><?= $this->session->flashdata('msg3') == NULL ? 'Pay' : $this->session->flashdata('msg3') ?></button>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><?= $this->session->flashdata('msg3') == NULL ? 'Renew' : $this->session->flashdata('msg3') ?></button>
             <?php if($this->session->flashdata('msg5') == NULL ) { ?>
               <a href="<?= site_url('dashboard') ?>">
                 <button type="button" class="btn btn-primary"><?= $this->session->flashdata('msg4') == NULL ? 'Continue' : $this->session->flashdata('msg4') ?></button>

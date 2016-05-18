@@ -91,7 +91,7 @@ class Login extends CI_Controller {
 								$this->session->set_flashdata('msg0', 'Subscription Expired!');
 								$this->session->set_flashdata('msg1', 'subscription expiration notice!');
 								$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using a join code or voucher');
-								$this->session->set_flashdata('msg3', 'Pay');
+								$this->session->set_flashdata('msg3', 'Renew');
 								$this->session->set_flashdata('msg4', 'Logout');
 								$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
 								redirect('payment');

@@ -28,7 +28,7 @@ class Profile extends CI_Controller {
 				$this->session->set_flashdata('msg0', 'Subscription Expired!');
 				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
 				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
-				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg3', 'Renew');
 				$this->session->set_flashdata('msg4', 'Logout');
 				$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
 				redirect('payment');
@@ -93,8 +93,9 @@ class Profile extends CI_Controller {
 				$this->session->set_flashdata('msg0', 'Subscription Expired!');
 				$this->session->set_flashdata('msg1', 'subscription expiration notice!');
 				$this->session->set_flashdata('msg2', 'Unfortunately your subscription has expired. Please consider renewing using any of our various payment methods');
-				$this->session->set_flashdata('msg3', 'Pay');
+				$this->session->set_flashdata('msg3', 'Renew');
 				$this->session->set_flashdata('msg4', 'Logout');
+				$this->session->set_flashdata('msg5', site_url('dashboard/logout'));
 				redirect('payment');
 			}
 			
