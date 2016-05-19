@@ -49,12 +49,31 @@ class Profile extends CI_Controller {
 			$currentUser = $this->session->userdata('user_vars');
 			$access = $currentUser['accesslevel'];
 
-			$username = $edit['email'];
-			$firstname = $edit['firstname'];
-			$lastname = $edit['lastname'];
-			$fullname = $edit['fullname'];
-			$country = $edit['country'];
-			$assword = $edit['password'];
+			if(empty($edit['fullname'])){
+				$username = $edit['email'];
+				$firstname = $edit['firstname'];
+				$lastname = $edit['lastname'];
+				$fullname = '';
+				$country = $edit['country'];
+				$password = $edit['password'];
+			}else if($edit['password'] == null){
+				$username = $edit['email'];
+				$firstname = $edit['firstname'];
+				$lastname = $edit['lastname'];
+				$country = $edit['country'];
+			}else if(empty($edit['fullname']) && $edit['password'] == null){
+				$username = $edit['email'];
+				$firstname = $edit['firstname'];
+				$lastname = $edit['lastname'];
+				$country = $edit['country'];
+			}else if(!empty($edit['fullname'])){
+				$username = $edit['email'];
+				$firstname = '';
+				$lastname = '';
+				$fullname = $edit['fullname'];
+				$password = $edit['password'];
+				$country = $edit['country'];
+			}
 
 			$status1 = true; 
 

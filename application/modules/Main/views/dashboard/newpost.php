@@ -71,7 +71,7 @@
                   <strong>Value:</strong> <?= $result[0]->value ?><br>
                   <strong>Courses:</strong> <?= $result[0]->frequency ?><br>
                   <!-- <strong> Study Establishment:</strong> <?= $result->establishment ?><br> -->
-                  <strong>Country of Study:</strong> <?= $result[0]->country ?> <br><br>
+                  <strong>Host Country:</strong> <?= $result[0]->country ?> <br><br>
                   <!-- <strong>No. of awards offered:</strong> <?= $result->awards ?><br><br> -->
                   <a href="<?= $result[0]->weblink ?>" target="_blank" class="form-submit"> Visit Website </a>
                   <br>

@@ -134,6 +134,8 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Edit Profile</h4>
+                                <br>
+                                <h6><em>*</em> Please note that you will bbe required to sign in again if you change your email address.</h6>
                             </div>
                             <div class="content">
                                 <form method="post" action="<?php echo site_url('Main/Profile/edit/'.$userid); ?>">
@@ -204,7 +206,6 @@
                                                 <br>
                                                 <select size="1" data-var="<?php echo $country ?>" id="nat" required name="editprofile[country]">
                                                 <option value="" selected="selected">--Select--</option>
-                                                <option value=""></option>
                                                 <script type="text/javascript">
                                                   setCountries(this);
                                                 </script>

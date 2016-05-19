@@ -94,14 +94,34 @@ class Login_model extends CI_Model {
     {
       try {
         $currentUser = $this->session->userdata('user_vars');
+        $details = $this->db->get_where('userdetails', ['username' => $currentUser['username']])->row();
+
         $access = $currentUser['accesslevel'];
         $postArray = [];
         if ($access == '1') {
+          if($password != null){
+            $postArray = ['firstname' => $firstname,
+                          'lastname' => $lastname,
+                          'username' => $username,
+                          'password' => $password,
+                         ];
+          }else{
+            $postArray = ['firstname' => $firstname,
+                          'lastname' => $lastname,
+                          'username' => $username,
+                          'country' => $country,
+                         ];
+          }
+
+          if ($password != null && $country != null) {
+            $postArray = ['firstname' => $firstname,
+                          'lastname' => $lastname,
+                          'username' => $username,
+                          'country' => $country,
+                          'password' => $password,
+                         ];
+          }
           
-          $postArray = ['firstname' => $fullname,
-                        'lastname' => $lastname,
-                        'username' => $username,
-                       ];
         }else{
           if (!empty($password)) {
             $postArray = ['fullname' => $fullname,
@@ -114,12 +134,27 @@ class Login_model extends CI_Model {
                           'country' => $country,
                          ];
           }
+
+          if ($password != null && $country != null) {
+            $postArray = ['fullname' => $fullname,
+                          'username' => $username,
+                          'country' => $country,
+                          'password' => $password,
+                         ];
+          }
           
         }
         
         $this->db->where('id', $userid);
-        $this->db->update('userdetails', $postArray);
-        return ['status' => true,];
+        if($this->db->update('userdetails', $postArray)){
+          $this->session->unset_userdata('user_vars');
+          
+          $this->login($details->username, $details->password);
+          return ['status' => true,];
+        }else{
+          return ['status' => false, 'parseMsg' => 'There was an error, please try again'];
+        }
+
       } catch (Exception $ex) {
         return ['status' => false, 'parseMsg' => 'There was an error, please try again'];
       }
