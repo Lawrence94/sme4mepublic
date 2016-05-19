@@ -172,9 +172,9 @@ class Login extends CI_Controller {
 							);
                    $this->load->view('login/signup', $data);
             }else{
-            	$roleCheck = $this->db->get_where('userdetails', ['username' => $username])->row();
-            	if(!empty($rolecheck)){
-            		notify('danger', 'This email  has been taken', site_url('login'));
+            	$role = $this->db->get_where('userdetails', ['email' => $username])->row();
+            	if(!empty($role)){
+            		notify('danger', 'This email  has been taken', site_url('register'));
             	}else{
 					$signupParse = $this->login->doSignup($fullname, $username, $password, $country);
 
