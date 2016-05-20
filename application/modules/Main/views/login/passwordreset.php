@@ -58,7 +58,7 @@
       </fieldset>
       <fieldset>
         <label for="email">Confirm Password</label>
-        <input id="user" type="text" name="txtpassword1" placeholder="Confirm Password" required/>
+        <input id="user" type="password" name="txtpassword1" placeholder="Confirm Password" required/>
         <input id="user" type="hidden" name="id" value="<?php echo $id;?>" />
       </fieldset>
       <fieldset>
