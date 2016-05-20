@@ -162,7 +162,7 @@ class Login extends CI_Controller {
 			$this->form_validation->set_rules('signup[country]', 'Country', 'required|min_length[5]');
 			$this->form_validation->set_rules('signup[username]', 'Email', 'required|min_length[5]|valid_email|trim');
 			$this->form_validation->set_rules('signup[password]', 'Password', 'required|min_length[8]|callback_password_check');
-			$this->form_validation->set_rules('signup[password1]', 'Password  Confirmation', 'required|matches[signup[password]]|callback_password_check');
+			$this->form_validation->set_rules('signup[password1]', 'Password  Confirmation', 'required|matches[signup[password]]');
 
 			//check validation
             if ($this->form_validation->run() == FALSE)
@@ -197,10 +197,10 @@ class Login extends CI_Controller {
 								$this->session->set_flashdata('msg0', 'Welcome!');
 								$this->session->set_flashdata('msg1', 'Thank you for signing up on sme4.me!');
 								$this->session->set_flashdata('msg2', '<p>You have been given a two(2) day free trial!</p>
-																	  <p>To extend this time click on "pay" and use one of our various payment
-																	options, otherwise click on "continue to site" to use the site for the
+																	  <p>To extend this time click on "Enter Voucher Code" and enter a voucher code
+																	  , otherwise click on "continue to site" to use the site for the
 																	trial period.</p>');
-								$this->session->set_flashdata('msg3', 'Pay');
+								$this->session->set_flashdata('msg3', 'Enter Voucher Code');
 								$this->session->set_flashdata('msg4', 'Continue to site');
 
 								if (empty($formurl)) {
@@ -389,6 +389,7 @@ public function password_check($str)
    if (preg_match('#[0-9]#', $str) && preg_match('#[a-zA-Z]#', $str)) {
      return TRUE;
    }
+   $this->form_validation->set_message('password_check', 'The %s field must contain both letters and numbers');
    return FALSE;
 }
 

@@ -57,7 +57,7 @@
 <div class="image-credit">
   <div class="image-credit"></div>
   Photo Licensed to SME4ME By <a href="http://sme4me.com/" id="background_credit_name" target="_blank"></a> </div>
-<span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/1.jpg" data-url="<?php echo site_url();?>assets/login/css/1.jpg" id="background_1"></span> 
+<span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/3.jpg" data-url="<?php echo site_url();?>assets/login/css/3.jpg" id="background_1"></span> 
 
 <span data-credit_name="Shutterstock" data-href="http://www.Shutterstock.com/" data-small_url="<?php echo site_url();?>assets/login/css/2.jpg" data-url="<?php echo site_url();?>assets/login/css/2.jpg" id="background_2"></span> 
 

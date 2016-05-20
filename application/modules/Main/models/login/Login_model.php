@@ -123,7 +123,7 @@ class Login_model extends CI_Model {
           }
           
         }else{
-          if (!empty($password)) {
+          if ($password != null) {
             $postArray = ['fullname' => $fullname,
                           'username' => $username,
                           'password' => $password

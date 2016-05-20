@@ -42,7 +42,7 @@ class Card extends CI_Controller {
 				//ParseUser::logOut();
 
 				$this->load->view('login/signup', $data);
-				}
+			}
 	}
 	
 	public function doVoucherPay(){
@@ -77,7 +77,7 @@ class Card extends CI_Controller {
 	                	notify('success', 'You have a one year validity, please login again', site_url('login'));
 	                }
 				}else{
-					notify('danger', 'This Code has already been used, sorry', site_url('Main/Card'));
+					notify('danger', 'This Code has already been used, sorry', site_url('payment'));
 				}
 				
 			}

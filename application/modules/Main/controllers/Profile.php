@@ -56,11 +56,6 @@ class Profile extends CI_Controller {
 				$fullname = '';
 				$country = $edit['country'];
 				$password = $edit['password'];
-			}else if($edit['password'] == null){
-				$username = $edit['email'];
-				$firstname = $edit['firstname'];
-				$lastname = $edit['lastname'];
-				$country = $edit['country'];
 			}else if(empty($edit['fullname']) && $edit['password'] == null){
 				$username = $edit['email'];
 				$firstname = $edit['firstname'];
