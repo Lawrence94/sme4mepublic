@@ -8,6 +8,10 @@
     
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
     <link rel="stylesheet" href="<?php echo site_url();?>assets/card/css/normalize.css">
      <link rel="stylesheet" href="<?php echo site_url();?>assets/card/css/style.css">
@@ -124,7 +128,7 @@ body {
     
   </head>
 
-  <body>
+  <body style="background-image: url(&quot;http://sme4.me/assets/login/css/3.jpg&quot;); center bottom no-repeat; background-size: cover; height: 100%;">
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -173,22 +177,55 @@ body {
     <?php echo show_valnotif(); ?>
     </span>
 
-    <div class="credit-card credit-card--with-stripe credit-card--visa l-centered">
-      <div class="credit-card__title">
-        JOIN CODE
+      <div class="credit-card credit-card--with-stripe credit-card--visa l-centered">
+        <div class="credit-card__title">
+          Pay using our Access Code
+        </div>
+        <form class="credit-card__form" action="<?php echo site_url('Main/Card/doVoucherPay');?>" method="post">
+          <input class="credit-card__number" name="code" placeholder="Enter Access Code" type="text" />
+          <fieldset>
+          <input type="submit" class="form-submit" value="Submit">
+          </fieldset>
+        </form>
+        <br>
+        <span class="text-left"><a href="<?= site_url('dashboard') ?>"><button class="btn-primary">Continue to site</button></a></span>
+        <span class="text-right"><a href="<?= site_url('dashboard/logout') ?>"><button class="btn-primary">Logout</button></a></span>
+
       </div>
-      <form class="credit-card__form" action="<?php echo site_url('Main/Card/doVoucherPay');?>" method="post">
-        <input class="credit-card__number" name="code" placeholder="Enter Join Code" type="text" />
-        <fieldset>
-        <input type="submit" class="form-submit" value="Submit">
-        </fieldset>
-      </form>
-      <span class="text-left"><a href="<?= site_url('dashboard') ?>"><button class="btn-primary">Continue to site</button></a></span>
-      <span class="text-right"><a href="<?= site_url('dashboard/logout') ?>"><button class="btn-primary">Logout</button></a></span>
-    </div>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+      <div class="credit-card credit-card--with-stripe credit-card--visa l-centered">
+        <div class="credit-card__title">
+          Pay Using Your Credit/Debit Card
+        </div>
+        <div class="text-center" style="color: #fff">
+          <p>
+            <h4>To pay using your Credit/Debit Card, Please click on the subscribe button below</h4>
+          </p>
+          <br>
+          <form method='POST' action='https://voguepay.com/pay/'>
+
+          <input type='hidden' name='v_merchant_id' value='9837-0039733' />
+          <input type='hidden' name='merchant_ref' value='' />
+          <input type='hidden' name='memo' value='Test Payment' />
+
+          <input type='hidden' name='notify_url' value='http://www.mydomain.com/notification.php' />
+          <input type='hidden' name='success_url' value='http://sme4.me/dashboard' />
+          <input type='hidden' name='fail_url' value='http://sme4.me/profile' />
+
+          <input type='hidden' name='developer_code' value='574c2b480acf0' />
+          <input type='hidden' name='store_id' value='' />
+
+          <input type='hidden' name='cur' value='NGN' />
+
+          <input type='hidden' name='total' value='1' />
+
+          <input type='image' src='http://voguepay.com/images/buttons/subscribe_blue.png' alt='Submit' />
+
+          </form>
+        </div>
+
+      </div>
+    
     <script type="text/javascript">
       $('document').ready(function () {
         $('#myModal').modal('show');
