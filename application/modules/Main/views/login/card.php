@@ -227,9 +227,9 @@ body {
           <input type='hidden' name='developer_code' value='574c2b480acf0' />
           <input type='hidden' name='store_id' value='' />
 
-          <input type='hidden' name='cur' value='NGN' />
+          <input type='hidden' name='cur' value='USD' />
 
-          <input type='hidden' name='total' value='1' />
+          <input type='hidden' name='total' value='17' />
 
           <input type='image' src='http://voguepay.com/images/buttons/subscribe_blue.png' alt='Submit' />
 
