@@ -96,7 +96,6 @@
                                 <ul id="navbar-nav" class="nav navbar-nav navbar-right">
                                     <li><a class="navbar-nav-hover" href="<?php echo site_url('login');?>">LOGIN</a></li>
                                     <li><a class="navbar-nav-hover" href="<?php echo site_url('contact');?>">CONTACT US</a></li>
-                                    <li><a class="navbar-nav-hover" href="<?php echo site_url('payment');?>">SUBSCRIBE</a></li>
                                     <!-- <li><a class="navbar-nav-hover" href="#">CLIENTS</a></li>
                                     <li><a class="navbar-nav-hover" href="#">FAQ</a></li> -->
                                 </ul>
