@@ -135,7 +135,7 @@
                             <div class="header">
                                 <h4 class="title">Edit Profile</h4>
                                 <br>
-                                <h6><em>*</em> Please note that you will bbe required to sign in again if you change your email address.</h6>
+                                <h6><em>*</em> Please note that you will be required to sign in again if you change your email address.</h6>
                             </div>
                             <div class="content">
                                 <form method="post" action="<?php echo site_url('Main/Profile/edit/'.$userid); ?>">
