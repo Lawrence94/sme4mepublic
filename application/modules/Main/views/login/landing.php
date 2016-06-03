@@ -6,7 +6,7 @@
     <head>
 
         <!-- TITLE OF SITE -->
-        <title>SME4ME | Personlized Opportunities at your desk</title>
+        <title>SME4ME | Funding Your Future</title>
         
         <!-- Meta -->
         <meta charset="utf-8">

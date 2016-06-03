@@ -81,6 +81,8 @@ class Card extends CI_Controller {
 				}
 				
 			}
+		}else{
+			
 		}
 	}
 		
