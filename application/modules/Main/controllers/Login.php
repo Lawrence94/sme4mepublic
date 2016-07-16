@@ -196,7 +196,7 @@ class Login extends CI_Controller {
 								//echo "Logging you in...";
 								$this->session->set_flashdata('msg0', 'Welcome!');
 								$this->session->set_flashdata('msg1', 'Thank you for signing up on sme4.me!');
-								$this->session->set_flashdata('msg2', '<p>You have been given a two(2) day free trial!</p>
+								$this->session->set_flashdata('msg2', '<p>You have been given a seven(7) day free trial!</p>
 																	  <p>To extend this time click on "Enter Voucher Code" and enter a voucher code
 																	  , otherwise click on "continue to site" to use the site for the
 																	trial period.</p>');

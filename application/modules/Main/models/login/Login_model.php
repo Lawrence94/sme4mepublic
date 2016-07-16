@@ -58,7 +58,7 @@ class Login_model extends CI_Model {
     {
       // create the new user
       $created = new DateTime('now');
-      $end = new DateTime('+30 day');
+      $end = new DateTime('+7 day');
       $datadb = ['fullname' => $fullname,
                  'username' => $username,
                  'password' => $password,
